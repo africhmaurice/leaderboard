@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treasure Hunt Leaderboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Atomic Marker';src:url('https://static1.squarespace.com/static/68f0178dd88a7e52ec46ae7e/t/6aa9db35bc4f704c9378c402/1789516598919/Set+Sail+Studios+-+Atomic+Marker+Regular.otf') format('opentype');font-display:swap}
+:root{
+  --ink:#161d10; --paper:#fbf9f4; --paper-2:#f2efe6; --line:#161d10;
+  --rust:#c1330a; --rust-dark:#8f2f08; --muted:#5b5f52; --gold:#eac9a4;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:transparent}
+body{font-family:'Almarai',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;padding:2px 12px 12px 2px}
+.card{max-width:880px;margin:0 auto;background:var(--paper);border:3px solid var(--line);box-shadow:8px 8px 0 var(--line);padding:clamp(20px,4vw,44px) clamp(14px,4vw,44px) clamp(18px,3vw,32px)}
+h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(38px,7vw,72px);line-height:1;text-align:center;margin:0 0 10px;letter-spacing:.01em}
+.meta{text-align:center;font-size:14px;color:var(--muted);margin:0 0 clamp(20px,3vw,32px);min-height:1.2em}
+table{width:100%;border-collapse:collapse;border:2px solid var(--line)}
+th{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(16px,2.4vw,22px);text-align:left;padding:12px clamp(10px,2vw,20px);background:var(--ink);color:#fff;letter-spacing:.03em}
+th.num,td.num{text-align:right}
+td{border-top:2px solid var(--line);padding:clamp(10px,1.6vw,14px) clamp(10px,2vw,20px);vertical-align:middle}
+tbody tr:nth-child(even) td{background:var(--paper-2)}
+.rank{width:1%;white-space:nowrap}
+.badge{display:inline-grid;place-items:center;width:clamp(38px,6vw,48px);height:clamp(38px,6vw,48px);font-family:'Atomic Marker',cursive;font-size:clamp(20px,3.4vw,26px);line-height:1;border:2px solid var(--line);border-radius:50%;background:#fff}
+.top3 .badge{background:var(--rust);border-color:var(--rust-dark);color:#fff}
+.who{min-width:0}
+.name{display:block;font-weight:800;font-size:clamp(16px,2.4vw,20px);overflow-wrap:anywhere}
+.handle{display:block;font-size:clamp(13px,2vw,15px);color:var(--muted);margin-top:2px;overflow-wrap:anywhere}
+td.num{font-family:'Atomic Marker',cursive;font-size:clamp(22px,3.8vw,32px);white-space:nowrap;width:1%}
+td.num small{font-family:'Almarai',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:var(--muted);margin-left:4px}
+tr.prize-line td{padding:0;border-top:0}
+.prize-line div{background:var(--rust);color:#fff;font-weight:800;font-size:12px;letter-spacing:.12em;text-align:center;padding:6px 10px;text-transform:uppercase}
+.empty td{text-align:center;padding:40px 20px;font-size:17px;line-height:1.5}
+.empty strong{display:block;font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(26px,4vw,34px);margin-bottom:6px}
+.foot{text-align:center;font-size:13px;color:var(--muted);margin:18px 0 0}
+@media (max-width:420px){ td.num small{display:none} }
+</style>
+</head>
+<body>
+<main class="card">
+  <h1 id="title">Top 10 Sky Pirates</h1>
+  <p class="meta" id="meta" aria-live="polite"></p>
+  <table>
+    <thead><tr><th class="rank" scope="col">#</th><th scope="col">Sky Pirate</th><th class="num" scope="col">Points</th></tr></thead>
+    <tbody id="rows"><tr class="empty"><td colspan="3">Loading the leaderboard…</td></tr></tbody>
+  </table>
+  <p class="foot">The 3 Sky Pirates with the most points when the hunt ends win the Grand Prize.</p>
+</main>
+<script>
+(function () {
+  var rowsEl = document.getElementById('rows'), metaEl = document.getElementById('meta');
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
+
+  function reportHeight() {
+    if (window.parent !== window) window.parent.postMessage({ thLeaderboardHeight: document.documentElement.scrollHeight }, '*');
+  }
+
+  function render(d) {
+    if (d.title) document.getElementById('title').textContent = d.title;
+    var top = d.top || [];
+    if (!top.length) {
+      rowsEl.innerHTML = '<tr class="empty"><td colspan="3"><strong>No pirates on the board yet</strong>Submit your first points to claim a spot.</td></tr>';
+    } else {
+      var html = '';
+      top.forEach(function (p, i) {
+        html += '<tr class="' + (p.rank <= 3 ? 'top3' : '') + '">' +
+          '<td class="rank"><span class="badge" aria-label="Rank ' + p.rank + '">' + p.rank + '</span></td>' +
+          '<td class="who"><span class="name">' + esc(p.name || p.handle) + '</span>' + (p.name && p.handle ? '<span class="handle">' + esc(p.handle) + '</span>' : '') + '</td>' +
+          '<td class="num">' + Number(p.points).toLocaleString() + '<small>PTS</small></td></tr>';
+        if (p.rank === 3 && top.length > 3) html += '<tr class="prize-line" aria-hidden="true"><td colspan="3"><div>▲ Grand prize zone ▲</div></td></tr>';
+      });
+      rowsEl.innerHTML = html;
+    }
+    if (d.updated) {
+      var t = new Date(d.updated);
+      metaEl.textContent = 'Updated ' + t.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    }
+    reportHeight();
+  }
+
+  function load() {
+    fetch('leaderboard.json?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(render)
+      .catch(function () {
+        if (!rowsEl.querySelector('.top3, .who')) rowsEl.innerHTML = '<tr class="empty"><td colspan="3">The leaderboard is taking a breather. Check back soon!</td></tr>';
+        reportHeight();
+      });
+  }
+
+  load();
+  setInterval(load, 5 * 60 * 1000);
+  window.addEventListener('resize', reportHeight);
+  if (document.fonts) document.fonts.ready.then(reportHeight);
+})();
+</script>
+</body>
+</html>
