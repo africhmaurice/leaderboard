@@ -49,7 +49,7 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
 .pts small{font-family:'Almarai',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;color:var(--moss);margin-left:5px}
 .empty{text-align:center;padding:clamp(30px,5vw,54px) 16px;color:var(--moss)}
 .empty strong{display:block;font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(24px,3.4vw,38px);letter-spacing:.03em;color:var(--ink);margin:14px 0 8px}
-.empty p{margin:0;font-size:16px}
+.empty p{margin:0 auto;max-width:640px;font-weight:700;font-size:clamp(14px,1.5vw,17px);letter-spacing:.05em;line-height:1.6;color:var(--forest)}
 .note{font-weight:700;font-size:clamp(13px,1.4vw,15px);letter-spacing:.05em;line-height:1.6;color:var(--peach);text-shadow:0 1px 6px rgba(0,0,0,.35);text-align:center;margin:clamp(22px,3vw,32px) auto 0;max-width:780px}
 @media (max-width:900px){ body{background-attachment:scroll,scroll} }
 @media (max-width:620px){
@@ -114,7 +114,8 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
     noteEl.style.display = reg.note ? '' : 'none';
 
     if (!top.length) {
-      boardEl.innerHTML = '<li class="empty">' + LOCK + '<strong>No pirates on this board yet</strong><p>Submit your first points to claim a spot.</p></li>';
+      boardEl.innerHTML = '<li class="empty">' + LOCK + '<strong>' + esc(data.emptyHeading || 'No pirates on this board yet') + '</strong>' +
+        (data.emptyMessage ? '<p>' + esc(data.emptyMessage) + '</p>' : '') + '</li>';
     } else {
       var marksTop3 = reg.treasure !== false;
       boardEl.innerHTML = top.map(function (p) {
