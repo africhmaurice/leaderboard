@@ -14,24 +14,27 @@
 </div>
 <script>
 (function () {
-  var f = document.getElementById('th-leaderboard'), ticking = false;
+  var f = document.getElementById('th-leaderboard'), last = 0;
 
   window.addEventListener('message', function (e) {
     if (e.source === f.contentWindow && e.data && e.data.thLeaderboardHeight) f.style.height = e.data.thLeaderboardHeight + 'px';
   });
 
   // Tell the leaderboard where it sits on screen, so its artwork can drift.
+  // Throttled by time rather than animation frames, which browsers pause in
+  // background tabs.
   function report() {
-    ticking = false;
     if (!f.contentWindow) return;
+    last = Date.now();
     f.contentWindow.postMessage({ thScrollTop: f.getBoundingClientRect().top }, '*');
   }
-  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(report); } }
+  function onScroll() { if (Date.now() - last > 16) report(); }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  window.addEventListener('resize', report);
   f.addEventListener('load', report);
   report();
 })();
 </script>
+
 <div style="height:1200px;background:#123">spacer</div>
