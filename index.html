@@ -37,6 +37,11 @@ tr.prize-line td{padding:0;border-top:0}
 .empty td{text-align:center;padding:40px 20px;font-size:17px;line-height:1.5}
 .empty strong{display:block;font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(26px,4vw,34px);margin-bottom:6px}
 .foot{text-align:center;font-size:13px;color:var(--muted);margin:18px 0 0}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 clamp(16px,2.5vw,24px)}
+.tabs button{font-family:'Almarai',sans-serif;font-weight:800;font-size:clamp(12px,2vw,14px);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:999px;padding:9px clamp(12px,2.5vw,20px)}
+.tabs button:hover{background:var(--paper-2)}
+.tabs button[aria-selected="true"]{background:var(--rust);border-color:var(--rust-dark);color:#fff}
+.tabs button:focus-visible{outline:3px solid var(--rust);outline-offset:2px}
 @media (max-width:420px){ td.num small{display:none} }
 </style>
 </head>
@@ -44,6 +49,7 @@ tr.prize-line td{padding:0;border-top:0}
 <main class="card">
   <h1 id="title">Top 10 Sky Pirates</h1>
   <p class="meta" id="meta" aria-live="polite"></p>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Leaderboard region"></div>
   <table>
     <thead><tr><th class="rank" scope="col">#</th><th scope="col">Sky Pirate</th><th class="num" scope="col">Points</th></tr></thead>
     <tbody id="rows"><tr class="empty"><td colspan="3">Loading the leaderboard…</td></tr></tbody>
@@ -52,18 +58,41 @@ tr.prize-line td{padding:0;border-top:0}
 </main>
 <script>
 (function () {
-  var rowsEl = document.getElementById('rows'), metaEl = document.getElementById('meta');
+  var rowsEl = document.getElementById('rows'), metaEl = document.getElementById('meta'), tabsEl = document.getElementById('tabs');
+  // ?region=us|uk|row shows that board on its own, for embedding one board per page.
+  var only = (location.search.match(/[?&]region=([a-z_]+)/i) || [])[1];
+  var data = null, current = null;
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
 
   function reportHeight() {
     if (window.parent !== window) window.parent.postMessage({ thLeaderboardHeight: document.documentElement.scrollHeight }, '*');
   }
 
+  function renderTabs(regions) {
+    if (only || regions.length < 2) { tabsEl.style.display = 'none'; return; }
+    tabsEl.innerHTML = '';
+    regions.forEach(function (reg) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = reg.short || reg.label;
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-selected', reg.key === current ? 'true' : 'false');
+      b.onclick = function () { current = reg.key; renderTabs(regions); renderBoard(); };
+      tabsEl.appendChild(b);
+    });
+  }
+
+  function renderBoard() {
+    var regions = (data && data.regions) || [];
+    var reg = regions.filter(function (r) { return r.key === current; })[0] || regions[0] || {};
+    render({ title: reg.title, top: reg.top, updated: data && data.updated });
+  }
+
   function render(d) {
     if (d.title) document.getElementById('title').textContent = d.title;
     var top = d.top || [];
     if (!top.length) {
-      rowsEl.innerHTML = '<tr class="empty"><td colspan="3"><strong>No pirates on the board yet</strong>Submit your first points to claim a spot.</td></tr>';
+      rowsEl.innerHTML = '<tr class="empty"><td colspan="3"><strong>No pirates on this board yet</strong>Submit your first points to claim a spot.</td></tr>';
     } else {
       var html = '';
       top.forEach(function (p, i) {
@@ -85,7 +114,15 @@ tr.prize-line td{padding:0;border-top:0}
   function load() {
     fetch('leaderboard.json?t=' + Date.now(), { cache: 'no-store' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(render)
+      .then(function (d) {
+        data = d;
+        var regions = d.regions || [];
+        if (only) regions = regions.filter(function (r) { return r.key === only; });
+        data.regions = regions;
+        if (!current || !regions.some(function (r) { return r.key === current; })) current = (regions[0] || {}).key;
+        renderTabs(regions);
+        renderBoard();
+      })
       .catch(function () {
         if (!rowsEl.querySelector('.top3, .who')) rowsEl.innerHTML = '<tr class="empty"><td colspan="3">The leaderboard is taking a breather. Check back soon!</td></tr>';
         reportHeight();

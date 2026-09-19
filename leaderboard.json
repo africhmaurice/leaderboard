@@ -1,7 +1,31 @@
 {
-  "title": "Top 10 Sky Pirates",
-  "updated": "2026-09-19T04:06:29.576Z",
-  "participants": 0,
+  "updated": "2026-09-19T21:15:19.022Z",
   "crewTotal": 0,
-  "top": []
+  "participants": 0,
+  "regions": [
+    {
+      "key": "us",
+      "label": "United States",
+      "short": "USA",
+      "title": "Top 10 Sky Pirates · USA",
+      "participants": 0,
+      "top": []
+    },
+    {
+      "key": "uk",
+      "label": "United Kingdom",
+      "short": "UK",
+      "title": "Top 10 Sky Pirates · UK",
+      "participants": 0,
+      "top": []
+    },
+    {
+      "key": "row",
+      "label": "Rest of the World",
+      "short": "World",
+      "title": "Top 10 Sky Pirates · World",
+      "participants": 0,
+      "top": []
+    }
+  ]
 }
