@@ -95,8 +95,9 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,6vw,
     if (!top.length) {
       boardEl.innerHTML = '<li class="empty">' + LOCK + '<strong>No pirates on this board yet</strong><p>Submit your first points to claim a spot.</p></li>';
     } else {
+      var marksTop3 = reg.treasure !== false;
       boardEl.innerHTML = top.map(function (p) {
-        return '<li class="row' + (p.rank <= 3 ? ' top3' : '') + '">' +
+        return '<li class="row' + (marksTop3 && p.rank <= 3 ? ' top3' : '') + '">' +
           '<span class="rank">' + p.rank + '</span>' +
           '<span class="who"><span class="name">' + esc(p.name || p.handle) + '</span>' +
           (p.name && p.handle ? '<span class="handle">' + esc(p.handle) + '</span>' : '') + '</span>' +

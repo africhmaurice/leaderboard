@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19T22:13:58.973Z",
+  "updated": "2026-09-19T22:14:41.757Z",
   "crewTotal": 0,
   "participants": 0,
   "regions": [
@@ -8,6 +8,7 @@
       "label": "United States",
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
+      "treasure": true,
       "participants": 0,
       "top": []
     },
@@ -16,6 +17,7 @@
       "label": "United Kingdom",
       "title": "United Kingdom",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
+      "treasure": true,
       "participants": 0,
       "top": []
     },
@@ -24,6 +26,7 @@
       "label": "Other Country",
       "title": "Other Countries",
       "note": "*The Treasure can only be found by U.S. and U.K. Residents. Everyone else hunts for the glory — and every point still unlocks rewards for the whole crew.",
+      "treasure": false,
       "participants": 0,
       "top": []
     }
