@@ -8,61 +8,62 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
+/* Type, colour and component rules follow the REWARDS UNLOCKED section:
+   Atomic Marker headings on #fbf9f4, square tabs that fill #111 when active,
+   3px #1b3b15 boxes per row, #c1330a / #d13d0e accents, #c11212 for notes. */
 @font-face{font-family:'Atomic Marker';src:url('https://static1.squarespace.com/static/68f0178dd88a7e52ec46ae7e/t/6aa9db35bc4f704c9378c402/1789516598919/Set+Sail+Studios+-+Atomic+Marker+Regular.otf') format('opentype');font-display:swap}
 :root{
-  --ink:#161d10; --paper:#fbf9f4; --paper-2:#f2efe6; --line:#161d10;
-  --rust:#c1330a; --rust-dark:#8f2f08; --muted:#5b5f52; --gold:#eac9a4;
+  --paper:#fbf9f4; --ink:#111; --forest:#1b3b15; --moss:#607667;
+  --rust:#c1330a; --ember:#d13d0e; --alert:#c11212; --rule:#e5e5e5;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:transparent}
-body{font-family:'Almarai',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;padding:2px 12px 12px 2px}
-.card{max-width:880px;margin:0 auto;background:var(--paper);border:3px solid var(--line);box-shadow:8px 8px 0 var(--line);padding:clamp(20px,4vw,44px) clamp(14px,4vw,44px) clamp(18px,3vw,32px)}
-h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(38px,7vw,72px);line-height:1;text-align:center;margin:0 0 10px;letter-spacing:.01em}
-.meta{text-align:center;font-size:14px;color:var(--muted);margin:0 0 clamp(20px,3vw,32px);min-height:1.2em}
-table{width:100%;border-collapse:collapse;border:2px solid var(--line)}
-th{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(16px,2.4vw,22px);text-align:left;padding:12px clamp(10px,2vw,20px);background:var(--ink);color:#fff;letter-spacing:.03em}
-th.num,td.num{text-align:right}
-td{border-top:2px solid var(--line);padding:clamp(10px,1.6vw,14px) clamp(10px,2vw,20px);vertical-align:middle}
-tbody tr:nth-child(even) td{background:var(--paper-2)}
-.rank{width:1%;white-space:nowrap}
-.badge{display:inline-grid;place-items:center;width:clamp(38px,6vw,48px);height:clamp(38px,6vw,48px);font-family:'Atomic Marker',cursive;font-size:clamp(20px,3.4vw,26px);line-height:1;border:2px solid var(--line);border-radius:50%;background:#fff}
-.top3 .badge{background:var(--rust);border-color:var(--rust-dark);color:#fff}
-.who{min-width:0}
-.name{display:block;font-weight:800;font-size:clamp(16px,2.4vw,20px);overflow-wrap:anywhere}
-.handle{display:block;font-size:clamp(13px,2vw,15px);color:var(--muted);margin-top:2px;overflow-wrap:anywhere}
-td.num{font-family:'Atomic Marker',cursive;font-size:clamp(22px,3.8vw,32px);white-space:nowrap;width:1%}
-td.num small{font-family:'Almarai',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:var(--muted);margin-left:4px}
-tr.prize-line td{padding:0;border-top:0}
-.prize-line div{background:var(--rust);color:#fff;font-weight:800;font-size:12px;letter-spacing:.12em;text-align:center;padding:6px 10px;text-transform:uppercase}
-.empty td{text-align:center;padding:40px 20px;font-size:17px;line-height:1.5}
-.empty strong{display:block;font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(26px,4vw,34px);margin-bottom:6px}
-.foot{text-align:center;font-size:13px;color:var(--muted);margin:18px 0 0}
-.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 clamp(16px,2.5vw,24px)}
-.tabs button{font-family:'Almarai',sans-serif;font-weight:800;font-size:clamp(12px,2vw,14px);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:999px;padding:9px clamp(12px,2.5vw,20px)}
-.tabs button:hover{background:var(--paper-2)}
-.tabs button[aria-selected="true"]{background:var(--rust);border-color:var(--rust-dark);color:#fff}
-.tabs button:focus-visible{outline:3px solid var(--rust);outline-offset:2px}
-@media (max-width:420px){ td.num small{display:none} }
+html,body{margin:0;background:var(--paper)}
+body{font-family:'Almarai',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;padding:clamp(24px,5vw,64px) clamp(16px,5vw,72px)}
+.wrap{max-width:1220px;margin:0 auto}
+h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,6vw,92px);line-height:1.02;color:var(--ink);text-align:center;margin:0 0 40px}
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin:0 0 56px}
+.tabs button{font-family:'Almarai',sans-serif;font-weight:700;font-size:clamp(13px,1.6vw,17px);letter-spacing:.08em;cursor:pointer;background:transparent;color:var(--ink);border:2px solid var(--ink);padding:12px clamp(16px,3vw,30px);transition:opacity .15s ease}
+.tabs button:hover{opacity:.72}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#fff}
+.tabs button:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.region{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(28px,3.4vw,40px);letter-spacing:.04em;color:var(--ink);text-align:center;margin:0 0 14px}
+.meta{font-size:16px;color:var(--ink);text-align:center;margin:0 0 44px;min-height:1.2em}
+.board{display:flex;flex-direction:column;gap:18px;margin:0;padding:0;list-style:none}
+.row{display:flex;align-items:center;gap:clamp(14px,2.5vw,28px);border:3px solid var(--forest);padding:clamp(14px,2vw,20px) clamp(16px,2.5vw,28px);background:var(--paper)}
+.row.top3{border-color:var(--rust)}
+.rank{font-family:'Atomic Marker',cursive;font-size:clamp(30px,4vw,44px);line-height:1;color:var(--forest);min-width:clamp(38px,4.5vw,62px);text-align:center;flex:none}
+.row.top3 .rank{color:var(--rust)}
+.who{flex:1;min-width:0}
+.name{display:block;font-weight:800;font-size:clamp(17px,2.2vw,22px);line-height:1.3;overflow-wrap:anywhere}
+.handle{display:block;font-size:clamp(13px,1.7vw,16px);color:var(--moss);margin-top:3px;overflow-wrap:anywhere}
+.pts{font-family:'Atomic Marker',cursive;font-size:clamp(26px,3.4vw,42px);line-height:1;color:var(--ember);white-space:nowrap;flex:none}
+.pts small{font-family:'Almarai',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:var(--moss);margin-left:6px}
+.empty{border:3px solid var(--forest);padding:clamp(28px,5vw,44px) 20px;text-align:center;color:var(--moss)}
+.empty strong{display:block;font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(26px,3.4vw,40px);letter-spacing:.03em;color:var(--ink);margin:14px 0 8px}
+.empty p{margin:0;font-size:17px}
+.note{font-weight:700;font-size:15px;letter-spacing:.03em;color:var(--alert);text-align:center;margin:40px 0 0}
+@media (max-width:420px){ .pts small{display:none} }
 </style>
 </head>
 <body>
-<main class="card">
-  <h1 id="title">Top 10 Sky Pirates</h1>
-  <p class="meta" id="meta" aria-live="polite"></p>
+<main class="wrap">
+  <h1>Top 10 Sky Pirates</h1>
   <div class="tabs" id="tabs" role="tablist" aria-label="Leaderboard region"></div>
-  <table>
-    <thead><tr><th class="rank" scope="col">#</th><th scope="col">Sky Pirate</th><th class="num" scope="col">Points</th></tr></thead>
-    <tbody id="rows"><tr class="empty"><td colspan="3">Loading the leaderboard…</td></tr></tbody>
-  </table>
-  <p class="foot">The 3 Sky Pirates with the most points when the hunt ends win the Grand Prize.</p>
+  <h2 class="region" id="region"></h2>
+  <p class="meta" id="meta" aria-live="polite"></p>
+  <ol class="board" id="board"></ol>
+  <p class="note" id="note"></p>
 </main>
 <script>
 (function () {
-  var rowsEl = document.getElementById('rows'), metaEl = document.getElementById('meta'), tabsEl = document.getElementById('tabs');
+  var boardEl = document.getElementById('board'), metaEl = document.getElementById('meta'),
+      tabsEl = document.getElementById('tabs'), regionEl = document.getElementById('region'), noteEl = document.getElementById('note');
   // ?region=us|uk|row shows that board on its own, for embedding one board per page.
   var only = (location.search.match(/[?&]region=([a-z_]+)/i) || [])[1];
   var data = null, current = null;
-  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
+  var LOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="#1b3b15" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" style="width:30px;height:30px"><rect x="4" y="11" width="16" height="10" rx="1" fill="#1b3b15"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>';
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 
   function reportHeight() {
     if (window.parent !== window) window.parent.postMessage({ thLeaderboardHeight: document.documentElement.scrollHeight }, '*');
@@ -74,7 +75,7 @@ tr.prize-line td{padding:0;border-top:0}
     regions.forEach(function (reg) {
       var b = document.createElement('button');
       b.type = 'button';
-      b.textContent = reg.short || reg.label;
+      b.textContent = (reg.label || '').toUpperCase();
       b.setAttribute('role', 'tab');
       b.setAttribute('aria-selected', reg.key === current ? 'true' : 'false');
       b.onclick = function () { current = reg.key; renderTabs(regions); renderBoard(); };
@@ -85,27 +86,26 @@ tr.prize-line td{padding:0;border-top:0}
   function renderBoard() {
     var regions = (data && data.regions) || [];
     var reg = regions.filter(function (r) { return r.key === current; })[0] || regions[0] || {};
-    render({ title: reg.title, top: reg.top, updated: data && data.updated });
-  }
+    var top = reg.top || [];
 
-  function render(d) {
-    if (d.title) document.getElementById('title').textContent = d.title;
-    var top = d.top || [];
+    regionEl.textContent = reg.title || reg.label || '';
+    noteEl.textContent = reg.note || '';
+    noteEl.style.display = reg.note ? '' : 'none';
+
     if (!top.length) {
-      rowsEl.innerHTML = '<tr class="empty"><td colspan="3"><strong>No pirates on this board yet</strong>Submit your first points to claim a spot.</td></tr>';
+      boardEl.innerHTML = '<li class="empty">' + LOCK + '<strong>No pirates on this board yet</strong><p>Submit your first points to claim a spot.</p></li>';
     } else {
-      var html = '';
-      top.forEach(function (p, i) {
-        html += '<tr class="' + (p.rank <= 3 ? 'top3' : '') + '">' +
-          '<td class="rank"><span class="badge" aria-label="Rank ' + p.rank + '">' + p.rank + '</span></td>' +
-          '<td class="who"><span class="name">' + esc(p.name || p.handle) + '</span>' + (p.name && p.handle ? '<span class="handle">' + esc(p.handle) + '</span>' : '') + '</td>' +
-          '<td class="num">' + Number(p.points).toLocaleString() + '<small>PTS</small></td></tr>';
-        if (p.rank === 3 && top.length > 3) html += '<tr class="prize-line" aria-hidden="true"><td colspan="3"><div>▲ Grand prize zone ▲</div></td></tr>';
-      });
-      rowsEl.innerHTML = html;
+      boardEl.innerHTML = top.map(function (p) {
+        return '<li class="row' + (p.rank <= 3 ? ' top3' : '') + '">' +
+          '<span class="rank">' + p.rank + '</span>' +
+          '<span class="who"><span class="name">' + esc(p.name || p.handle) + '</span>' +
+          (p.name && p.handle ? '<span class="handle">' + esc(p.handle) + '</span>' : '') + '</span>' +
+          '<span class="pts">' + Number(p.points).toLocaleString() + '<small>PTS</small></span></li>';
+      }).join('');
     }
-    if (d.updated) {
-      var t = new Date(d.updated);
+
+    if (data && data.updated) {
+      var t = new Date(data.updated);
       metaEl.textContent = 'Updated ' + t.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
     }
     reportHeight();
@@ -124,7 +124,7 @@ tr.prize-line td{padding:0;border-top:0}
         renderBoard();
       })
       .catch(function () {
-        if (!rowsEl.querySelector('.top3, .who')) rowsEl.innerHTML = '<tr class="empty"><td colspan="3">The leaderboard is taking a breather. Check back soon!</td></tr>';
+        if (!boardEl.querySelector('.row')) boardEl.innerHTML = '<li class="empty"><p>The leaderboard is taking a breather. Check back soon!</p></li>';
         reportHeight();
       });
   }

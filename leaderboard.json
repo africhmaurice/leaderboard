@@ -1,29 +1,29 @@
 {
-  "updated": "2026-09-19T21:15:19.022Z",
+  "updated": "2026-09-19T21:27:14.022Z",
   "crewTotal": 0,
   "participants": 0,
   "regions": [
     {
       "key": "us",
       "label": "United States",
-      "short": "USA",
-      "title": "Top 10 Sky Pirates · USA",
+      "title": "United States",
+      "note": "*The three Sky Pirates with the most points at the end of the hunt win the Grand Prize.",
       "participants": 0,
       "top": []
     },
     {
       "key": "uk",
       "label": "United Kingdom",
-      "short": "UK",
-      "title": "Top 10 Sky Pirates · UK",
+      "title": "United Kingdom",
+      "note": "*The three Sky Pirates with the most points at the end of the hunt win the Grand Prize.",
       "participants": 0,
       "top": []
     },
     {
       "key": "row",
-      "label": "Rest of the World",
-      "short": "World",
-      "title": "Top 10 Sky Pirates · World",
+      "label": "Other Country",
+      "title": "Other Countries",
+      "note": "*Due to international sweepstakes laws, the Grand Prize is only available to U.S. and U.K. residents. Many of the unlocked rewards are available to everyone.",
       "participants": 0,
       "top": []
     }
