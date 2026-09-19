@@ -26,7 +26,7 @@ body{
 }
 /* The artwork is its own layer, taller than the page, so it can drift against the
    scroll. The parent page posts its scroll offset; see the embed snippet. */
-#bg{position:absolute;top:-20%;left:0;right:0;height:140%;z-index:0;pointer-events:none;
+#bg{position:absolute;top:-5%;left:0;right:0;height:110%;z-index:0;pointer-events:none;
   background:linear-gradient(rgba(193,51,10,.9),rgba(193,51,10,.9)),url('leaderboard-bg.jpg') center/cover;
   will-change:transform}
 body > *:not(#bg){position:relative;z-index:1}
@@ -162,7 +162,7 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
   }
 
   var bg = document.getElementById('bg');
-  var PARALLAX = 0.25;
+  var PARALLAX = 0.12;
   function moveTo(px) {
     // Never drift so far that the artwork's edge shows.
     var limit = Math.max(0, (bg.offsetHeight - document.documentElement.scrollHeight) / 2);
