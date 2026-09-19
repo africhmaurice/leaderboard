@@ -1,0 +1,37 @@
+<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>parallax test</title><body style="margin:0;font-family:sans-serif"><div style="height:800px;background:#123">spacer</div>
+<!-- Paste this into a Squarespace Code Block on the /leaderboard page.
+     Bump ?v=N whenever the page design changes, to skip the browser cache.
+     The wrapper breaks the iframe out of Squarespace's content column so the red
+     background runs edge to edge, and its own stacking context keeps Squarespace
+     overlays from swallowing clicks on the tabs. The script reports scroll
+     position (for the parallax) and resizes the iframe to fit the board. -->
+<div style="width:100vw;position:relative;left:50%;margin-left:-50vw;overflow:hidden;z-index:2;isolation:isolate">
+  <iframe id="th-leaderboard"
+          src="https://africhmaurice.github.io/leaderboard/?v=4"
+          title="Treasure Hunt Leaderboard"
+          loading="lazy"
+          style="width:100%;height:1200px;border:0;display:block;background:#c1330a;position:relative;z-index:2;pointer-events:auto"></iframe>
+</div>
+<script>
+(function () {
+  var f = document.getElementById('th-leaderboard'), ticking = false;
+
+  window.addEventListener('message', function (e) {
+    if (e.source === f.contentWindow && e.data && e.data.thLeaderboardHeight) f.style.height = e.data.thLeaderboardHeight + 'px';
+  });
+
+  // Tell the leaderboard where it sits on screen, so its artwork can drift.
+  function report() {
+    ticking = false;
+    if (!f.contentWindow) return;
+    f.contentWindow.postMessage({ thScrollTop: f.getBoundingClientRect().top }, '*');
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(report); } }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  f.addEventListener('load', report);
+  report();
+})();
+</script>
+<div style="height:1200px;background:#123">spacer</div>

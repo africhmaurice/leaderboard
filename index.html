@@ -20,10 +20,17 @@
 html,body{margin:0;padding:0}
 body{
   font-family:'Almarai',sans-serif;color:#fff;-webkit-font-smoothing:antialiased;
-  background:linear-gradient(rgba(193,51,10,.9),rgba(193,51,10,.9)),url('leaderboard-bg.jpg') center/cover;
-  background-attachment:fixed,fixed;
+  background:var(--rust);
   min-height:100vh;padding:clamp(72px,10.5vw,158px) clamp(16px,4vw,32px) clamp(44px,6vw,90px);
+  position:relative;overflow-x:hidden;
 }
+/* The artwork is its own layer, taller than the page, so it can drift against the
+   scroll. The parent page posts its scroll offset; see the embed snippet. */
+#bg{position:absolute;top:-14%;left:0;right:0;height:128%;z-index:0;pointer-events:none;
+  background:linear-gradient(rgba(193,51,10,.9),rgba(193,51,10,.9)),url('leaderboard-bg.jpg') center/cover;
+  will-change:transform}
+body > *:not(#bg){position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){ #bg{transform:none !important} }
 .head{text-align:center;margin:0 auto clamp(30px,4vw,44px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',cursive;font-size:clamp(24px,3.5vw,44px);color:var(--peach);margin:0 0 14px}
 h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,130px);line-height:1.05;color:#fff;margin:0}
@@ -51,7 +58,7 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
 .empty strong{display:block;font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(24px,3.4vw,38px);letter-spacing:.03em;color:var(--ink);margin:14px 0 8px}
 .empty p{margin:0 auto;max-width:640px;font-weight:700;font-size:clamp(14px,1.5vw,17px);letter-spacing:.05em;line-height:1.6;color:var(--forest)}
 .note{font-weight:700;font-size:clamp(13px,1.4vw,15px);letter-spacing:.05em;line-height:1.6;color:var(--peach);text-shadow:0 1px 6px rgba(0,0,0,.35);text-align:center;margin:clamp(22px,3vw,32px) auto 0;max-width:780px}
-@media (max-width:900px){ body{background-attachment:scroll,scroll} }
+
 @media (max-width:620px){
   .hrow,.row{grid-template-columns:clamp(34px,10vw,48px) minmax(0,1fr) clamp(70px,20vw,96px);gap:10px;row-gap:2px;align-items:start}
   .hrow .h-handle,.row .handle{grid-column:2;grid-row:2}
@@ -63,6 +70,7 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
 </style>
 </head>
 <body>
+<div id="bg" aria-hidden="true"></div>
 <header class="head">
   <p class="eyebrow">The Leaderboard</p>
   <h1>Top 10 Sky Pirates</h1>
@@ -151,6 +159,24 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
         if (!boardEl.querySelector('.row')) boardEl.innerHTML = '<li class="empty"><p>The leaderboard is taking a breather. Check back soon!</p></li>';
         reportHeight();
       });
+  }
+
+  var bg = document.getElementById('bg');
+  var PARALLAX = 0.18, shift = 0, ticking = false;
+  function paint() { ticking = false; bg.style.transform = 'translate3d(0,' + shift.toFixed(1) + 'px,0)'; }
+  function moveTo(px) {
+    var slack = bg.offsetHeight - document.documentElement.scrollHeight;
+    var limit = Math.max(0, slack / 2);
+    shift = Math.max(-limit, Math.min(limit, px));
+    if (!ticking) { ticking = true; requestAnimationFrame(paint); }
+  }
+  if (window.parent !== window) {
+    // Embedded: the page around us tells us where we sit in the viewport.
+    window.addEventListener('message', function (e) {
+      if (e.data && typeof e.data.thScrollTop === 'number') moveTo(-e.data.thScrollTop * PARALLAX);
+    });
+  } else {
+    window.addEventListener('scroll', function () { moveTo(window.scrollY * PARALLAX); }, { passive: true });
   }
 
   load();
