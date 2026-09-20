@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-20T22:10:13.115Z",
+  "updated": "2026-09-20T22:21:37.396Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 4350,
-  "participants": 16,
+  "crewTotal": 4975,
+  "participants": 17,
   "regions": [
     {
       "key": "us",
@@ -11,7 +11,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 15,
+      "participants": 16,
       "top": [
         {
           "rank": 1,
@@ -50,38 +50,38 @@
         },
         {
           "rank": 6,
+          "name": "Lizzie Berlin",
+          "handle": "@lizzieberlin",
+          "platform": "None",
+          "points": 400
+        },
+        {
+          "rank": 7,
           "name": "Michelle Downing",
           "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
           "points": 275
         },
         {
-          "rank": 7,
+          "rank": 8,
           "name": "Whitney Bolitho",
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
           "points": 250
         },
         {
-          "rank": 8,
+          "rank": 9,
           "name": "Jay Rodriguez",
           "handle": "@jay.rodriguez621",
           "platform": "Instagram",
           "points": 225
         },
         {
-          "rank": 9,
+          "rank": 10,
           "name": "Samantha Bennett",
           "handle": "@yarnbombcrochet",
           "platform": "Instagram",
           "points": 225
-        },
-        {
-          "rank": 10,
-          "name": "Christy P",
-          "handle": "@wuthering.reads",
-          "platform": "Instagram",
-          "points": 200
         }
       ]
     },
@@ -107,7 +107,7 @@
           "name": "Lilith Sylvia Daisy Mühlberg",
           "handle": "@lovelisyda",
           "platform": "Instagram",
-          "points": 150
+          "points": 225
         }
       ]
     }
