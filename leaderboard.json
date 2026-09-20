@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-20T22:04:51.186Z",
+  "updated": "2026-09-20T22:10:13.115Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 3250,
+  "crewTotal": 4350,
   "participants": 16,
   "regions": [
     {
@@ -22,66 +22,66 @@
         },
         {
           "rank": 2,
+          "name": "Christopher Varen",
+          "handle": "@chris.varen",
+          "platform": "Instagram",
+          "points": 550
+        },
+        {
+          "rank": 3,
           "name": "Clark Sweeney",
           "handle": "@grizspins",
           "platform": "Instagram",
           "points": 500
         },
         {
-          "rank": 3,
+          "rank": 4,
           "name": "Joshua Carroll",
           "handle": "@poppa_squatch",
           "platform": "Instagram",
-          "points": 400
-        },
-        {
-          "rank": 4,
-          "name": "Christopher Varen",
-          "handle": "@chris.varen",
-          "platform": "Instagram",
-          "points": 300
+          "points": 500
         },
         {
           "rank": 5,
           "name": "Shay Booth",
           "handle": "@what.shays.reading",
           "platform": "Instagram",
-          "points": 275
+          "points": 425
         },
         {
           "rank": 6,
+          "name": "Michelle Downing",
+          "handle": "@extraordinary_book_lover",
+          "platform": "Instagram",
+          "points": 275
+        },
+        {
+          "rank": 7,
           "name": "Whitney Bolitho",
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
           "points": 250
         },
         {
-          "rank": 7,
+          "rank": 8,
           "name": "Jay Rodriguez",
           "handle": "@jay.rodriguez621",
           "platform": "Instagram",
           "points": 225
         },
         {
-          "rank": 8,
-          "name": "Michelle Downing",
-          "handle": "@extraordinary_book_lover",
-          "platform": "Instagram",
-          "points": 125
-        },
-        {
           "rank": 9,
-          "name": "Christy P",
-          "handle": "@wuthering.reads",
-          "platform": "Instagram",
-          "points": 100
-        },
-        {
-          "rank": 10,
           "name": "Samantha Bennett",
           "handle": "@yarnbombcrochet",
           "platform": "Instagram",
-          "points": 75
+          "points": 225
+        },
+        {
+          "rank": 10,
+          "name": "Christy P",
+          "handle": "@wuthering.reads",
+          "platform": "Instagram",
+          "points": 200
         }
       ]
     },
