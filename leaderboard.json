@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-20T21:17:39.579Z",
+  "updated": "2026-09-20T21:22:44.254Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 550,
-  "participants": 7,
+  "crewTotal": 825,
+  "participants": 9,
   "regions": [
     {
       "key": "us",
@@ -11,49 +11,63 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 6,
+      "participants": 8,
       "top": [
         {
           "rank": 1,
+          "name": "Whitney Bolitho",
+          "handle": "@queen_0f_ink",
+          "platform": "Instagram",
+          "points": 250
+        },
+        {
+          "rank": 2,
           "name": "Jay Rodriguez",
           "handle": "@jay.rodriguez621",
           "platform": "Instagram",
           "points": 175
         },
         {
-          "rank": 2,
+          "rank": 3,
           "name": "Michelle Downing",
           "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
           "points": 100
         },
         {
-          "rank": 3,
+          "rank": 4,
           "name": "Shay Booth",
           "handle": "@what.shays.reading",
           "platform": "Instagram",
           "points": 75
         },
         {
-          "rank": 4,
+          "rank": 5,
           "name": "Christy P",
           "handle": "@wuthering.reads",
           "platform": "Instagram",
           "points": 50
         },
         {
-          "rank": 5,
+          "rank": 6,
           "name": "Michael Munoz",
           "handle": "@mikesbookstagram",
           "platform": "Instagram",
           "points": 50
         },
         {
-          "rank": 6,
-          "name": "Whitney Bolitho",
-          "handle": "@queen_0f_ink",
+          "rank": 7,
+          "name": "Alexander Murray",
+          "handle": "@words_by_alexander",
           "platform": "Instagram",
           "points": 50
+        },
+        {
+          "rank": 8,
+          "name": "Justin Romeo",
+          "handle": "@j.r.starq_author",
+          "platform": "Instagram",
+          "points": 25
         }
       ]
     },
