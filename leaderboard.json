@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-20T21:22:44.254Z",
+  "updated": "2026-09-20T22:04:51.186Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 825,
-  "participants": 9,
+  "crewTotal": 3250,
+  "participants": 16,
   "regions": [
     {
       "key": "us",
@@ -11,63 +11,77 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 8,
+      "participants": 15,
       "top": [
         {
           "rank": 1,
+          "name": "Brian Price",
+          "handle": "@featherandinkbooks",
+          "platform": "Instagram",
+          "points": 625
+        },
+        {
+          "rank": 2,
+          "name": "Clark Sweeney",
+          "handle": "@grizspins",
+          "platform": "Instagram",
+          "points": 500
+        },
+        {
+          "rank": 3,
+          "name": "Joshua Carroll",
+          "handle": "@poppa_squatch",
+          "platform": "Instagram",
+          "points": 400
+        },
+        {
+          "rank": 4,
+          "name": "Christopher Varen",
+          "handle": "@chris.varen",
+          "platform": "Instagram",
+          "points": 300
+        },
+        {
+          "rank": 5,
+          "name": "Shay Booth",
+          "handle": "@what.shays.reading",
+          "platform": "Instagram",
+          "points": 275
+        },
+        {
+          "rank": 6,
           "name": "Whitney Bolitho",
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
           "points": 250
         },
         {
-          "rank": 2,
+          "rank": 7,
           "name": "Jay Rodriguez",
           "handle": "@jay.rodriguez621",
           "platform": "Instagram",
-          "points": 175
+          "points": 225
         },
         {
-          "rank": 3,
+          "rank": 8,
           "name": "Michelle Downing",
           "handle": "@extraordinary_book_lover",
+          "platform": "Instagram",
+          "points": 125
+        },
+        {
+          "rank": 9,
+          "name": "Christy P",
+          "handle": "@wuthering.reads",
           "platform": "Instagram",
           "points": 100
         },
         {
-          "rank": 4,
-          "name": "Shay Booth",
-          "handle": "@what.shays.reading",
+          "rank": 10,
+          "name": "Samantha Bennett",
+          "handle": "@yarnbombcrochet",
           "platform": "Instagram",
           "points": 75
-        },
-        {
-          "rank": 5,
-          "name": "Christy P",
-          "handle": "@wuthering.reads",
-          "platform": "Instagram",
-          "points": 50
-        },
-        {
-          "rank": 6,
-          "name": "Michael Munoz",
-          "handle": "@mikesbookstagram",
-          "platform": "Instagram",
-          "points": 50
-        },
-        {
-          "rank": 7,
-          "name": "Alexander Murray",
-          "handle": "@words_by_alexander",
-          "platform": "Instagram",
-          "points": 50
-        },
-        {
-          "rank": 8,
-          "name": "Justin Romeo",
-          "handle": "@j.r.starq_author",
-          "platform": "Instagram",
-          "points": 25
         }
       ]
     },
@@ -93,7 +107,7 @@
           "name": "Lilith Sylvia Daisy Mühlberg",
           "handle": "@lovelisyda",
           "platform": "Instagram",
-          "points": 50
+          "points": 150
         }
       ]
     }
