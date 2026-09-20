@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T22:21:37.396Z",
+  "updated": "2026-09-20T22:24:46.347Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
   "crewTotal": 4975,
@@ -15,72 +15,82 @@
       "top": [
         {
           "rank": 1,
-          "name": "Brian Price",
+          "name": "Brian",
           "handle": "@featherandinkbooks",
           "platform": "Instagram",
+          "country": "United States",
           "points": 625
         },
         {
           "rank": 2,
-          "name": "Christopher Varen",
+          "name": "Christopher",
           "handle": "@chris.varen",
           "platform": "Instagram",
+          "country": "United States",
           "points": 550
         },
         {
           "rank": 3,
-          "name": "Clark Sweeney",
+          "name": "Clark",
           "handle": "@grizspins",
           "platform": "Instagram",
+          "country": "United States",
           "points": 500
         },
         {
           "rank": 4,
-          "name": "Joshua Carroll",
+          "name": "Joshua",
           "handle": "@poppa_squatch",
           "platform": "Instagram",
+          "country": "United States",
           "points": 500
         },
         {
           "rank": 5,
-          "name": "Shay Booth",
+          "name": "Shay",
           "handle": "@what.shays.reading",
           "platform": "Instagram",
+          "country": "United States",
           "points": 425
         },
         {
           "rank": 6,
-          "name": "Lizzie Berlin",
+          "name": "Lizzie",
           "handle": "@lizzieberlin",
-          "platform": "None",
+          "platform": "",
+          "country": "United States",
           "points": 400
         },
         {
           "rank": 7,
-          "name": "Michelle Downing",
+          "name": "Michelle",
           "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
+          "country": "United States",
           "points": 275
         },
         {
           "rank": 8,
-          "name": "Whitney Bolitho",
+          "name": "Whitney",
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
+          "country": "United States",
           "points": 250
         },
         {
           "rank": 9,
-          "name": "Jay Rodriguez",
+          "name": "Jay",
           "handle": "@jay.rodriguez621",
           "platform": "Instagram",
+          "country": "United States",
           "points": 225
         },
         {
           "rank": 10,
-          "name": "Samantha Bennett",
+          "name": "Samantha",
           "handle": "@yarnbombcrochet",
           "platform": "Instagram",
+          "country": "United States",
           "points": 225
         }
       ]
@@ -104,9 +114,10 @@
       "top": [
         {
           "rank": 1,
-          "name": "Lilith Sylvia Daisy Mühlberg",
+          "name": "Lilith",
           "handle": "@lovelisyda",
           "platform": "Instagram",
+          "country": "Other Country",
           "points": 225
         }
       ]
