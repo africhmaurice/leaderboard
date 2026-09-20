@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T19:50:22.300Z",
+  "updated": "2026-09-20T20:03:34.037Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
   "crewTotal": 0,
@@ -18,7 +18,7 @@
       "key": "uk",
       "label": "United Kingdom",
       "title": "United Kingdom",
-      "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
+      "note": "*The three U.K. Sky Pirates with the most points at the end of the hunt find the U.K. Treasure — revealed soon.",
       "treasure": true,
       "participants": 0,
       "top": []
