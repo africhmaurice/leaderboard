@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-20T22:24:46.347Z",
+  "updated": "2026-09-20T22:39:04.360Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 4975,
+  "crewTotal": 5600,
   "participants": 17,
   "regions": [
     {
@@ -19,7 +19,7 @@
           "handle": "@featherandinkbooks",
           "platform": "Instagram",
           "country": "United States",
-          "points": 625
+          "points": 675
         },
         {
           "rank": 2,
@@ -27,7 +27,7 @@
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 550
+          "points": 625
         },
         {
           "rank": 3,
@@ -35,7 +35,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 500
+          "points": 600
         },
         {
           "rank": 4,
@@ -43,47 +43,47 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 500
+          "points": 600
         },
         {
           "rank": 5,
-          "name": "Shay",
-          "handle": "@what.shays.reading",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 425
-        },
-        {
-          "rank": 6,
           "name": "Lizzie",
           "handle": "@lizzieberlin",
           "platform": "",
           "country": "United States",
-          "points": 400
+          "points": 450
+        },
+        {
+          "rank": 6,
+          "name": "Shay",
+          "handle": "@what.shays.reading",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 450
         },
         {
           "rank": 7,
-          "name": "Michelle",
-          "handle": "@extraordinary_book_lover",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 275
-        },
-        {
-          "rank": 8,
-          "name": "Whitney",
-          "handle": "@queen_0f_ink",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 250
-        },
-        {
-          "rank": 9,
           "name": "Jay",
           "handle": "@jay.rodriguez621",
           "platform": "Instagram",
           "country": "United States",
-          "points": 225
+          "points": 325
+        },
+        {
+          "rank": 8,
+          "name": "Michelle",
+          "handle": "@extraordinary_book_lover",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 325
+        },
+        {
+          "rank": 9,
+          "name": "Whitney",
+          "handle": "@queen_0f_ink",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 300
         },
         {
           "rank": 10,
@@ -117,8 +117,8 @@
           "name": "Lilith",
           "handle": "@lovelisyda",
           "platform": "Instagram",
-          "country": "Other Country",
-          "points": 225
+          "country": "Estonia",
+          "points": 250
         }
       ]
     }
