@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-20T22:39:04.360Z",
+  "updated": "2026-09-21T00:13:17.619Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 5600,
-  "participants": 17,
+  "crewTotal": 5700,
+  "participants": 18,
   "regions": [
     {
       "key": "us",
@@ -11,7 +11,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 16,
+      "participants": 17,
       "top": [
         {
           "rank": 1,
@@ -87,11 +87,11 @@
         },
         {
           "rank": 10,
-          "name": "Samantha",
-          "handle": "@yarnbombcrochet",
+          "name": "Christy",
+          "handle": "@wuthering.reads",
           "platform": "Instagram",
           "country": "United States",
-          "points": 225
+          "points": 250
         }
       ]
     },
