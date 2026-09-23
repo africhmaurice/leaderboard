@@ -20,10 +20,14 @@
 html,body{margin:0;padding:0}
 body{
   font-family:'Almarai',sans-serif;color:#fff;-webkit-font-smoothing:antialiased;
-  background:linear-gradient(rgba(193,51,10,.9),rgba(193,51,10,.9)),url('leaderboard-bg.jpg') center/cover;
   background-color:var(--rust);
+  position:relative;isolation:isolate;
   min-height:100vh;padding:clamp(72px,10.5vw,158px) clamp(16px,4vw,32px) clamp(44px,6vw,90px);
 }
+/* Parallax: the artwork sits on its own layer; the host page reports its scroll position (see the message listener below). */
+.bgbox{position:absolute;inset:0;overflow:hidden;z-index:-2;pointer-events:none}
+.bgfx{position:absolute;left:0;right:0;top:-20%;height:140%;background:url('leaderboard-bg.jpg') center/cover;z-index:-2;will-change:transform}
+.bgwash{position:absolute;inset:0;background:rgba(193,51,10,.9);z-index:-1}
 .head{text-align:center;margin:0 auto clamp(30px,4vw,44px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',cursive;font-size:clamp(24px,3.5vw,44px);color:var(--peach);margin:0 0 14px}
 h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,130px);line-height:1.05;color:#fff;margin:0}
@@ -64,6 +68,15 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
 </style>
 </head>
 <body>
+<div class="bgbox" aria-hidden="true"><div class="bgfx"></div></div><div class="bgwash" aria-hidden="true"></div>
+<script>
+(function(){
+  var fx=document.querySelector('.bgfx'); if(!fx||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+  window.addEventListener('message',function(e){var d=e.data&&e.data.thScroll;if(!d)return;var h=document.body.offsetHeight;
+    var s=(d.vh/2-(d.top+h/2))*0.25, lim=h*0.18; s=Math.max(-lim,Math.min(lim,s));
+    fx.style.transform='translate3d(0,'+(-s).toFixed(1)+'px,0)';});
+})();
+</script>
 <header class="head">
   <p class="eyebrow">The Leaderboard</p>
   <h1>Top 10 Sky Pirates</h1>
