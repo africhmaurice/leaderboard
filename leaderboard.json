@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-23T01:40:30.272Z",
+  "updated": "2026-09-23T01:56:19.741Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 20125,
-  "participants": 56,
+  "crewTotal": 20500,
+  "participants": 57,
   "regions": [
     {
       "key": "us",
@@ -11,7 +11,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 48,
+      "participants": 49,
       "top": [
         {
           "rank": 1,
@@ -19,7 +19,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1100
+          "points": 1150
         },
         {
           "rank": 2,
@@ -27,20 +27,20 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1075
+          "points": 1125
         },
         {
           "rank": 3,
-          "name": "Brian",
-          "handle": "@featherandinkbooks",
+          "name": "Michelle",
+          "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1025
+          "points": 1100
         },
         {
           "rank": 4,
-          "name": "Michelle",
-          "handle": "@extraordinary_book_lover",
+          "name": "Brian",
+          "handle": "@featherandinkbooks",
           "platform": "Instagram",
           "country": "United States",
           "points": 1025
@@ -105,19 +105,19 @@
       "top": [
         {
           "rank": 1,
-          "name": "Mina",
-          "handle": "@dearthedays",
+          "name": "jakub",
+          "handle": "@jacob112360",
           "platform": "Instagram",
           "country": "United Kingdom",
           "points": 475
         },
         {
           "rank": 2,
-          "name": "jakub",
-          "handle": "@jacob112360",
+          "name": "Mina",
+          "handle": "@dearthedays",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 450
+          "points": 475
         },
         {
           "rank": 3,
