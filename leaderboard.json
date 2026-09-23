@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-23T15:59:26.283Z",
+  "updated": "2026-09-23T20:13:47.392Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 24075,
-  "entries": 550,
-  "participants": 59,
+  "crewTotal": 24950,
+  "entries": 572,
+  "participants": 60,
   "regions": [
     {
       "key": "us",
@@ -12,7 +12,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 51,
+      "participants": 52,
       "top": [
         {
           "rank": 1,
@@ -20,7 +20,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1400
+          "points": 1500
         },
         {
           "rank": 2,
@@ -28,7 +28,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1375
+          "points": 1475
         },
         {
           "rank": 3,
@@ -68,7 +68,7 @@
           "handle": "@vintage_book_journal",
           "platform": "Instagram",
           "country": "United States",
-          "points": 800
+          "points": 900
         },
         {
           "rank": 8,
@@ -76,23 +76,23 @@
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 775
+          "points": 825
         },
         {
           "rank": 9,
+          "name": "Neil",
+          "handle": "@neilthebookguy",
+          "platform": "TikTok",
+          "country": "United States",
+          "points": 725
+        },
+        {
+          "rank": 10,
           "name": "Ashton",
           "handle": "@readersquadrant_bookart",
           "platform": "Instagram",
           "country": "United States",
           "points": 675
-        },
-        {
-          "rank": 10,
-          "name": "Matt",
-          "handle": "@4eyedgoonie",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 650
         }
       ]
     },
@@ -126,7 +126,7 @@
           "handle": "@dearthedays",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 550
+          "points": 575
         },
         {
           "rank": 4,
@@ -156,6 +156,14 @@
       "top": [
         {
           "rank": 1,
+          "name": "Lilith",
+          "handle": "@lovelisyda",
+          "platform": "Instagram",
+          "country": "Estonia",
+          "points": 925
+        },
+        {
+          "rank": 2,
           "name": "Becky",
           "handle": "@becks.and.books",
           "platform": "TikTok",
@@ -163,20 +171,12 @@
           "points": 800
         },
         {
-          "rank": 2,
-          "name": "Lilith",
-          "handle": "@lovelisyda",
-          "platform": "Instagram",
-          "country": "Estonia",
-          "points": 675
-        },
-        {
           "rank": 3,
           "name": "Chrystal",
           "handle": "",
           "platform": "",
           "country": "Canada",
-          "points": 350
+          "points": 400
         }
       ]
     }
