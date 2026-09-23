@@ -26,8 +26,12 @@ body{
 }
 /* Fixed-style background: the artwork sits on its own layer, moved to stay in view (see the script after <body>). */
 .bgbox{position:absolute;inset:0;overflow:hidden;z-index:-2;pointer-events:none}
-.bgfx{position:absolute;left:0;right:0;top:0;height:100%;background:url('leaderboard-bg-storm.webp') center/cover;z-index:-2;will-change:transform}
+.bgfx{position:absolute;inset:0;background:url('leaderboard-bg-storm.webp') center/cover}
 .bgwash{position:absolute;inset:0;background:rgba(193,51,10,.9);z-index:-1}
+/* Embedded on mauriceafrich.com (?embed=1): the host page paints the artwork as a real fixed background behind this
+   transparent frame, exactly like the Hunt page sections. Standalone visits keep their own artwork layer. */
+html.embedded,html.embedded body{background:transparent!important}
+html.embedded .bgbox{display:none}
 .head{text-align:center;margin:0 auto clamp(30px,4vw,44px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',cursive;font-size:clamp(24px,3.5vw,44px);color:var(--peach);margin:0 0 14px}
 h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,130px);line-height:1.05;color:#fff;margin:0}
@@ -68,23 +72,8 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
 </style>
 </head>
 <body>
+<script>if(window.parent!==window&&/[?&]embed=1/.test(location.search))document.documentElement.classList.add('embedded');</script>
 <div class="bgbox" aria-hidden="true"><div class="bgfx"></div></div><div class="bgwash" aria-hidden="true"></div>
-<script>
-(function(){
-  // Matches the Hunt page's fixed backgrounds: the artwork holds still in the visitor's window while the board
-  // scrolls over it. The host page reports where the frame sits (see pages/leaderboard.html in mauriceafrich-site).
-  // 900px and narrower (and touch screens) get a plain scrolling background, same as the Hunt page.
-  var fx=document.querySelector('.bgfx'); if(!fx) return;
-  function still(){ return window.innerWidth<=900 || (window.matchMedia&&matchMedia('(hover: none)').matches); }
-  function reset(){ fx.style.top='0'; fx.style.height='100%'; fx.style.transform='none'; }
-  reset();
-  window.addEventListener('message',function(e){var d=e.data&&e.data.thScroll;if(!d)return;
-    if(still()){reset();return;}
-    var h=document.body.offsetHeight, y=Math.max(0,Math.min(h-d.vh,-d.top));
-    fx.style.top='0'; fx.style.height=d.vh+'px'; fx.style.transform='translate3d(0,'+y.toFixed(1)+'px,0)';});
-  window.addEventListener('resize',function(){ if(still()) reset(); });
-})();
-</script>
 <header class="head">
   <p class="eyebrow">The Leaderboard</p>
   <h1>Top 10 Sky Pirates</h1>
