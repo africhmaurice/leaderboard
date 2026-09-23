@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-23T20:24:16.503Z",
+  "updated": "2026-09-23T23:12:11.417Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 25475,
-  "entries": 588,
+  "crewTotal": 26225,
+  "entries": 603,
   "participants": 60,
   "regions": [
     {
@@ -20,7 +20,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1500
+          "points": 1550
         },
         {
           "rank": 2,
@@ -28,7 +28,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1475
+          "points": 1525
         },
         {
           "rank": 3,
@@ -36,7 +36,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1425
+          "points": 1475
         },
         {
           "rank": 4,
@@ -44,7 +44,7 @@
           "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1175
+          "points": 1275
         },
         {
           "rank": 5,
@@ -52,7 +52,7 @@
           "handle": "@featherandinkbooks",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1025
+          "points": 1175
         },
         {
           "rank": 6,
@@ -68,23 +68,23 @@
           "handle": "@vintage_book_journal",
           "platform": "Instagram",
           "country": "United States",
-          "points": 925
+          "points": 975
         },
         {
           "rank": 8,
-          "name": "Christopher",
-          "handle": "@chris.varen",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 850
-        },
-        {
-          "rank": 9,
           "name": "Neil",
           "handle": "@neilthebookguy",
           "platform": "TikTok",
           "country": "United States",
-          "points": 775
+          "points": 975
+        },
+        {
+          "rank": 9,
+          "name": "Christopher",
+          "handle": "@chris.varen",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 900
         },
         {
           "rank": 10,
