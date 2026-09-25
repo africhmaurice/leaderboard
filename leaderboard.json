@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-24T21:11:38.827Z",
+  "updated": "2026-09-25T00:13:52.570Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 35950,
-  "entries": 807,
-  "participants": 68,
+  "crewTotal": 39285,
+  "entries": 889,
+  "participants": 70,
   "regions": [
     {
       "key": "us",
@@ -12,7 +12,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 57,
+      "participants": 58,
       "top": [
         {
           "rank": 1,
@@ -20,7 +20,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 2000
+          "points": 2115
         },
         {
           "rank": 2,
@@ -28,7 +28,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 2000
+          "points": 2065
         },
         {
           "rank": 3,
@@ -36,23 +36,23 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1875
+          "points": 1940
         },
         {
           "rank": 4,
-          "name": "Michelle",
-          "handle": "@extraordinary_book_lover",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 1675
-        },
-        {
-          "rank": 5,
           "name": "Christopher",
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1550
+          "points": 1865
+        },
+        {
+          "rank": 5,
+          "name": "Michelle",
+          "handle": "@extraordinary_book_lover",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 1775
         },
         {
           "rank": 6,
@@ -68,23 +68,23 @@
           "handle": "@vintage_book_journal",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1225
+          "points": 1315
         },
         {
           "rank": 8,
-          "name": "Whitney",
-          "handle": "@queen_0f_ink",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 1150
-        },
-        {
-          "rank": 9,
           "name": "Ashton",
           "handle": "@readersquadrant_bookart",
           "platform": "Instagram",
           "country": "United States",
-          "points": 1125
+          "points": 1190
+        },
+        {
+          "rank": 9,
+          "name": "Whitney",
+          "handle": "@queen_0f_ink",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 1175
         },
         {
           "rank": 10,
@@ -92,7 +92,7 @@
           "handle": "@neilthebookguy",
           "platform": "TikTok",
           "country": "United States",
-          "points": 1050
+          "points": 1100
         }
       ]
     },
@@ -110,7 +110,7 @@
           "handle": "@dearthedays",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 1225
+          "points": 1390
         },
         {
           "rank": 2,
@@ -118,7 +118,7 @@
           "handle": "@spine.breakerbooks",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 1175
+          "points": 1325
         },
         {
           "rank": 3,
@@ -126,7 +126,7 @@
           "handle": "@jacob112360",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 975
+          "points": 1040
         },
         {
           "rank": 4,
@@ -152,7 +152,7 @@
       "title": "Other Countries",
       "note": "*The Treasure can only be found by U.S. and U.K. Residents. Everyone else hunts for the glory — and every point still unlocks rewards for the whole crew.",
       "treasure": false,
-      "participants": 4,
+      "participants": 5,
       "top": [
         {
           "rank": 1,
@@ -160,7 +160,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 1300
+          "points": 1415
         },
         {
           "rank": 2,
@@ -176,10 +176,18 @@
           "handle": "",
           "platform": "",
           "country": "Canada",
-          "points": 700
+          "points": 915
         },
         {
           "rank": 4,
+          "name": "Ryan",
+          "handle": "@ryan_reads_big_books",
+          "platform": "Instagram",
+          "country": "Canada",
+          "points": 250
+        },
+        {
+          "rank": 5,
           "name": "Vivian",
           "handle": "@readysteadynovel",
           "platform": "Instagram",
