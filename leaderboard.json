@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-25T16:18:10.582Z",
+  "updated": "2026-09-25T16:35:10.060Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 45930,
-  "entries": 1058,
-  "participants": 73,
+  "crewTotal": 46680,
+  "entries": 1079,
+  "participants": 74,
   "regions": [
     {
       "key": "us",
@@ -12,7 +12,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 60,
+      "participants": 61,
       "top": [
         {
           "rank": 1,
@@ -28,15 +28,15 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 2255
+          "points": 2305
         },
         {
           "rank": 3,
-          "name": "Clark",
-          "handle": "@grizspins",
+          "name": "Michelle",
+          "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
           "country": "United States",
-          "points": 2130
+          "points": 2155
         },
         {
           "rank": 4,
@@ -44,15 +44,15 @@
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 2105
+          "points": 2130
         },
         {
           "rank": 5,
-          "name": "Michelle",
-          "handle": "@extraordinary_book_lover",
+          "name": "Clark",
+          "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 2080
+          "points": 2130
         },
         {
           "rank": 6,
@@ -72,6 +72,14 @@
         },
         {
           "rank": 8,
+          "name": "Tyler",
+          "handle": "@tylers_bookshelf",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 1405
+        },
+        {
+          "rank": 9,
           "name": "Brian",
           "handle": "@featherandinkbooks",
           "platform": "Instagram",
@@ -79,18 +87,10 @@
           "points": 1325
         },
         {
-          "rank": 9,
+          "rank": 10,
           "name": "Neil",
           "handle": "@neilthebookguy",
           "platform": "TikTok",
-          "country": "United States",
-          "points": 1305
-        },
-        {
-          "rank": 10,
-          "name": "Tyler",
-          "handle": "@tylers_bookshelf",
-          "platform": "Instagram",
           "country": "United States",
           "points": 1305
         }
