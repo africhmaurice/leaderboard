@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-29T01:32:16.466Z",
+  "updated": "2026-09-29T02:11:16.260Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 132945,
-  "entries": 2448,
+  "crewTotal": 132495,
+  "entries": 2454,
   "participants": 208,
   "reveals": [
     {
@@ -26,7 +26,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 4755
+          "points": 4830
         },
         {
           "rank": 2,
@@ -34,7 +34,7 @@
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 4675
+          "points": 4625
         },
         {
           "rank": 3,
@@ -42,7 +42,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 4535
+          "points": 4585
         },
         {
           "rank": 4,
@@ -50,7 +50,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 4475
+          "points": 4550
         },
         {
           "rank": 5,
@@ -66,7 +66,7 @@
           "handle": "@brandibuystoomanybooks",
           "platform": "Instagram",
           "country": "United States",
-          "points": 3875
+          "points": 3800
         },
         {
           "rank": 7,
@@ -86,19 +86,19 @@
         },
         {
           "rank": 9,
-          "name": "Devin",
-          "handle": "@vintage_book_journal",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 3385
-        },
-        {
-          "rank": 10,
           "name": "Kate",
           "handle": "@redhead_reader",
           "platform": "Instagram",
           "country": "United States",
-          "points": 3355
+          "points": 3405
+        },
+        {
+          "rank": 10,
+          "name": "Ashton",
+          "handle": "@readersquadrant_bookart",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 3400
         }
       ]
     },
@@ -140,7 +140,7 @@
           "handle": "@jamesthorneauthor",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 1790
+          "points": 1665
         },
         {
           "rank": 5,
@@ -156,7 +156,7 @@
           "handle": "@joshthebookbloke",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 890
+          "points": 790
         },
         {
           "rank": 7,
@@ -206,7 +206,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 4175
+          "points": 3950
         },
         {
           "rank": 2,
@@ -222,7 +222,7 @@
           "handle": "",
           "platform": "",
           "country": "Canada",
-          "points": 3175
+          "points": 3150
         },
         {
           "rank": 4,
