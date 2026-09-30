@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-30T00:36:37.906Z",
+  "updated": "2026-09-30T01:09:18.749Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 185795,
+  "crewTotal": 185845,
   "entries": 3063,
   "participants": 234,
   "reveals": [
@@ -94,11 +94,11 @@
         },
         {
           "rank": 10,
-          "name": "Theresa",
-          "handle": "@earlybirdbooks",
-          "platform": "TikTok",
+          "name": "Kate",
+          "handle": "@redhead_reader",
+          "platform": "Instagram",
           "country": "United States",
-          "points": 4375
+          "points": 4405
         }
       ]
     },
