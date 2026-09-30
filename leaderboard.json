@@ -1,10 +1,14 @@
 {
-  "updated": "2026-09-30T16:45:01.892Z",
+  "updated": "2026-09-30T22:57:10.572Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 197355,
-  "entries": 3293,
-  "participants": 243,
+  "crewTotal": 202385,
+  "acts": {
+    "two": 0,
+    "three": 0
+  },
+  "entries": 3396,
+  "participants": 252,
   "reveals": [
     {
       "at": 125000,
@@ -18,7 +22,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 201,
+      "participants": 209,
       "top": [
         {
           "rank": 1,
@@ -26,7 +30,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 7810
+          "points": 7910
         },
         {
           "rank": 2,
@@ -34,7 +38,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 7340
+          "points": 7540
         },
         {
           "rank": 3,
@@ -50,7 +54,7 @@
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 7005
+          "points": 7155
         },
         {
           "rank": 5,
@@ -58,7 +62,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 6480
+          "points": 6680
         },
         {
           "rank": 6,
@@ -66,7 +70,7 @@
           "handle": "@brandibuystoomanybooks",
           "platform": "Instagram",
           "country": "United States",
-          "points": 5930
+          "points": 6030
         },
         {
           "rank": 7,
@@ -74,7 +78,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 5330
+          "points": 5380
         },
         {
           "rank": 8,
@@ -86,19 +90,19 @@
         },
         {
           "rank": 9,
+          "name": "Neil",
+          "handle": "@neilthebookguy",
+          "platform": "TikTok",
+          "country": "United States",
+          "points": 4850
+        },
+        {
+          "rank": 10,
           "name": "Kate",
           "handle": "@redhead_reader",
           "platform": "Instagram",
           "country": "United States",
           "points": 4770
-        },
-        {
-          "rank": 10,
-          "name": "Neil",
-          "handle": "@neilthebookguy",
-          "platform": "TikTok",
-          "country": "United States",
-          "points": 4750
         }
       ]
     },
@@ -116,7 +120,7 @@
           "handle": "@spine.breakerbooks",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 6265
+          "points": 6690
         },
         {
           "rank": 2,
@@ -124,7 +128,7 @@
           "handle": "@dearthedays",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 5505
+          "points": 5705
         },
         {
           "rank": 3,
@@ -132,7 +136,7 @@
           "handle": "@jacob112360",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 5205
+          "points": 5555
         },
         {
           "rank": 4,
@@ -140,7 +144,7 @@
           "handle": "@jamesthorneauthor",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 3820
+          "points": 3870
         },
         {
           "rank": 5,
@@ -198,7 +202,7 @@
       "title": "Other Countries",
       "note": "*The Treasure can only be found by U.S. and U.K. Residents. Everyone else hunts for the glory — and every point still unlocks rewards for the whole crew.",
       "treasure": false,
-      "participants": 20,
+      "participants": 21,
       "top": [
         {
           "rank": 1,
@@ -206,7 +210,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 5480
+          "points": 5580
         },
         {
           "rank": 2,
@@ -214,7 +218,7 @@
           "handle": "@ryan_reads_big_books",
           "platform": "Instagram",
           "country": "Canada",
-          "points": 4500
+          "points": 4550
         },
         {
           "rank": 3,
