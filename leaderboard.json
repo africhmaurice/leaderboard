@@ -1,14 +1,14 @@
 {
-  "updated": "2026-10-01T00:22:29.024Z",
+  "updated": "2026-10-01T04:04:10.632Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 203035,
+  "crewTotal": 205940,
   "acts": {
-    "two": 3035,
+    "two": 5940,
     "three": 0
   },
-  "entries": 3409,
-  "participants": 253,
+  "entries": 3455,
+  "participants": 254,
   "reveals": [
     {
       "at": 125000,
@@ -22,7 +22,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 210,
+      "participants": 211,
       "top": [
         {
           "rank": 1,
@@ -38,10 +38,18 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 7540
+          "points": 7640
         },
         {
           "rank": 3,
+          "name": "Christopher",
+          "handle": "@chris.varen",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 7505
+        },
+        {
+          "rank": 4,
           "name": "Michelle",
           "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
@@ -49,20 +57,12 @@
           "points": 7290
         },
         {
-          "rank": 4,
-          "name": "Christopher",
-          "handle": "@chris.varen",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 7155
-        },
-        {
           "rank": 5,
           "name": "Katie",
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 6680
+          "points": 6830
         },
         {
           "rank": 6,
@@ -70,7 +70,7 @@
           "handle": "@brandibuystoomanybooks",
           "platform": "Instagram",
           "country": "United States",
-          "points": 6030
+          "points": 6330
         },
         {
           "rank": 7,
@@ -78,31 +78,31 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 5380
+          "points": 5530
         },
         {
           "rank": 8,
-          "name": "Ashton",
-          "handle": "@readersquadrant_bookart",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 4855
-        },
-        {
-          "rank": 9,
           "name": "Neil",
           "handle": "@neilthebookguy",
           "platform": "TikTok",
           "country": "United States",
-          "points": 4850
+          "points": 4950
         },
         {
-          "rank": 10,
+          "rank": 9,
           "name": "Kate",
           "handle": "@redhead_reader",
           "platform": "Instagram",
           "country": "United States",
-          "points": 4770
+          "points": 4870
+        },
+        {
+          "rank": 10,
+          "name": "Ashton",
+          "handle": "@readersquadrant_bookart",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 4865
         }
       ]
     },
