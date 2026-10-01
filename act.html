@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Act Standings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+/* Act standings (Maurice, 2026-10-01): the leaderboard's layout with everything on the daily standings card.
+   ?act=one|two|three picks the act and its color: Act One violet, Act Two green, Act Three red.
+   Each act starts every player at zero; the main leaderboard keeps the overall totals. */
+@font-face{font-family:'Atomic Marker';src:url('https://static1.squarespace.com/static/68f0178dd88a7e52ec46ae7e/t/6aa9db35bc4f704c9378c402/1789516598919/Set+Sail+Studios+-+Atomic+Marker+Regular.otf') format('opentype');font-display:block}
+:root{--ink:#111;--forest:#1b3b15;--moss:#607667;--rule:rgba(27,59,21,.2);
+  --base:#482d85;--wash:rgba(72,45,133,.9);--hi:#7b4ee1;--soft:#c3a6ff;--deep:#2d1c53}
+html[data-act="two"]{--base:#1a5e41;--wash:rgba(26,94,65,.9);--hi:#268e62;--soft:#89fbcb;--deep:#0f3a27}
+html[data-act="three"]{--base:#c1330a;--wash:rgba(193,51,10,.9);--hi:#d13d0e;--soft:#ffd9c4;--deep:#912501}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Almarai',sans-serif;color:#fff;-webkit-font-smoothing:antialiased;background-color:var(--base);position:relative;isolation:isolate;
+  min-height:100vh;padding:clamp(72px,10.5vw,158px) clamp(16px,4vw,32px) clamp(44px,6vw,90px)}
+.bgbox{position:absolute;inset:0;overflow:hidden;z-index:-2;pointer-events:none}
+.bgfx{position:absolute;inset:0;background:url('leaderboard-bg-storm.webp') center/cover}
+.bgwash{position:absolute;inset:0;background:var(--wash);z-index:-1}
+html.embedded,html.embedded body{background:transparent!important}
+html.embedded .bgbox,html.embedded .bgwash{display:none}
+.head{text-align:center;margin:0 auto clamp(26px,3.5vw,40px);max-width:1000px}
+.eyebrow{font-family:'Atomic Marker',cursive;font-size:clamp(24px,3.5vw,44px);line-height:1.2;letter-spacing:.03em;color:var(--soft);margin:0 0 14px}
+h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,8vw,120px);line-height:1.2;letter-spacing:.03em;color:#fff;margin:0}
+.when{font-weight:800;font-size:clamp(13px,1.5vw,16px);letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:16px 0 0}
+.wrap{max-width:1000px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.6vw,16px);margin:0 0 clamp(12px,1.6vw,16px)}
+.stat{background:rgba(255,255,255,.92);color:var(--ink);padding:clamp(16px,2.4vw,24px) 12px;text-align:center}
+.stat b{display:block;font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.2;letter-spacing:.03em;color:var(--hi)}
+.stat span{display:block;font-weight:700;font-size:clamp(11px,1.2vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--moss);margin-top:8px}
+.prog{background:rgba(255,255,255,.92);color:var(--ink);padding:clamp(16px,2.4vw,24px) clamp(18px,2.8vw,28px);margin:0 0 clamp(26px,3.5vw,40px)}
+.prog-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px}
+.prog-top b{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(24px,3vw,34px);line-height:1.2;letter-spacing:.03em}
+.prog-top i{font-style:normal;font-family:'Atomic Marker',cursive;font-size:clamp(26px,3.2vw,38px);line-height:1.2;letter-spacing:.03em;color:var(--hi)}
+.bar{height:26px;background:#e5e5e5;position:relative;overflow:hidden}
+.bar>div{position:absolute;inset:0 auto 0 0;width:0;background:var(--base);transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.bar u{position:absolute;top:0;bottom:0;width:2px;background:rgba(0,0,0,.18)}
+.prog-foot{font-family:'Atomic Marker',cursive;font-size:clamp(17px,2vw,22px);line-height:1.3;letter-spacing:.03em;margin:12px 0 0}
+.prog-foot em{font-style:normal;color:var(--hi)}
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:0 0 clamp(22px,3vw,32px)}
+.tabs button{font-family:'Almarai',sans-serif;font-weight:700;font-size:clamp(13px,1.5vw,15px);letter-spacing:.08em;cursor:pointer;color:#fff;background:rgba(12,26,8,.35);border:2px solid #f3ead9;padding:11px clamp(14px,2.6vw,24px);transition:transform .15s ease,background .15s ease,color .15s ease}
+.tabs button:hover{transform:scale(1.04)}
+.tabs button[aria-selected="true"]{background:#f3ead9;color:var(--base)}
+.tabs button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.panel{background:rgba(255,255,255,.92);color:var(--ink);padding:clamp(22px,4vw,48px) clamp(16px,3.5vw,44px) clamp(24px,3.5vw,40px)}
+.region{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(28px,3.6vw,44px);line-height:1.2;letter-spacing:.04em;text-align:center;margin:0 0 8px}
+.meta{font-size:14px;color:var(--moss);text-align:center;margin:0 0 clamp(20px,3vw,30px);min-height:1.2em}
+.board{margin:0;padding:0;list-style:none}
+.hrow,.row{display:grid;grid-template-columns:clamp(44px,6vw,72px) minmax(0,1.1fr) minmax(0,1.5fr) minmax(0,1fr) clamp(88px,11vw,132px);align-items:center;gap:clamp(10px,2vw,22px)}
+.hrow{font-weight:700;font-size:clamp(11px,1.3vw,13px);letter-spacing:.08em;text-transform:uppercase;color:var(--moss);padding:0 clamp(6px,1.4vw,14px) 12px;border-bottom:2px solid var(--deep)}
+.row{padding:clamp(12px,1.8vw,17px) clamp(6px,1.4vw,14px);border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.rank{font-family:'Atomic Marker',cursive;font-size:clamp(26px,3.6vw,40px);line-height:1.2;color:var(--forest);text-align:center}
+.row.top3 .rank{color:var(--hi)}
+.name{font-weight:800;font-size:clamp(15px,2vw,20px);line-height:1.3;overflow-wrap:anywhere}
+.handle{font-size:clamp(13px,1.7vw,17px);line-height:1.3;color:var(--forest);overflow-wrap:anywhere}
+.handle em{font-style:normal;font-size:clamp(11px,1.3vw,13px);font-weight:700;letter-spacing:.04em;color:var(--moss);white-space:nowrap}
+.country{font-size:clamp(12px,1.5vw,16px);line-height:1.3;color:var(--forest);overflow-wrap:anywhere}
+.pts{font-family:'Atomic Marker',cursive;font-size:clamp(24px,3.2vw,38px);line-height:1.2;color:var(--hi);text-align:right;white-space:nowrap}
+.pts small{font-family:'Almarai',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;color:var(--moss);margin-left:5px}
+.empty{text-align:center;padding:clamp(30px,5vw,54px) 16px;color:var(--moss);font-weight:700;font-size:clamp(14px,1.5vw,17px);letter-spacing:.05em;line-height:1.6}
+.note{font-weight:700;font-size:clamp(13px,1.4vw,15px);letter-spacing:.05em;line-height:1.6;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.35);text-align:center;margin:clamp(22px,3vw,32px) auto 0;max-width:780px}
+.note a{color:var(--soft)}
+@media (max-width:620px){
+  .stats{grid-template-columns:1fr}
+  .hrow,.row{grid-template-columns:clamp(34px,10vw,48px) minmax(0,1fr) clamp(70px,20vw,96px);gap:10px;row-gap:2px;align-items:start}
+  .hrow .h-handle,.hrow .h-country{display:none}
+  .row .handle{grid-column:2;grid-row:2}
+  .row .country{grid-column:2;grid-row:3;font-size:13px;color:var(--moss)}
+  .row .rank,.row .pts{align-self:center}
+  .pts small{display:none}
+}
+</style>
+</head>
+<body>
+<script>
+(function () {
+  var act = (location.search.match(/[?&]act=(one|two|three)/i) || [])[1] || 'two';
+  document.documentElement.setAttribute('data-act', act.toLowerCase());
+  if (window.parent !== window && /[?&]embed=1/.test(location.search)) document.documentElement.classList.add('embedded');
+})();
+</script>
+<div class="bgbox" aria-hidden="true"><div class="bgfx"></div></div><div class="bgwash" aria-hidden="true"></div>
+<header class="head">
+  <p class="eyebrow">The Treasure Hunt</p>
+  <h1 id="title">Act Standings</h1>
+  <p class="when" id="when"></p>
+</header>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b id="s-pts">0</b><span id="s-pts-l">Crew Points</span></div>
+    <div class="stat"><b id="s-ent">0</b><span id="s-ent-l">Sweepstakes Entries</span></div>
+    <div class="stat"><b id="s-crew">0</b><span>Sky Pirates</span></div>
+  </div>
+  <div class="prog">
+    <div class="prog-top"><b id="bar-title">Progress</b><i id="pct">0%</i></div>
+    <div class="bar" id="bar"><div id="fill"></div></div>
+    <p class="prog-foot" id="foot"></p>
+  </div>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Leaderboard region"></div>
+  <main class="panel">
+    <h2 class="region" id="region"></h2>
+    <p class="meta" id="meta" aria-live="polite"></p>
+    <div class="hrow" aria-hidden="true"><span>Rank</span><span>Name</span><span class="h-handle">Handle</span><span class="h-country">Country</span><span style="text-align:right">Points</span></div>
+    <ol class="board" id="board"></ol>
+  </main>
+  <p class="note" id="note"></p>
+</div>
+<script>
+(function () {
+  var ACT = document.documentElement.getAttribute('data-act');
+  // Keep in step with the Hunt page: Act One's goal and its reward marks; Act Two's tiers (scripts/act-two-rewards.cjs).
+  var ACTS = {
+    one: { key: 'actOne', name: 'Act One', dates: 'September 21 to September 30', goal: 40000, marks: [8000, 16000, 24000, 30000, 32000] },
+    two: { key: 'actTwo', name: 'Act Two', dates: 'October 1 to October 15', goal: 200000, marks: [50000, 80000, 120000, 150000] },
+    three: { key: 'actThree', name: 'Act Three', dates: 'October 16 to November 1', goal: 200000, marks: [] }
+  };
+  var A = ACTS[ACT];
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (n) { return Number(n || 0).toLocaleString('en-US'); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var data = null, current = null;
+  document.title = A.name + ' Standings';
+  $('title').textContent = A.name + ' Standings';
+  $('bar-title').textContent = A.name + ' Progress';
+  $('s-pts-l').textContent = A.name + ' Crew Points';
+  $('s-ent-l').textContent = A.name + ' Entries';
+  $('bar').insertAdjacentHTML('beforeend', A.marks.map(function (m) { return '<u style="left:' + (m / A.goal * 100) + '%"></u>'; }).join(''));
+  function reportHeight() { if (window.parent !== window) window.parent.postMessage({ thLeaderboardHeight: document.documentElement.scrollHeight }, '*'); }
+
+  function render() {
+    var d = data[A.key];
+    var over = ACT === 'one' || Date.now() >= Date.parse(ACT === 'two' ? '2026-10-16T00:00:00-04:00' : '2026-11-02T00:00:00-05:00');
+    if (!d) {
+      $('when').textContent = A.dates;
+      $('board').innerHTML = '<li class="empty">' + A.name + ' hasn’t started yet. Every sky pirate starts it at zero.</li>';
+      $('tabs').style.display = 'none'; reportHeight(); return;
+    }
+    $('when').textContent = A.dates + (over ? ' · Final' : '');
+    $('s-pts').textContent = fmt(d.crewPoints);
+    $('s-ent').textContent = fmt(d.entries);
+    $('s-crew').textContent = fmt(d.participants);
+    var pct = Math.min(100, d.crewPoints / A.goal * 100);
+    $('pct').textContent = pct.toFixed(1) + '%';
+    requestAnimationFrame(function () { $('fill').style.width = pct + '%'; });
+    var next = A.marks.concat(A.goal).filter(function (m) { return d.crewPoints < m; })[0];
+    $('foot').innerHTML = ACT === 'one'
+      ? 'Every Act One reward and bonus unlocked: <em>' + fmt(d.crewPoints) + '</em> points'
+      : next ? 'Next reward: <em>' + fmt(d.crewPoints) + '</em> / ' + fmt(next) : 'Every ' + A.name + ' reward unlocked: <em>' + fmt(d.crewPoints) + '</em>';
+    var regions = d.regions || [];
+    if (!current || !regions.some(function (r) { return r.key === current; })) current = (regions[0] || {}).key;
+    var tabs = $('tabs'); tabs.innerHTML = '';
+    regions.forEach(function (reg) {
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('role', 'tab');
+      b.textContent = (reg.label || '').toUpperCase(); b.setAttribute('aria-selected', reg.key === current ? 'true' : 'false');
+      b.onclick = function () { current = reg.key; render(); };
+      tabs.appendChild(b);
+    });
+    var reg = regions.filter(function (r) { return r.key === current; })[0] || {};
+    $('region').textContent = reg.title || reg.label || '';
+    $('meta').textContent = (reg.participants ? fmt(reg.participants) + ' sky pirates on this board' : '') + (data.updated && !over ? (reg.participants ? ' · ' : '') + 'Updated ' + new Date(data.updated).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
+    var top = reg.top || [];
+    $('board').innerHTML = top.length ? top.map(function (p) {
+      return '<li class="row' + (reg.treasure !== false && p.rank <= 3 ? ' top3' : '') + '"><span class="rank">' + p.rank + '</span>' +
+        '<span class="name">' + esc(p.name || p.handle) + '</span>' +
+        '<span class="handle">' + esc(p.handle || '—') + (p.platform ? ' <em>(' + esc(p.platform) + ')</em>' : '') + '</span>' +
+        '<span class="country">' + esc(p.country || '—') + '</span>' +
+        '<span class="pts">' + fmt(p.points) + '<small>PTS</small></span></li>';
+    }).join('') : '<li class="empty">Nobody on this board yet. The first points take the top spot!</li>';
+    $('note').innerHTML = 'Every sky pirate starts each act at zero. Overall totals are on <a href="https://www.mauriceafrich.com/leaderboard" target="_top">the leaderboard</a>.';
+    reportHeight();
+  }
+  function load() {
+    fetch('leaderboard.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) { data = d; render(); })
+      .catch(function () { if (!$('board').querySelector('.row')) $('board').innerHTML = '<li class="empty">The standings are taking a breather. Check back soon!</li>'; reportHeight(); });
+  }
+  load();
+  setInterval(load, 5 * 60 * 1000);
+  window.addEventListener('resize', reportHeight);
+  if (document.fonts) document.fonts.ready.then(reportHeight);
+})();
+</script>
+</body>
+</html>
