@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T04:08:36.902Z",
+  "updated": "2026-10-01T04:55:19.995Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
   "crewTotal": 206040,
@@ -286,5 +286,82 @@
         }
       ]
     }
-  ]
+  ],
+  "actTwo": {
+    "entries": 20,
+    "regions": [
+      {
+        "key": "us",
+        "participants": 7,
+        "top": [
+          {
+            "rank": 1,
+            "name": "Pauline",
+            "handle": "@exclaimbooks",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 725
+          },
+          {
+            "rank": 2,
+            "name": "Whitney",
+            "handle": "@queen_0f_ink",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 540
+          },
+          {
+            "rank": 3,
+            "name": "Devin",
+            "handle": "@vintage_book_journal",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 115
+          },
+          {
+            "rank": 4,
+            "name": "Theresa",
+            "handle": "@earlybirdbooks",
+            "platform": "TikTok",
+            "country": "United States",
+            "points": 90
+          },
+          {
+            "rank": 5,
+            "name": "Neil",
+            "handle": "@neilthebookguy",
+            "platform": "TikTok",
+            "country": "United States",
+            "points": 50
+          },
+          {
+            "rank": 6,
+            "name": "Amanda",
+            "handle": "@ahurst.ink",
+            "platform": "",
+            "country": "United States",
+            "points": 50
+          },
+          {
+            "rank": 7,
+            "name": "Christy",
+            "handle": "@wuthering.reads",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 25
+          }
+        ]
+      },
+      {
+        "key": "uk",
+        "participants": 0,
+        "top": []
+      },
+      {
+        "key": "row",
+        "participants": 0,
+        "top": []
+      }
+    ]
+  }
 }
