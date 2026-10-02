@@ -1,0 +1,352 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"></head><body><title>Act One UK Draw</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap">
+<style>
+/* Layout: a full-screen stage for recording. The wheel fills the left, the five winner slots stack on the right. Single dark look by choice. */
+@font-face{font-family:"Atomic Marker";src:url("https://static1.squarespace.com/static/68f0178dd88a7e52ec46ae7e/t/6aa9db35bc4f704c9378c402/1789516598919/Set+Sail+Studios+-+Atomic+Marker+Regular.otf") format("opentype");font-display:block}
+:root{
+  color-scheme:dark;
+  --ink:#0b170f; --panel:#132219; --line:rgba(243,234,217,.18);
+  --ember:#c53200; --ember-hi:#ff4c0f; --violet:#482d85; --lav:#c3a6ff; --emerald:#268e62; --mint:#89fbcb;
+  --green:#2c6021; --leaf:#a2f590; --parch:#f3ead9; --white:#fffffe; --muted:#9fb0a4;
+  --display:"Atomic Marker","Almarai",cursive; --sans:"Almarai",system-ui,sans-serif;
+}
+*{box-sizing:border-box;border-radius:0}
+html,body{height:100%}
+body{margin:0;background:var(--ink);color:var(--parch);font-family:var(--sans);overflow:hidden}
+.stage{height:100%;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,1fr);gap:clamp(16px,3vw,48px);padding:clamp(16px,3vh,36px) clamp(16px,3vw,48px);align-items:center}
+.left{display:grid;justify-items:center;gap:clamp(10px,2vh,20px);min-width:0}
+.head{text-align:center;display:grid;gap:10px}
+.eyebrow{font:800 13px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--leaf);margin:0}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.6vw,64px);line-height:1.2;letter-spacing:.03em;color:var(--white);margin:0}
+.wheel-wrap{position:relative;width:min(58vh,52vw);aspect-ratio:1;max-width:100%}
+canvas{width:100%;height:100%;display:block}
+.pointer{position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:0;height:0;border-left:22px solid transparent;border-right:22px solid transparent;border-top:40px solid var(--parch);filter:drop-shadow(0 4px 4px rgba(0,0,0,.5));z-index:2}
+.pointer::after{content:"";position:absolute;left:-14px;top:-36px;border-left:14px solid transparent;border-right:14px solid transparent;border-top:26px solid var(--ember-hi)}
+.hub{position:absolute;inset:36%;transition:opacity .2s linear;background:var(--ink);border:3px solid var(--parch);display:grid;place-items:center;text-align:center;padding:8px;box-shadow:0 0 0 6px var(--ink);border-radius:50%}
+.hub span{font-family:var(--display);font-size:clamp(12px,min(2.2vh,3.6vw),26px);line-height:1.2;letter-spacing:.03em;color:var(--white)}
+.readout{min-height:3.4em;text-align:center;display:grid;gap:4px}
+.readout b{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vh,40px);line-height:1.2;letter-spacing:.03em;color:var(--white)}
+.readout i{font-style:normal;font-weight:700;font-size:16px;color:var(--mint)}
+.controls{display:flex;gap:12px;align-items:center}
+button{font:800 17px/1 var(--sans);letter-spacing:.12em;color:var(--white);background:var(--ember);border:2px solid var(--parch);box-shadow:4px 5px 0 rgba(0,0,0,.45);padding:16px 40px;cursor:pointer;transition:transform .15s ease,background .15s ease}
+button:hover:not(:disabled){transform:scale(1.04);background:#e04a12}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+.right{display:grid;gap:14px;align-content:center;min-width:0}
+.right h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:1.2;letter-spacing:.03em;color:var(--white);margin:0}
+.prize{font-weight:700;font-size:15px;line-height:1.5;color:var(--parch);margin:0}
+.slots{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.slot{display:grid;grid-template-columns:56px minmax(0,1fr);align-items:center;gap:16px;background:var(--panel);border:1.5px solid var(--line);padding:14px 18px;min-height:84px}
+.slot .n{font-family:var(--display);font-size:34px;line-height:1.2;color:var(--muted);text-align:center}
+.slot .who{display:grid;gap:4px;min-width:0}
+.slot .who b{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.4vw,32px);line-height:1.2;letter-spacing:.03em;color:var(--muted);overflow-wrap:anywhere}
+.slot .who i{font-style:normal;font-weight:700;font-size:16px;color:var(--mint);overflow-wrap:anywhere}
+.slot.won{border-color:var(--parch);background:var(--violet);box-shadow:5px 6px 0 rgba(0,0,0,.45)}
+.slot.won .n{color:var(--ember-hi)}
+.slot.won .who b{color:var(--white)}
+.slot.pop{animation:pop .7s cubic-bezier(.2,1.5,.4,1)}
+@keyframes pop{0%{transform:scale(.85);opacity:.2}100%{transform:scale(1);opacity:1}}
+.fine{font-size:12px;line-height:1.5;color:var(--muted);margin:4px 0 0}
+.reset{background:none;border:1px solid var(--line);box-shadow:none;color:var(--muted);font-size:11px;letter-spacing:.14em;padding:8px 12px}
+.tools{display:flex;gap:12px;flex-wrap:wrap}
+.reset[hidden]{display:none}
+.reset:hover:not(:disabled){background:rgba(243,234,217,.08);transform:none}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:5}
+@media (max-width:820px){body{overflow:auto}.stage{grid-template-columns:1fr;height:auto}.wheel-wrap{width:min(88vw,520px)}}
+@media (prefers-reduced-motion:reduce){.slot.pop{animation:none}}
+</style>
+
+<div class="stage">
+  <section class="left" aria-label="Wheel">
+    <div class="head">
+      <p class="eyebrow">The Cello’s Gate Treasure Hunt</p>
+      <h1>Act One UK Prize Draw</h1>
+    </div>
+    <div class="wheel-wrap">
+      <div class="pointer" aria-hidden="true"></div>
+      <canvas id="wheel" aria-label="Sweepstakes wheel"></canvas>
+      <div class="hub"><span>Sky<br>Pirates</span></div>
+    </div>
+    <div class="readout" aria-live="off"><b id="now">Spin the wheel!</b><i id="nowh">457 entries from 20 UK sky pirates</i></div>
+    <div class="controls">
+      <button id="spin" type="button">SPIN</button>
+    </div>
+  </section>
+  <aside class="right" aria-label="Winners">
+    <h2>Winners</h2>
+    <p class="prize">Five winners drawn at random from every UK entry in Act One. The UK prize is coming soon!</p>
+    <ol class="slots" id="slots"></ol>
+    <p class="fine">Every prize draw entry is its own slice of the wheel, mixed so no name sits next to itself. Winners are chosen with the browser’s cryptographic random number generator. Limit one prize per person.</p>
+    <div class="tools"><button class="reset" id="reset" type="button">START OVER</button><button class="reset" id="save" type="button" hidden>SAVE RESULTS</button></div>
+  </aside>
+</div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script>
+(function () {
+  // [first name, handle, entries] for every U.S. Act One entrant, from the hunt's ledger.
+  var ENTRANTS = [["Stephen","@spine.breakerbooks",116],["Mina","@dearthedays",98],["jakub","@jacob112360",96],["James","@jamesthorneauthor",59],["Josh","@joshthebookbloke",24],["Lottie","@rocknrollspiderman",23],["David","@hellojolley",14],["James","@decaf_dada",6],["Katherine","@wheelygoodfantasy",4],["Liv","@o.k_reads",3],["Billy","@kingothenorth31",2],["Darren","@darren_reads",2],["Wafi","@chowdhurywafi",2],["Dominik","@ratchet11246",2],["Ainsley","@patientvalkyrie",1],["Karen","@booksofthevoid",1],["Sian","@sianbone",1],["Valentin","@vali.epuran",1],["Euan","@euanharkness",1],["Shaun","@shiunhaurlim",1]];
+  var WINNERS = 5, KEY = 'actOneWheel:winners';
+  // On the website the wheel replays the recorded draw instead of drawing: REPLAY holds each spin's layout and landing.
+  var REPLAY = /*REPLAY*/null;
+  var PUBLIC = true;   // the website copy: it only ever replays, and waits quietly until the draw is saved
+  var spins = [];   // the record of this draw, saved so the website can replay it exactly
+  var COLORS = ['#c53200', '#268e62', '#482d85', '#2c6021', '#912501', '#1a5e41', '#7b4ee1', '#57bb41'];
+  function zoomTo() { return Math.max(4, Math.min(ZOOM, ZOOM * slices.length / 2600)); }
+  var ZOOM = 34;                       // how far the camera closes in at the end of a spin (2,600-slice wheel; smaller wheels scale down)
+  var $ = function (id) { return document.getElementById(id); };
+  var canvas = $('wheel'), ctx = canvas.getContext('2d'), now = $('now'), nowh = $('nowh'), btn = $('spin'), slotsEl = $('slots');
+  var face = document.createElement('canvas'), hub = document.querySelector('.hub');   // the whole wheel, drawn once per spin and rotated each frame
+  var slices = [], winners = [], angle = 0, zoom = 1, spinning = false, dirty = true;
+
+  // Uniform random integer in [0, n) from the cryptographic generator, with no modulo bias.
+  function randInt(n) {
+    var max = Math.floor(4294967296 / n) * n, buf = new Uint32Array(1);
+    do { crypto.getRandomValues(buf); } while (buf[0] >= max);
+    return buf[0] % n;
+  }
+  function rand01() { return randInt(1000000) / 1000000; }
+
+  if (!REPLAY) {
+    try { winners = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { winners = []; }
+    try { spins = JSON.parse(localStorage.getItem(KEY + ':spins') || '[]') || []; } catch (e) { spins = []; }
+    if (spins.length !== winners.length) spins = [];
+  }
+  var INDEX = new Map(ENTRANTS.map(function (e, i) { return [e, i]; }));
+
+  // Lays out one equal slice per entry, in random order, with no two neighbouring slices (the last and
+  // the first included) belonging to the same person. Each next slice is drawn at random, weighted by
+  // how many entries each person still has to place, from everyone but the person just placed.
+  // one person holding more than half the wheel cannot be kept fully apart: every other slice sits between runs of theirs, spread as evenly as possible
+  function spread(people, top) {
+    var others = [], i, j;
+    people.forEach(function (e, k) { if (k !== top) for (i = 0; i < e[2]; i++) others.push(e); });
+    for (i = others.length - 1; i > 0; i--) { j = randInt(i + 1); var t = others[i]; others[i] = others[j]; others[j] = t; }
+    var m = people[top][2], k = others.length, base = Math.floor(m / k), extra = m - base * k, gaps = [];
+    for (i = 0; i < k; i++) gaps.push(i < extra ? base + 1 : base);
+    for (i = k - 1; i > 0; i--) { j = randInt(i + 1); var g = gaps[i]; gaps[i] = gaps[j]; gaps[j] = g; }
+    var out = [];
+    for (i = 0; i < k; i++) { out.push(others[i]); for (j = 0; j < gaps[i]; j++) out.push(people[top]); }
+    return out;
+  }
+  function arrange(people) {
+    var total = 0, top = 0;
+    people.forEach(function (e, k) { total += e[2]; if (e[2] > people[top][2]) top = k; });
+    if (people.length > 1 && people[top][2] * 2 > total) return spread(people, top);
+    for (var tries = 0; tries < 3000; tries++) {
+      var left = people.map(function (e) { return e[2]; }), remaining = left.reduce(function (t, n) { return t + n; }, 0);
+      var out = [], prev = -1, ok = true;
+      while (remaining) {
+        // someone holding more than half of what is left must go now, or they could not be kept apart
+        var forced = -1;
+        for (var i = 0; i < left.length; i++) if (i !== prev && left[i] * 2 > remaining) forced = i;
+        var pick = forced;
+        if (pick < 0) {
+          var pool = remaining - (prev >= 0 ? left[prev] : 0);
+          if (pool <= 0) { ok = false; break; }
+          var r = randInt(pool);
+          for (var j = 0; j < left.length; j++) { if (j === prev) continue; if (r < left[j]) { pick = j; break; } r -= left[j]; }
+        }
+        out.push(pick); left[pick]--; remaining--; prev = pick;
+      }
+      if (ok && (out.length < 2 || out[0] !== out[out.length - 1])) return out.map(function (i) { return people[i]; });
+    }
+    return spread(people, top);
+  }
+  function build() {
+    if (REPLAY) { var r = REPLAY.spins[Math.min(winners.length, REPLAY.spins.length - 1)]; slices = r.order.map(function (i) { return ENTRANTS[i]; }); paintFace(); dirty = false; return; }
+    var won = {}; winners.forEach(function (w) { won[w[0] + '|' + w[1]] = 1; });
+    var people = ENTRANTS.filter(function (e) { return !won[e[0] + '|' + e[1]]; });
+    slices = arrange(people);
+    paintFace(); dirty = false;
+  }
+
+  function geom() { var s = canvas.width, c = s / 2; return { s: s, c: c, R: c - s * 0.02 }; }
+  function size() {
+    var r = canvas.getBoundingClientRect(), dpr = Math.min(2, window.devicePixelRatio || 1), s = Math.round(r.width * dpr);
+    if (canvas.width !== s) { canvas.width = canvas.height = s; face.width = face.height = s; paintFace(); }
+    draw();
+  }
+  function rim(g, c, R, s) {
+    g.lineWidth = s * 0.016; g.strokeStyle = '#f3ead9'; g.beginPath(); g.arc(c, c, R, 0, Math.PI * 2); g.stroke();
+    g.lineWidth = s * 0.006; g.strokeStyle = '#0b170f'; g.beginPath(); g.arc(c, c, R - s * 0.012, 0, Math.PI * 2); g.stroke();
+  }
+  function paintFace() {
+    var s = face.width; if (!s || !slices.length) return;
+    var g = face.getContext('2d'), c = s / 2, R = c - s * 0.02, w = Math.PI * 2 / slices.length;
+    g.clearRect(0, 0, s, s);
+    for (var i = 0; i < slices.length; i++) {
+      g.beginPath(); g.moveTo(c, c); g.arc(c, c, R, -Math.PI / 2 + i * w, -Math.PI / 2 + (i + 1) * w + 0.002); g.closePath();
+      g.fillStyle = COLORS[i % COLORS.length]; g.fill();
+    }
+    rim(g, c, R, s);
+    for (var k = 0; k < 48; k++) {   // studs around the rim
+      var a = k / 48 * Math.PI * 2; g.beginPath(); g.arc(c + Math.cos(a) * R, c + Math.sin(a) * R, s * 0.006, 0, Math.PI * 2); g.fillStyle = '#0b170f'; g.fill();
+    }
+  }
+
+  // Draws the wheel at the current rotation. When zoomed in, the camera closes in on the pointer at the top and the
+  // slices near it are drawn sharp, each with its name.
+  function draw() {
+    var G = geom(), s = G.s, c = G.c, R = G.R;
+    ctx.clearRect(0, 0, s, s);
+    var px = c, py = c - R + R * 0.06;   // the pointer's tip, the point the camera zooms toward
+    var labels = [];
+    ctx.save();
+    // zoomed or not, the view stays inside the wheel's circle
+    ctx.beginPath(); ctx.arc(c, c, R + s * 0.01, 0, Math.PI * 2); ctx.clip();
+    ctx.translate(px, py); ctx.scale(zoom, zoom); ctx.translate(-px, -py);
+    ctx.save(); ctx.translate(c, c); ctx.rotate(angle * Math.PI / 180); ctx.drawImage(face, -c, -c); ctx.restore();
+    if (zoom > 1.05 && slices.length) {
+      var n = slices.length, w = 360 / n, a = ((-angle % 360) + 360) % 360;
+      var half = (s / zoom) / R * 180 / Math.PI * 0.75 + w;           // the arc of the wheel the camera can see
+      var k0 = Math.floor((a - half) / w), k1 = Math.ceil((a + half) / w);
+      var rIn = R * (1 - Math.min(0.5, 1.6 / zoom * 6));
+      for (var k = k0; k <= k1; k++) {
+        var idx = ((k % n) + n) % n, e = slices[idx];
+        var a0 = (-90 + k * w + angle) * Math.PI / 180, a1 = a0 + w * Math.PI / 180;
+        ctx.beginPath(); ctx.arc(c, c, R, a0, a1); ctx.arc(c, c, rIn, a1, a0, true); ctx.closePath();
+        ctx.fillStyle = COLORS[idx % COLORS.length]; ctx.fill();
+        ctx.lineWidth = 1.2 / zoom; ctx.strokeStyle = 'rgba(11,23,15,.7)'; ctx.stroke();
+        // the name, written along the slice, sized to fit it on screen
+        var screenW = R * 0.94 * (w * Math.PI / 180) * zoom, fsz = Math.min(34, screenW * 0.62);
+        if (fsz >= 9) labels.push({ mid: (a0 + a1) / 2, fsz: fsz, name: e[0].length > 14 ? e[0].slice(0, 13) + '.' : e[0] });
+      }
+      rim(ctx, c, R, s);
+    }
+    ctx.restore();
+    // names are written in screen space (a font scaled down by the zoom would be too small for the browser to draw)
+    if (labels.length) {
+      ctx.save(); ctx.beginPath(); ctx.arc(c, c, R, 0, Math.PI * 2); ctx.clip();
+      // each name starts just under the pointer and reads down the slice
+      var rA = Math.min(R * 0.99, c - py - (s * 0.13 - py) / zoom);
+      ctx.fillStyle = '#fffffe'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+      ctx.shadowColor = 'rgba(0,0,0,.5)'; ctx.shadowBlur = 3;
+      labels.forEach(function (l) {
+        var rx = c + Math.cos(l.mid) * rA, ry = c + Math.sin(l.mid) * rA;
+        var sx = px + (rx - px) * zoom, sy = py + (ry - py) * zoom;
+        ctx.save(); ctx.translate(sx, sy); ctx.rotate(l.mid);
+        ctx.font = l.fsz + 'px "Atomic Marker", Almarai, sans-serif'; ctx.fillText(l.name, 0, 0);
+        ctx.restore();
+      });
+      ctx.restore();
+    }
+    hub.style.opacity = String(1 - smooth((zoom - 1) / 2));
+  }
+  // The entry under the pointer (top of the wheel) at a given rotation in degrees.
+  function under(deg) {
+    var n = slices.length, a = ((-deg % 360) + 360) % 360;
+    return slices[Math.min(n - 1, Math.floor(a / (360 / n)))];
+  }
+  function show(e) { now.textContent = e[0]; nowh.textContent = e[1] || ' '; }
+
+  function renderSlots(popIndex) {
+    slotsEl.innerHTML = '';
+    for (var i = 0; i < WINNERS; i++) {
+      var w = winners[i], li = document.createElement('li');
+      li.className = 'slot' + (w ? ' won' : '') + (i === popIndex ? ' pop' : '');
+      li.innerHTML = '<span class="n">' + (i + 1) + '</span><span class="who"><b></b><i></i></span>';
+      li.querySelector('b').textContent = w ? w[0] : 'Winner ' + (i + 1);
+      li.querySelector('i').textContent = w ? (w[1] || '') : '';
+      slotsEl.appendChild(li);
+    }
+    btn.disabled = spinning || winners.length >= WINNERS;
+    if (PUBLIC && !REPLAY) { btn.disabled = true; btn.textContent = 'DRAW COMING SOON'; }
+    if (winners.length >= WINNERS) { if (REPLAY) { btn.disabled = spinning; btn.textContent = 'WATCH AGAIN'; } else btn.textContent = 'ALL 5 DRAWN'; }
+    var sv = $('save'); if (sv) sv.hidden = REPLAY || spinning || winners.length < WINNERS;
+  }
+
+  function ease(p) { return 1 - Math.pow(1 - p, 4); }
+  function smooth(p) { p = Math.max(0, Math.min(1, p)); return p * p * (3 - 2 * p); }
+
+  function spin() {
+    if (PUBLIC && !REPLAY) return;
+    if (REPLAY && !spinning && winners.length >= WINNERS) { winners = []; dirty = true; btn.textContent = 'SPIN'; renderSlots(-1); }
+    if (spinning || winners.length >= WINNERS) return;
+    if (dirty) build();                       // the last winner's slices leave the wheel here, as the next spin starts
+    spinning = true; btn.disabled = true;
+    var n = slices.length, w = 360 / n;
+    var rec = REPLAY && REPLAY.spins[winners.length];
+    if (rec) angle = rec.start;
+    var k = rec ? rec.k : randInt(n);         // the winning entry: every remaining entry has the same chance
+    var offset = (rec ? rec.off : 0.3 + 0.4 * rand01()) * w;  // land well inside that slice, never on its edge
+    var target = -(k * w + offset);
+    var start = angle, turns = 7 + randInt(3);
+    var end = rec ? rec.end : target - 360 * Math.ceil((start - target) / 360 + turns);
+    var dur = rec ? rec.dur : 11000 + randInt(2500), t0 = performance.now();
+    if (!rec) spins.push({ order: slices.map(function (e) { return INDEX.get(e); }), k: k, off: offset / w, start: start, end: end, dur: dur });
+    function frame(t) {
+      var p = Math.min(1, (t - t0) / dur);
+      angle = start + (end - start) * ease(p);
+      zoom = 1 + (zoomTo() - 1) * smooth((p - 0.62) / 0.3);   // closes in over the last stretch of the spin
+      draw(); show(under(angle));
+      if (p < 1) requestAnimationFrame(frame);
+      else { angle = end; zoom = zoomTo(); draw(); won(slices[k]); }
+    }
+    requestAnimationFrame(frame);
+  }
+  function won(e) {
+    winners.push([e[0], e[1]]);
+    if (!REPLAY) try { localStorage.setItem(KEY, JSON.stringify(winners)); localStorage.setItem(KEY + ':spins', JSON.stringify(spins)); } catch (x) {}
+    show(e); renderSlots(winners.length - 1); confetti();
+    dirty = true;
+    // hold on the winning slice, then pull back out to the whole wheel
+    setTimeout(function () {
+      var t0 = performance.now(), from = zoom;
+      (function out(t) {
+        var p = Math.min(1, (t - t0) / 1600);
+        zoom = from + (1 - from) * smooth(p); draw();
+        if (p < 1) requestAnimationFrame(out); else { zoom = 1; draw(); spinning = false; renderSlots(-1); }
+      })(t0);
+    }, 2600);
+  }
+
+  // A short burst of brand-colored confetti.
+  var cf = $('confetti'), cx = cf.getContext('2d'), bits = [];
+  function confetti() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    cf.width = innerWidth; cf.height = innerHeight;
+    var r = canvas.getBoundingClientRect(), ox = r.left + r.width / 2, oy = r.top + r.height * 0.1;
+    for (var i = 0; i < 160; i++) bits.push({ x: ox, y: oy, vx: (rand01() - .5) * 16, vy: -rand01() * 14 - 4, s: 6 + rand01() * 8, c: COLORS[i % COLORS.length], r: rand01() * 6, life: 0 });
+    requestAnimationFrame(tick);
+  }
+  function tick() {
+    cx.clearRect(0, 0, cf.width, cf.height);
+    bits = bits.filter(function (b) { return b.life < 140; });
+    bits.forEach(function (b) { b.vy += .35; b.x += b.vx; b.y += b.vy; b.r += .1; b.life++; cx.save(); cx.translate(b.x, b.y); cx.rotate(b.r); cx.fillStyle = b.c; cx.fillRect(-b.s / 2, -b.s / 4, b.s, b.s / 2); cx.restore(); });
+    if (bits.length) requestAnimationFrame(tick); else cx.clearRect(0, 0, cf.width, cf.height);
+  }
+
+  btn.addEventListener('click', spin);
+  // Saves the finished draw (every spin's layout and landing) as a file for the website's replay.
+  if ($('save')) $('save').addEventListener('click', function () {
+    var data = { wheel: KEY, saved: new Date().toISOString(), entrants: ENTRANTS, winners: winners, spins: spins };
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
+    a.download = KEY.split(':')[0] + '-results.json'; document.body.appendChild(a); a.click(); a.remove();
+  });
+  if ((REPLAY || PUBLIC) && $('reset')) $('reset').hidden = true;
+  // Inside the website's frame on a phone, tell the page how tall the wheel is.
+  if (PUBLIC && parent !== window) { var tell = function () { parent.postMessage({ wheelHeight: document.documentElement.scrollHeight }, '*'); }; addEventListener('load', tell); addEventListener('resize', tell); setTimeout(tell, 600); }
+  document.addEventListener('keydown', function (e) { if (e.code === 'Space' && e.target === document.body) { e.preventDefault(); spin(); } });
+  // Starting over needs two clicks, so a stray click mid-recording can't wipe the winners.
+  var armed = 0;
+  $('reset').addEventListener('click', function () {
+    if (spinning) return;
+    if (!armed) { armed = 1; this.textContent = 'CLICK AGAIN TO CLEAR WINNERS'; var b = this; setTimeout(function () { armed = 0; b.textContent = 'START OVER'; }, 3000); return; }
+    armed = 0; this.textContent = 'START OVER'; winners = []; spins = []; btn.textContent = 'SPIN';
+    try { localStorage.removeItem(KEY); localStorage.removeItem(KEY + ':spins'); } catch (x) {}
+    build(); angle = 0; zoom = 1; draw(); renderSlots(-1); now.textContent = 'Spin the wheel!'; nowh.textContent = '457 entries from 20 UK sky pirates';
+  });
+
+  build(); renderSlots(-1);
+  window.addEventListener('resize', size);
+  // The names on the wheel use the brand font, so repaint once it has loaded.
+  (document.fonts && document.fonts.load ? document.fonts.load('40px "Atomic Marker"') : Promise.resolve()).then(function () { paintFace(); draw(); });
+  size();
+  window.__wheel = { slices: function () { return slices; } };   // read-only peek for checking the layout
+})();
+</script>
+</body></html>
