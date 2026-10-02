@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-02T17:03:32.980Z",
+  "updated": "2026-10-02T17:14:14.930Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 259520,
+  "crewTotal": 259835,
   "acts": {
-    "two": 59520,
+    "two": 59835,
     "three": 0
   },
-  "entries": 4555,
+  "entries": 4563,
   "participants": 300,
   "reveals": [
     {
@@ -34,19 +34,19 @@
         },
         {
           "rank": 2,
+          "name": "Christopher",
+          "handle": "@chris.varen",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 9370
+        },
+        {
+          "rank": 3,
           "name": "Joshua",
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
           "points": 9295
-        },
-        {
-          "rank": 3,
-          "name": "Christopher",
-          "handle": "@chris.varen",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 9170
         },
         {
           "rank": 4,
@@ -562,16 +562,16 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 59520,
-    "entries": 1117,
-    "participants": 104,
+    "crewPoints": 59835,
+    "entries": 1125,
+    "participants": 105,
     "regions": [
       {
         "key": "us",
         "label": "United States",
         "title": "United States",
         "treasure": true,
-        "participants": 86,
+        "participants": 87,
         "top": [
           {
             "rank": 1,
@@ -599,6 +599,14 @@
           },
           {
             "rank": 4,
+            "name": "Christopher",
+            "handle": "@chris.varen",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 1815
+          },
+          {
+            "rank": 5,
             "name": "Tyler",
             "handle": "@tylers_bookshelf",
             "platform": "Instagram",
@@ -606,7 +614,7 @@
             "points": 1730
           },
           {
-            "rank": 5,
+            "rank": 6,
             "name": "Joshua",
             "handle": "@poppa_squatch",
             "platform": "Instagram",
@@ -614,20 +622,12 @@
             "points": 1655
           },
           {
-            "rank": 6,
+            "rank": 7,
             "name": "Kyle",
             "handle": "@kylesekellick",
             "platform": "Instagram",
             "country": "United States",
             "points": 1630
-          },
-          {
-            "rank": 7,
-            "name": "Christopher",
-            "handle": "@chris.varen",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 1615
           },
           {
             "rank": 8,
