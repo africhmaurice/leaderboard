@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-02T22:38:34.952Z",
+  "updated": "2026-10-02T22:57:01.205Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 272575,
+  "crewTotal": 273075,
   "acts": {
-    "two": 72575,
+    "two": 73075,
     "three": 0
   },
-  "entries": 4785,
+  "entries": 4790,
   "participants": 313,
   "reveals": [
     {
@@ -30,7 +30,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 11440
+          "points": 11490
         },
         {
           "rank": 2,
@@ -38,7 +38,7 @@
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 9960
+          "points": 10060
         },
         {
           "rank": 3,
@@ -54,7 +54,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 8335
+          "points": 8435
         },
         {
           "rank": 5,
@@ -210,7 +210,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 6760
+          "points": 6810
         },
         {
           "rank": 2,
@@ -562,8 +562,8 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 72575,
-    "entries": 1347,
+    "crewPoints": 73075,
+    "entries": 1352,
     "participants": 121,
     "regions": [
       {
@@ -579,7 +579,7 @@
             "handle": "@grizspins",
             "platform": "Instagram",
             "country": "United States",
-            "points": 3480
+            "points": 3530
           },
           {
             "rank": 2,
@@ -587,7 +587,7 @@
             "handle": "@chris.varen",
             "platform": "Instagram",
             "country": "United States",
-            "points": 2405
+            "points": 2505
           },
           {
             "rank": 3,
@@ -623,6 +623,14 @@
           },
           {
             "rank": 7,
+            "name": "Brian",
+            "handle": "@featherandinkbooks",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 1790
+          },
+          {
+            "rank": 8,
             "name": "Kyle",
             "handle": "@kylesekellick",
             "platform": "Instagram",
@@ -630,7 +638,7 @@
             "points": 1730
           },
           {
-            "rank": 8,
+            "rank": 9,
             "name": "Zarina",
             "handle": "@redheadsreadingsmut",
             "platform": "Instagram",
@@ -638,20 +646,12 @@
             "points": 1630
           },
           {
-            "rank": 9,
+            "rank": 10,
             "name": "Whitney",
             "handle": "@queen_0f_ink",
             "platform": "Instagram",
             "country": "United States",
             "points": 1620
-          },
-          {
-            "rank": 10,
-            "name": "Brian",
-            "handle": "@featherandinkbooks",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 1590
           }
         ]
       },
@@ -757,7 +757,7 @@
             "handle": "@lovelisyda",
             "platform": "Instagram",
             "country": "Estonia",
-            "points": 1180
+            "points": 1230
           },
           {
             "rank": 2,
