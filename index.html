@@ -156,7 +156,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
     // the share card shows whichever region is open
     if (!share && window.LBShare) share = LBShare.mount(document.querySelector('.panel'), function () {
       var r = (data.regions || []).filter(function (x) { return x.key === current; })[0] || {};
-      return { title: 'Leaderboard', region: r.label || '', when: data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : '', rows: r.top || [], theme: 'scarlet' };
+      return { title: 'Leaderboard', region: r.label || '', when: data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : '', stat: (data.participants || 0).toLocaleString('en-US') + ' sky pirates in the hunt  ·  ' + (data.crewTotal || 0).toLocaleString('en-US') + ' points earned', rows: r.top || [], theme: 'scarlet' };
     });
     else if (share) share.refresh();
     reportHeight();

@@ -178,7 +178,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
       var dd = data[A.key] || {}, r = (dd.regions || []).filter(function (x) { return x.key === current; })[0] || {};
       var done = ACT === 'one' || Date.now() >= Date.parse(ACT === 'two' ? '2026-10-16T00:00:00-04:00' : '2026-11-02T00:00:00-05:00');
       return { title: A.name + ' Standings', region: r.label || '', when: done ? 'Final' : (data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : ''),
-        stat: fmt(dd.crewPoints) + ' ' + A.name + ' crew points', rows: r.top || [], theme: { one: 'violet', two: 'teal', three: 'scarlet' }[ACT] };
+        stat: (dd.participants ? fmt(dd.participants) + ' sky pirates  ·  ' : '') + fmt(dd.crewPoints) + ' ' + A.name + ' crew points', rows: r.top || [], theme: { one: 'violet', two: 'teal', three: 'scarlet' }[ACT] };
     });
     else if (share) share.refresh();
     $('note').innerHTML = 'Every sky pirate starts each act at zero. Overall totals are on <a href="https://www.mauriceafrich.com/leaderboard" target="_top">the leaderboard</a>.';
