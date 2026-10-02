@@ -19,7 +19,7 @@ var LBShare = (function () {
     '.lbs-open:hover{transform:scale(1.04);background:rgba(12,26,8,.55)}' +
     '.lbs{max-width:1000px;margin:clamp(16px,2.4vw,22px) auto 0;background:#0b170f;border:3px solid #111;padding:clamp(22px,3.5vw,34px) clamp(16px,3vw,30px);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;color:#fffffe}' +
     '.lbs[hidden]{display:none}' +
-    '.lbs-h{font-family:"Atomic Marker",cursive;font-weight:400;font-size:clamp(28px,4.5vw,42px);line-height:1.25;letter-spacing:.03em;color:#a2f590;margin:0}' +
+    '.lbs-h{font-family:"Atomic Marker",Impact,sans-serif;font-weight:400;font-size:clamp(28px,4.5vw,42px);line-height:1.25;letter-spacing:.03em;color:#a2f590;margin:0}' +
     '.lbs img{display:block;width:100%;max-width:360px;aspect-ratio:4/5;border:2px solid rgba(162,245,144,.35);background:#0b170f}' +
     '.lbs-sw{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0;padding:0;border:0}' +
     '.lbs-sw legend{width:100%;padding:0;margin:0 0 10px;font-weight:700;font-size:14px;letter-spacing:.08em}' +
@@ -66,7 +66,7 @@ var LBShare = (function () {
       x.strokeStyle = T.rule; x.lineWidth = 2; x.strokeRect(44, 58, W - 88, H - 116);
       x.textBaseline = 'alphabetic'; x.textAlign = 'center';
       x.fillStyle = T.soft; x.font = '800 24px Almarai, sans-serif'; spaced(x, "CELLO'S GATE TREASURE HUNT", W / 2, 134, 4);
-      x.fillStyle = T.text; x.font = '96px "Atomic Marker", cursive'; fit(x, b.title.toUpperCase(), W / 2, 252, R - L);
+      x.fillStyle = T.text; x.font = '96px "Atomic Marker",Impact,sans-serif'; fit(x, b.title.toUpperCase(), W / 2, 252, R - L);
       x.fillStyle = T.hi; x.font = '800 30px Almarai, sans-serif'; spaced(x, (b.region + (b.when ? '  ·  ' + b.when : '')).toUpperCase(), W / 2, 316, 3);
       if (b.stat) { x.fillStyle = T.soft; x.font = '700 26px Almarai, sans-serif'; spaced(x, b.stat.toUpperCase(), W / 2, 362, 2); }
       // the top ten
@@ -75,10 +75,10 @@ var LBShare = (function () {
       rows.forEach(function (p, i) {
         var y = top + i * rowH;
         if (i) { x.beginPath(); x.moveTo(L, y); x.lineTo(R, y); x.stroke(); }
-        x.textAlign = 'center'; x.fillStyle = p.rank <= 3 ? T.hi : T.text; x.font = '46px "Atomic Marker", cursive'; x.fillText(String(p.rank), L + 34, y + 58);
+        x.textAlign = 'center'; x.fillStyle = p.rank <= 3 ? T.hi : T.text; x.font = '46px "Atomic Marker",Impact,sans-serif'; x.fillText(String(p.rank), L + 34, y + 58);
         x.textAlign = 'left'; x.fillStyle = T.text; x.font = '800 32px Almarai, sans-serif'; fit(x, p.name || p.handle || '', L + 96, y + 40, 470);
         x.fillStyle = T.soft; x.font = '700 22px Almarai, sans-serif'; fit(x, p.handle || '', L + 96, y + 68, 470);
-        x.textAlign = 'right'; x.fillStyle = p.rank <= 3 ? T.hi : T.text; x.font = '44px "Atomic Marker", cursive'; fit(x, Number(p.points || 0).toLocaleString('en-US'), R - 66, y + 56, 260);
+        x.textAlign = 'right'; x.fillStyle = p.rank <= 3 ? T.hi : T.text; x.font = '44px "Atomic Marker",Impact,sans-serif'; fit(x, Number(p.points || 0).toLocaleString('en-US'), R - 66, y + 56, 260);
         x.fillStyle = T.soft; x.font = '700 18px Almarai, sans-serif'; x.fillText('PTS', R, y + 56);
       });
       if (!rows.length) { x.textAlign = 'center'; x.fillStyle = T.soft; x.font = '700 30px Almarai, sans-serif'; x.fillText('The first points take the top spot!', W / 2, top + 120); }
