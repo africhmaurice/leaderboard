@@ -86,13 +86,14 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
   <ol class="board" id="board"></ol>
 </main>
 <p class="note" id="note"></p>
+<script src="share-card.js"></script>
 <script>
 (function () {
   var boardEl = document.getElementById('board'), metaEl = document.getElementById('meta'),
       tabsEl = document.getElementById('tabs'), regionEl = document.getElementById('region'), noteEl = document.getElementById('note');
   // ?region=us|uk|row shows that board on its own, for embedding one board per page.
   var only = (location.search.match(/[?&]region=([a-z_]+)/i) || [])[1];
-  var data = null, current = null;
+  var data = null, current = null, share = null;
   var LOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="#1b3b15" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" style="width:30px;height:30px"><rect x="4" y="11" width="16" height="10" rx="1" fill="#1b3b15"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>';
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
@@ -144,6 +145,12 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,9vw,
       var t = new Date(data.updated);
       metaEl.textContent = 'Updated ' + t.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
     }
+    // the share card shows whichever region is open
+    if (!share && window.LBShare) share = LBShare.mount(document.querySelector('.panel'), function () {
+      var r = (data.regions || []).filter(function (x) { return x.key === current; })[0] || {};
+      return { title: 'Leaderboard', region: r.label || '', when: data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : '', rows: r.top || [], theme: 'scarlet' };
+    });
+    else if (share) share.refresh();
     reportHeight();
   }
 

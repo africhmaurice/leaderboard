@@ -112,6 +112,7 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,8vw,
   </main>
   <p class="note" id="note"></p>
 </div>
+<script src="share-card.js"></script>
 <script>
 (function () {
   var ACT = document.documentElement.getAttribute('data-act');
@@ -125,7 +126,7 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,8vw,
   var $ = function (id) { return document.getElementById(id); };
   var fmt = function (n) { return Number(n || 0).toLocaleString('en-US'); };
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
-  var data = null, current = null;
+  var data = null, current = null, share = null;
   document.title = A.name + ' Standings';
   $('title').textContent = A.name + ' Standings';
   $('bar-title').textContent = A.name + ' Progress';
@@ -173,6 +174,13 @@ h1{font-family:'Atomic Marker',cursive;font-weight:400;font-size:clamp(46px,8vw,
         '<span class="country">' + esc(p.country || '—') + '</span>' +
         '<span class="pts">' + fmt(p.points) + '<small>PTS</small></span></li>';
     }).join('') : '<li class="empty">Nobody on this board yet. The first points take the top spot!</li>';
+    if (!share && window.LBShare) share = LBShare.mount(document.querySelector('.panel'), function () {
+      var dd = data[A.key] || {}, r = (dd.regions || []).filter(function (x) { return x.key === current; })[0] || {};
+      var done = ACT === 'one' || Date.now() >= Date.parse(ACT === 'two' ? '2026-10-16T00:00:00-04:00' : '2026-11-02T00:00:00-05:00');
+      return { title: A.name + ' Standings', region: r.label || '', when: done ? 'Final' : (data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : ''),
+        stat: fmt(dd.crewPoints) + ' ' + A.name + ' crew points', rows: r.top || [], theme: { one: 'violet', two: 'teal', three: 'scarlet' }[ACT] };
+    });
+    else if (share) share.refresh();
     $('note').innerHTML = 'Every sky pirate starts each act at zero. Overall totals are on <a href="https://www.mauriceafrich.com/leaderboard" target="_top">the leaderboard</a>.';
     reportHeight();
   }
