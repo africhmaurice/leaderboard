@@ -88,7 +88,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
 (function () {
   // [first name, handle, entries] for every U.S. Act One entrant, from the hunt's ledger.
   var ENTRANTS = [["Stephen","@spine.breakerbooks",116],["Mina","@dearthedays",98],["jakub","@jacob112360",96],["James","@jamesthorneauthor",59],["Josh","@joshthebookbloke",24],["Lottie","@rocknrollspiderman",23],["David","@hellojolley",14],["James","@decaf_dada",6],["Katherine","@wheelygoodfantasy",4],["Liv","@o.k_reads",3],["Billy","@kingothenorth31",2],["Darren","@darren_reads",2],["Wafi","@chowdhurywafi",2],["Dominik","@ratchet11246",2],["Ainsley","@patientvalkyrie",1],["Karen","@booksofthevoid",1],["Sian","@sianbone",1],["Valentin","@vali.epuran",1],["Euan","@euanharkness",1],["Shaun","@shiunhaurlim",1]];
-  var WINNERS = 5, KEY = 'actOneWheel:winners';
+  var WINNERS = 5, KEY = 'actOneWheelUK:winners';   // each wheel saves under its own name
   // On the website the wheel replays the recorded draw instead of drawing: REPLAY holds each spin's layout and landing.
   var REPLAY = /*REPLAY*/null;
   var PUBLIC = true;   // the website copy: it only ever replays, and waits quietly until the draw is saved
@@ -113,6 +113,8 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
     try { winners = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { winners = []; }
     try { spins = JSON.parse(localStorage.getItem(KEY + ':spins') || '[]') || []; } catch (e) { spins = []; }
     if (spins.length !== winners.length) spins = [];
+    // a save from another wheel (the shared-name bug before 2026-10-02) is ignored
+    if (!winners.every(function (w) { return ENTRANTS.some(function (e) { return e[0] === w[0] && e[1] === w[1]; }); })) { winners = []; spins = []; }
   }
   var INDEX = new Map(ENTRANTS.map(function (e, i) { return [e, i]; }));
 
@@ -190,6 +192,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
   // Draws the wheel at the current rotation. When zoomed in, the camera closes in on the pointer at the top and the
   // slices near it are drawn sharp, each with its name.
   function draw() {
+    if (!canvas.width || !face.width) return;   // not laid out yet
     var G = geom(), s = G.s, c = G.c, R = G.R;
     ctx.clearRect(0, 0, s, s);
     var px = c, py = c - R + R * 0.06;   // the pointer's tip, the point the camera zooms toward
