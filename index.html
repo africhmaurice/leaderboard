@@ -35,6 +35,13 @@ html.embedded .bgbox{display:none}
 .head{text-align:center;margin:0 auto clamp(30px,4vw,44px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',Impact,sans-serif;font-size:clamp(24px,3.5vw,44px);color:var(--peach);margin:0 0 14px}
 h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp(46px,9vw,130px);line-height:1.05;color:#fff;margin:0}
+/* The whole hunt at a glance (Maurice, 2026-10-02): everyone who has played and every point earned, all Acts. */
+.whole[hidden]{display:none}
+.whole{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:760px;margin:clamp(22px,3vw,32px) auto 0}
+.whole div{background:rgba(255,255,255,.92);color:var(--ink);padding:18px 16px 16px;text-align:center}
+.whole b{display:block;font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.2;letter-spacing:.03em;color:var(--rust)}
+.whole span{display:block;font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--moss);margin-top:6px}
+@media (max-width:420px){.whole{grid-template-columns:1fr}}
 .tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:clamp(26px,4vw,38px) 0 clamp(26px,4vw,40px)}
 .tabs button{font-family:'Almarai',sans-serif;font-weight:700;font-size:clamp(13px,1.5vw,15px);letter-spacing:.08em;cursor:pointer;color:#fff;background:rgba(12,26,8,.35);border:2px solid #f3ead9;padding:11px clamp(14px,2.6vw,24px);transition:transform .15s ease,background .15s ease,color .15s ease}
 .tabs button:hover{transform:scale(1.04)}
@@ -77,6 +84,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 <header class="head">
   <p class="eyebrow">The Leaderboard</p>
   <h1>Top 10 Sky Pirates</h1>
+  <div class="whole" id="whole" hidden><div><b id="w-crew"></b><span>Sky Pirates in the Whole Hunt</span></div><div><b id="w-pts"></b><span>Points Earned by Everyone</span></div></div>
 </header>
 <div class="tabs" id="tabs" role="tablist" aria-label="Leaderboard region"></div>
 <main class="panel">
@@ -159,6 +167,11 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
         data = d;
+        if (d.participants && d.crewTotal) {
+          document.getElementById('w-crew').textContent = d.participants.toLocaleString('en-US');
+          document.getElementById('w-pts').textContent = d.crewTotal.toLocaleString('en-US');
+          document.getElementById('whole').hidden = false;
+        }
         var regions = d.regions || [];
         if (only) regions = regions.filter(function (r) { return r.key === only; });
         data.regions = regions;
