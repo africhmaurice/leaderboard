@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-07T00:12:02.444Z",
+  "updated": "2026-10-07T00:30:12.449Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 405380,
+  "crewTotal": 405680,
   "acts": {
-    "two": 205380,
+    "two": 205680,
     "three": 0
   },
-  "entries": 7109,
+  "entries": 7113,
   "participants": 409,
   "reveals": [
     {
@@ -54,7 +54,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 12620
+          "points": 12770
         },
         {
           "rank": 5,
@@ -102,7 +102,7 @@
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
           "country": "United States",
-          "points": 8200
+          "points": 8250
         }
       ]
     },
@@ -128,7 +128,7 @@
           "handle": "@dearthedays",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 9820
+          "points": 9920
         },
         {
           "rank": 3,
@@ -562,8 +562,8 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 205380,
-    "entries": 3671,
+    "crewPoints": 205680,
+    "entries": 3675,
     "participants": 237,
     "regions": [
       {
@@ -595,7 +595,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 5790
+            "points": 5940
           },
           {
             "rank": 4,
@@ -627,7 +627,7 @@
             "handle": "@queen_0f_ink",
             "platform": "Instagram",
             "country": "United States",
-            "points": 4000
+            "points": 4050
           },
           {
             "rank": 8,
@@ -676,7 +676,7 @@
             "handle": "@dearthedays",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 4115
+            "points": 4215
           },
           {
             "rank": 3,
