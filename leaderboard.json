@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-09T01:52:08.186Z",
+  "updated": "2026-10-09T02:15:21.365Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 452700,
+  "crewTotal": 452977,
   "acts": {
-    "two": 252700,
+    "two": 252977,
     "three": 0
   },
-  "entries": 8067,
+  "entries": 8075,
   "participants": 458,
   "reveals": [
     {
@@ -30,7 +30,7 @@
           "handle": "@chris.varen",
           "platform": "Instagram",
           "country": "United States",
-          "points": 20760
+          "points": 20762
         },
         {
           "rank": 2,
@@ -46,7 +46,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 15075
+          "points": 15089
         },
         {
           "rank": 4,
@@ -62,7 +62,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 12395
+          "points": 12434
         },
         {
           "rank": 6,
@@ -102,7 +102,7 @@
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
           "country": "United States",
-          "points": 9450
+          "points": 9650
         }
       ]
     },
@@ -136,7 +136,7 @@
           "handle": "@jacob112360",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 10900
+          "points": 10905
         },
         {
           "rank": 4,
@@ -152,7 +152,7 @@
           "handle": "",
           "platform": "",
           "country": "United Kingdom",
-          "points": 5430
+          "points": 5432
         },
         {
           "rank": 6,
@@ -562,8 +562,8 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 252700,
-    "entries": 4629,
+    "crewPoints": 252977,
+    "entries": 4637,
     "participants": 289,
     "regions": [
       {
@@ -579,7 +579,7 @@
             "handle": "@chris.varen",
             "platform": "Instagram",
             "country": "United States",
-            "points": 13205
+            "points": 13207
           },
           {
             "rank": 2,
@@ -595,7 +595,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 8245
+            "points": 8259
           },
           {
             "rank": 4,
@@ -611,7 +611,7 @@
             "handle": "@tylers_bookshelf",
             "platform": "Instagram",
             "country": "United States",
-            "points": 6815
+            "points": 6854
           },
           {
             "rank": 6,
@@ -623,19 +623,19 @@
           },
           {
             "rank": 7,
+            "name": "Whitney",
+            "handle": "@queen_0f_ink",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 5450
+          },
+          {
+            "rank": 8,
             "name": "Brandi",
             "handle": "@brandibuystoomanybooks",
             "platform": "Instagram",
             "country": "United States",
             "points": 5255
-          },
-          {
-            "rank": 8,
-            "name": "Whitney",
-            "handle": "@queen_0f_ink",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 5250
           },
           {
             "rank": 9,
@@ -651,7 +651,7 @@
             "handle": "@heathers_endless_tbr",
             "platform": "Instagram",
             "country": "United States",
-            "points": 4820
+            "points": 4825
           }
         ]
       },
@@ -684,7 +684,7 @@
             "handle": "",
             "platform": "",
             "country": "United Kingdom",
-            "points": 5430
+            "points": 5432
           },
           {
             "rank": 4,
@@ -692,7 +692,7 @@
             "handle": "@jacob112360",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 5345
+            "points": 5350
           },
           {
             "rank": 5,
