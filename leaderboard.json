@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T18:36:00.062Z",
+  "updated": "2026-10-10T18:37:22.399Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
   "crewTotal": 501970,
@@ -13,6 +13,11 @@
     {
       "at": 125000,
       "name": "+50 New Loot Boxes"
+    },
+    {
+      "act": "two",
+      "at": 300000,
+      "name": "A Secret Has Been Unlocked: Coming Soon!"
     }
   ],
   "regions": [
