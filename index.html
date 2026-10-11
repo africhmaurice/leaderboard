@@ -31,6 +31,8 @@ body{
 /* Embedded on mauriceafrich.com (?embed=1): the host page paints the artwork as a real fixed background behind this
    transparent frame, exactly like the Hunt page sections. Standalone visits keep their own artwork layer. */
 html.embedded,html.embedded body{background:transparent!important}
+/* Embedded, 100vh is the frame's own height: the page would always report itself taller than the frame and keep growing it (the 10/11 scroll glitch on phones). */
+html.embedded body{min-height:0!important}
 html.embedded .bgbox{display:none}
 .head{text-align:center;margin:0 auto clamp(30px,4vw,44px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',Impact,sans-serif;font-size:clamp(24px,3.5vw,44px);color:var(--peach);margin:0 0 14px}

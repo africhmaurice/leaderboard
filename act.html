@@ -24,6 +24,8 @@ body{font-family:'Almarai',sans-serif;color:#fff;-webkit-font-smoothing:antialia
 .bgfx{position:absolute;inset:0;background:url('leaderboard-bg-storm.webp') center/cover}
 .bgwash{position:absolute;inset:0;background:var(--wash);z-index:-1}
 html.embedded,html.embedded body{background:transparent!important}
+/* Embedded, 100vh is the frame's own height: the page would always report itself taller than the frame and keep growing it (the 10/11 scroll glitch on phones). */
+html.embedded body{min-height:0!important}
 html.embedded .bgbox,html.embedded .bgwash{display:none}
 .head{text-align:center;margin:0 auto clamp(26px,3.5vw,40px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',Impact,sans-serif;font-size:clamp(24px,3.5vw,44px);line-height:1.2;letter-spacing:.03em;color:var(--soft);margin:0 0 14px}
