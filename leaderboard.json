@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T14:28:16.448Z",
+  "updated": "2026-10-11T17:27:48.049Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
   "crewTotal": 515910,
@@ -32,7 +32,7 @@
         {
           "rank": 1,
           "name": "Christopher",
-          "handle": "@chris.varen",
+          "handle": "",
           "platform": "Instagram",
           "country": "United States",
           "points": 28395
@@ -323,7 +323,7 @@
           {
             "rank": 3,
             "name": "Christopher",
-            "handle": "@chris.varen",
+            "handle": "",
             "platform": "Instagram",
             "country": "United States",
             "points": 7555
@@ -581,7 +581,7 @@
           {
             "rank": 1,
             "name": "Christopher",
-            "handle": "@chris.varen",
+            "handle": "",
             "platform": "Instagram",
             "country": "United States",
             "points": 20840
