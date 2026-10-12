@@ -26,6 +26,8 @@ body{font-family:'Almarai',sans-serif;color:#fff;-webkit-font-smoothing:antialia
 html.embedded,html.embedded body{background:transparent!important}
 /* Embedded, 100vh is the frame's own height: the page would always report itself taller than the frame and keep growing it (the 10/11 scroll glitch on phones). */
 html.embedded body{min-height:0!important}
+/* The frame never scrolls by itself (iPhones hand a swipe to a frame that is even 1px taller than its box), so every swipe moves the host page. */
+html.embedded,html.embedded body{overflow:hidden!important;overscroll-behavior:none}
 html.embedded .bgbox,html.embedded .bgwash{display:none}
 .head{text-align:center;margin:0 auto clamp(26px,3.5vw,40px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',Impact,sans-serif;font-size:clamp(24px,3.5vw,44px);line-height:1.2;letter-spacing:.03em;color:var(--soft);margin:0 0 14px}
@@ -137,7 +139,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
   $('bar').insertAdjacentHTML('beforeend', A.marks.map(function (m) { return '<u style="left:' + (m / A.goal * 100) + '%"></u>'; }).join(''));
   function reportHeight() {
     // The page's own height (not the frame's), sent only when it really changes, so the host page never jumps (10/11).
-    if (window.parent === window) return; var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (window.parent === window) return; var h = Math.ceil(document.body.getBoundingClientRect().height) + 2;
     if (Math.abs(h - (reportHeight.last || 0)) < 2) return; reportHeight.last = h; window.parent.postMessage({ thLeaderboardHeight: h }, '*');
   }
   // A phone's toolbar changing size is a resize too; only a new width can change the page's height.
