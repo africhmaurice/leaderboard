@@ -47,6 +47,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 .bar u{position:absolute;top:0;bottom:0;width:2px;background:rgba(0,0,0,.18)}
 .prog-foot{font-family:'Atomic Marker',Impact,sans-serif;font-size:clamp(17px,2vw,22px);line-height:1.3;letter-spacing:.03em;margin:12px 0 0}
 .prog-foot em{font-style:normal;color:var(--hi)}
+.prog-foot:empty{display:none}
 .tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:0 0 clamp(22px,3vw,32px)}
 .tabs button{font-family:'Almarai',sans-serif;font-weight:700;font-size:clamp(13px,1.5vw,15px);letter-spacing:.08em;cursor:pointer;color:#fff;background:rgba(12,26,8,.35);border:2px solid #f3ead9;padding:11px clamp(14px,2.6vw,24px);transition:transform .15s ease,background .15s ease,color .15s ease}
 .tabs button:hover{transform:scale(1.04)}
@@ -165,7 +166,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
     var next = A.marks.concat(A.goal, A.bonus || []).filter(function (m) { return d.crewPoints < m; })[0];
     $('foot').innerHTML = ACT === 'one'
       ? 'Every Act One reward and bonus unlocked: <em>' + fmt(d.crewPoints) + '</em> points'
-      : next ? 'Next reward: <em>' + fmt(d.crewPoints) + '</em> / ' + fmt(next) : 'Every ' + A.name + ' reward unlocked: <em>' + fmt(d.crewPoints) + '</em>';
+      : next ? 'Next reward: <em>' + fmt(d.crewPoints) + '</em> / ' + fmt(next) : '';   // no 'every reward unlocked' line past the last tier (Maurice, 2026-10-13)
     var regions = d.regions || [];
     if (!current || !regions.some(function (r) { return r.key === current; })) current = (regions[0] || {}).key;
     var tabs = $('tabs'); tabs.innerHTML = '';
