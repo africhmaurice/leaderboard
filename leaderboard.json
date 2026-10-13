@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-13T17:19:46.295Z",
+  "updated": "2026-10-13T22:00:34.214Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 607425,
+  "crewTotal": 609925,
   "acts": {
-    "two": 407425,
+    "two": 409925,
     "three": 0
   },
-  "entries": 11541,
+  "entries": 11566,
   "participants": 650,
   "reveals": [
     {
@@ -44,19 +44,19 @@
         },
         {
           "rank": 2,
+          "name": "Katie",
+          "handle": "@spacefoxy9",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 24189
+        },
+        {
+          "rank": 3,
           "name": "Clark",
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
           "points": 23940
-        },
-        {
-          "rank": 3,
-          "name": "Katie",
-          "handle": "@spacefoxy9",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 23189
         },
         {
           "rank": 4,
@@ -84,19 +84,19 @@
         },
         {
           "rank": 7,
+          "name": "Brandi",
+          "handle": "@brandibuystoomanybooks",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 13865
+        },
+        {
+          "rank": 8,
           "name": "Michelle",
           "handle": "@extraordinary_book_lover",
           "platform": "Instagram",
           "country": "United States",
           "points": 13710
-        },
-        {
-          "rank": 8,
-          "name": "Brandi",
-          "handle": "@brandibuystoomanybooks",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 13365
         },
         {
           "rank": 9,
@@ -572,8 +572,8 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 407425,
-    "entries": 8103,
+    "crewPoints": 409925,
+    "entries": 8128,
     "participants": 488,
     "regions": [
       {
@@ -597,7 +597,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 15859
+            "points": 16859
           },
           {
             "rank": 3,
@@ -641,6 +641,14 @@
           },
           {
             "rank": 8,
+            "name": "Brandi",
+            "handle": "@brandibuystoomanybooks",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 7285
+          },
+          {
+            "rank": 9,
             "name": "Kate",
             "handle": "@redhead_reader",
             "platform": "Instagram",
@@ -648,20 +656,12 @@
             "points": 7265
           },
           {
-            "rank": 9,
+            "rank": 10,
             "name": "Heather",
             "handle": "@heathers_endless_tbr",
             "platform": "Instagram",
             "country": "United States",
             "points": 7045
-          },
-          {
-            "rank": 10,
-            "name": "Brandi",
-            "handle": "@brandibuystoomanybooks",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 6785
           }
         ]
       },
