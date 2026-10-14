@@ -1,14 +1,14 @@
 {
-  "updated": "2026-10-13T22:46:43.001Z",
+  "updated": "2026-10-14T01:34:15.653Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 625630,
+  "crewTotal": 630070,
   "acts": {
-    "two": 425630,
+    "two": 430070,
     "three": 0
   },
-  "entries": 11922,
-  "participants": 663,
+  "entries": 12041,
+  "participants": 670,
   "reveals": [
     {
       "at": 125000,
@@ -32,7 +32,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 594,
+      "participants": 601,
       "top": [
         {
           "rank": 1,
@@ -48,7 +48,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 25239
+          "points": 25264
         },
         {
           "rank": 3,
@@ -56,7 +56,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 24865
+          "points": 24915
         },
         {
           "rank": 4,
@@ -72,7 +72,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 22075
+          "points": 22125
         },
         {
           "rank": 6,
@@ -80,7 +80,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 16469
+          "points": 16784
         },
         {
           "rank": 7,
@@ -104,7 +104,7 @@
           "handle": "@redhead_reader",
           "platform": "Instagram",
           "country": "United States",
-          "points": 12385
+          "points": 12410
         },
         {
           "rank": 10,
@@ -112,7 +112,7 @@
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
           "country": "United States",
-          "points": 12200
+          "points": 12225
         }
       ]
     },
@@ -162,7 +162,7 @@
           "handle": "",
           "platform": "",
           "country": "United Kingdom",
-          "points": 6862
+          "points": 7062
         },
         {
           "rank": 6,
@@ -170,7 +170,7 @@
           "handle": "@wheelygoodfantasy",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 5080
+          "points": 5130
         },
         {
           "rank": 7,
@@ -220,7 +220,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 14525
+          "points": 14575
         },
         {
           "rank": 2,
@@ -228,7 +228,7 @@
           "handle": "@ryan_reads_big_books",
           "platform": "Instagram",
           "country": "Canada",
-          "points": 11690
+          "points": 11715
         },
         {
           "rank": 3,
@@ -252,7 +252,7 @@
           "handle": "",
           "platform": "",
           "country": "Canada",
-          "points": 1315
+          "points": 1365
         },
         {
           "rank": 6,
@@ -572,16 +572,16 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 425630,
-    "entries": 8484,
-    "participants": 504,
+    "crewPoints": 430070,
+    "entries": 8603,
+    "participants": 512,
     "regions": [
       {
         "key": "us",
         "label": "United States",
         "title": "United States",
         "treasure": true,
-        "participants": 459,
+        "participants": 467,
         "top": [
           {
             "rank": 1,
@@ -597,7 +597,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 17909
+            "points": 17934
           },
           {
             "rank": 3,
@@ -605,7 +605,7 @@
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
-            "points": 17100
+            "points": 17150
           },
           {
             "rank": 4,
@@ -613,7 +613,7 @@
             "handle": "@grizspins",
             "platform": "Instagram",
             "country": "United States",
-            "points": 16155
+            "points": 16205
           },
           {
             "rank": 5,
@@ -629,7 +629,7 @@
             "handle": "@tylers_bookshelf",
             "platform": "Instagram",
             "country": "United States",
-            "points": 10639
+            "points": 10954
           },
           {
             "rank": 7,
@@ -637,7 +637,7 @@
             "handle": "@queen_0f_ink",
             "platform": "Instagram",
             "country": "United States",
-            "points": 7750
+            "points": 7775
           },
           {
             "rank": 8,
@@ -653,7 +653,7 @@
             "handle": "@redhead_reader",
             "platform": "Instagram",
             "country": "United States",
-            "points": 7265
+            "points": 7290
           },
           {
             "rank": 10,
@@ -702,7 +702,7 @@
             "handle": "",
             "platform": "",
             "country": "United Kingdom",
-            "points": 6862
+            "points": 7062
           },
           {
             "rank": 5,
@@ -710,7 +710,7 @@
             "handle": "@wheelygoodfantasy",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 4880
+            "points": 4930
           },
           {
             "rank": 6,
@@ -767,7 +767,7 @@
             "handle": "@lovelisyda",
             "platform": "Instagram",
             "country": "Estonia",
-            "points": 8945
+            "points": 8995
           },
           {
             "rank": 2,
@@ -775,7 +775,7 @@
             "handle": "@ryan_reads_big_books",
             "platform": "Instagram",
             "country": "Canada",
-            "points": 6890
+            "points": 6915
           },
           {
             "rank": 3,
@@ -799,7 +799,7 @@
             "handle": "",
             "platform": "",
             "country": "Canada",
-            "points": 1315
+            "points": 1365
           },
           {
             "rank": 6,
