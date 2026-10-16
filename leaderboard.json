@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-16T07:24:35.603Z",
+  "updated": "2026-10-16T07:29:17.266Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 704100,
+  "crewTotal": 704850,
   "acts": {
-    "two": 504100,
+    "two": 504850,
     "three": 0
   },
-  "entries": 13727,
+  "entries": 13741,
   "participants": 735,
   "reveals": [
     {
@@ -48,7 +48,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 28919
+          "points": 29019
         },
         {
           "rank": 3,
@@ -56,7 +56,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 27520
+          "points": 27695
         },
         {
           "rank": 4,
@@ -64,7 +64,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 25915
+          "points": 26165
         },
         {
           "rank": 5,
@@ -72,7 +72,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 25155
+          "points": 25355
         },
         {
           "rank": 6,
@@ -572,8 +572,8 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 504100,
-    "entries": 10289,
+    "crewPoints": 504850,
+    "entries": 10303,
     "participants": 577,
     "regions": [
       {
@@ -597,7 +597,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 21589
+            "points": 21689
           },
           {
             "rank": 3,
@@ -605,7 +605,7 @@
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
-            "points": 20180
+            "points": 20380
           },
           {
             "rank": 4,
@@ -613,7 +613,7 @@
             "handle": "@grizspins",
             "platform": "Instagram",
             "country": "United States",
-            "points": 18810
+            "points": 18985
           },
           {
             "rank": 5,
@@ -621,7 +621,7 @@
             "handle": "@poppa_squatch",
             "platform": "Instagram",
             "country": "United States",
-            "points": 17025
+            "points": 17275
           },
           {
             "rank": 6,
@@ -661,7 +661,7 @@
             "handle": "@heathers_endless_tbr",
             "platform": "Instagram",
             "country": "United States",
-            "points": 8175
+            "points": 8200
           }
         ]
       },
