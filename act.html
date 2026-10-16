@@ -38,6 +38,9 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 .stat{background:rgba(255,255,255,.92);color:var(--ink);padding:clamp(16px,2.4vw,24px) 12px;text-align:center}
 .stat b{display:block;font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.2;letter-spacing:.03em;color:var(--hi)}
 .stat span{display:block;font-weight:700;font-size:clamp(11px,1.2vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--moss);margin-top:8px}
+/* Points carried over from the previous act, in small type under the crew points (Maurice, 2026-10-16). */
+.stat small{display:block;font-weight:700;font-size:clamp(11px,1.1vw,12px);line-height:1.4;letter-spacing:.02em;color:var(--moss);margin-top:6px}
+.stat small[hidden]{display:none}
 .prog{background:rgba(255,255,255,.92);color:var(--ink);padding:clamp(16px,2.4vw,24px) clamp(18px,2.8vw,28px);margin:0 0 clamp(26px,3.5vw,40px)}
 .prog-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px}
 .prog-top b{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp(24px,3vw,34px);line-height:1.2;letter-spacing:.03em}
@@ -86,7 +89,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 <body>
 <script>
 (function () {
-  var act = (location.search.match(/[?&]act=(one|two|three)/i) || [])[1] || 'two';
+  var act = (location.search.match(/[?&]act=(one|two|three)/i) || [])[1] || 'three';
   document.documentElement.setAttribute('data-act', act.toLowerCase());
   if (window.parent !== window && /[?&]embed=1/.test(location.search)) document.documentElement.classList.add('embedded');
 })();
@@ -99,7 +102,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 </header>
 <div class="wrap">
   <div class="stats">
-    <div class="stat"><b id="s-pts">0</b><span id="s-pts-l">Crew Points</span></div>
+    <div class="stat"><b id="s-pts">0</b><span id="s-pts-l">Crew Points</span><small id="s-carry" hidden></small></div>
     <div class="stat"><b id="s-ent">0</b><span id="s-ent-l">Sweepstakes Entries</span></div>
     <div class="stat"><b id="s-crew">0</b><span>Sky Pirates</span></div>
   </div>
@@ -158,6 +161,8 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
     }
     $('when').textContent = A.dates + (over ? ' · Final' : '');
     $('s-pts').textContent = fmt(d.crewPoints);
+    var prev = { two: 'Act One', three: 'Act Two' }[ACT];
+    if (d.carried && prev) { $('s-carry').textContent = 'Includes ' + fmt(d.carried) + ' carried over from ' + prev; $('s-carry').hidden = false; } else $('s-carry').hidden = true;
     $('s-ent').textContent = fmt(d.entries);
     $('s-crew').textContent = fmt(d.participants);
     var pct = Math.min(100, d.crewPoints / A.goal * 100);
