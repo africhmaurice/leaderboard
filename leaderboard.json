@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-16T15:30:02.273Z",
+  "updated": "2026-10-16T15:50:22.138Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 722910,
+  "crewTotal": 723260,
   "acts": {
-    "two": 504850,
-    "three": 18060
+    "two": 505100,
+    "three": 18160
   },
-  "entries": 14175,
+  "entries": 14180,
   "participants": 747,
   "reveals": [
     {
@@ -64,7 +64,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 26615
+          "points": 26715
         },
         {
           "rank": 5,
@@ -72,7 +72,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 25905
+          "points": 26105
         },
         {
           "rank": 6,
@@ -146,7 +146,7 @@
           "handle": "@jacob112360",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 14780
+          "points": 14830
         },
         {
           "rank": 4,
@@ -572,8 +572,8 @@
     ]
   },
   "actTwo": {
-    "crewPoints": 504850,
-    "entries": 10303,
+    "crewPoints": 505100,
+    "entries": 10306,
     "participants": 577,
     "regions": [
       {
@@ -605,7 +605,7 @@
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
-            "points": 20380
+            "points": 20480
           },
           {
             "rank": 4,
@@ -621,7 +621,7 @@
             "handle": "@poppa_squatch",
             "platform": "Instagram",
             "country": "United States",
-            "points": 17275
+            "points": 17375
           },
           {
             "rank": 6,
@@ -686,7 +686,7 @@
             "handle": "@jacob112360",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 8950
+            "points": 9000
           },
           {
             "rank": 3,
@@ -846,8 +846,8 @@
     ]
   },
   "actThree": {
-    "crewPoints": 18060,
-    "entries": 434,
+    "crewPoints": 18160,
+    "entries": 436,
     "participants": 51,
     "regions": [
       {
@@ -891,6 +891,14 @@
           },
           {
             "rank": 5,
+            "name": "Theresa",
+            "handle": "@earlybirdbooks",
+            "platform": "TikTok",
+            "country": "United States",
+            "points": 650
+          },
+          {
+            "rank": 6,
             "name": "Katie",
             "handle": "@spacefoxy9",
             "platform": "Instagram",
@@ -898,20 +906,12 @@
             "points": 640
           },
           {
-            "rank": 6,
+            "rank": 7,
             "name": "Jay",
             "handle": "@jay.rodriguez621",
             "platform": "Instagram",
             "country": "United States",
             "points": 590
-          },
-          {
-            "rank": 7,
-            "name": "Theresa",
-            "handle": "@earlybirdbooks",
-            "platform": "TikTok",
-            "country": "United States",
-            "points": 550
           },
           {
             "rank": 8,
