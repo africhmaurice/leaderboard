@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-16T15:12:04.999Z",
+  "updated": "2026-10-16T15:30:02.273Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 722510,
+  "crewTotal": 722910,
   "acts": {
     "two": 504850,
-    "three": 17660
+    "three": 18060
   },
-  "entries": 14171,
+  "entries": 14175,
   "participants": 747,
   "reveals": [
     {
@@ -40,7 +40,7 @@
           "handle": "",
           "platform": "Instagram",
           "country": "United States",
-          "points": 39055
+          "points": 39155
         },
         {
           "rank": 2,
@@ -64,7 +64,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 26315
+          "points": 26615
         },
         {
           "rank": 5,
@@ -846,8 +846,8 @@
     ]
   },
   "actThree": {
-    "crewPoints": 17660,
-    "entries": 430,
+    "crewPoints": 18060,
+    "entries": 434,
     "participants": 51,
     "regions": [
       {
@@ -879,7 +879,7 @@
             "handle": "",
             "platform": "Instagram",
             "country": "United States",
-            "points": 815
+            "points": 915
           },
           {
             "rank": 4,
