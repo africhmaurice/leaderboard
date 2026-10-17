@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-17T05:06:54.304Z",
+  "updated": "2026-10-17T07:58:30.555Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 755390,
+  "crewTotal": 756890,
   "acts": {
     "two": 505425,
-    "three": 49540
+    "three": 51040
   },
-  "entries": 14683,
+  "entries": 14686,
   "participants": 762,
   "reveals": [
     {
@@ -96,7 +96,7 @@
           "handle": "@redhead_reader",
           "platform": "Instagram",
           "country": "United States",
-          "points": 15055
+          "points": 15555
         },
         {
           "rank": 9,
@@ -146,7 +146,7 @@
           "handle": "@jacob112360",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 14980
+          "points": 15480
         },
         {
           "rank": 4,
@@ -848,8 +848,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 49540,
-    "entries": 935,
+    "crewPoints": 51040,
+    "entries": 938,
     "carried": 5425,
     "participants": 88,
     "regions": [
@@ -902,6 +902,14 @@
           },
           {
             "rank": 6,
+            "name": "Devin",
+            "handle": "@vintage_book_journal",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 1500
+          },
+          {
+            "rank": 7,
             "name": "Clark",
             "handle": "@grizspins",
             "platform": "Instagram",
@@ -909,7 +917,15 @@
             "points": 1425
           },
           {
-            "rank": 7,
+            "rank": 8,
+            "name": "Kate",
+            "handle": "@redhead_reader",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 1340
+          },
+          {
+            "rank": 9,
             "name": "Dennis",
             "handle": "@dennisreadslitrpg",
             "platform": "TikTok",
@@ -917,28 +933,12 @@
             "points": 1325
           },
           {
-            "rank": 8,
+            "rank": 10,
             "name": "Heather",
             "handle": "@heathers_endless_tbr",
             "platform": "Instagram",
             "country": "United States",
             "points": 1265
-          },
-          {
-            "rank": 9,
-            "name": "Jillian",
-            "handle": "@littleboopboops",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 1140
-          },
-          {
-            "rank": 10,
-            "name": "Noah",
-            "handle": "@nsakmar",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 1100
           }
         ]
       },
@@ -967,6 +967,14 @@
           },
           {
             "rank": 3,
+            "name": "jakub",
+            "handle": "@jacob112360",
+            "platform": "Instagram",
+            "country": "United Kingdom",
+            "points": 525
+          },
+          {
+            "rank": 4,
             "name": "Navi",
             "handle": "",
             "platform": "",
@@ -974,7 +982,7 @@
             "points": 500
           },
           {
-            "rank": 4,
+            "rank": 5,
             "name": "Katherine",
             "handle": "@wheelygoodfantasy",
             "platform": "Instagram",
@@ -982,7 +990,7 @@
             "points": 150
           },
           {
-            "rank": 5,
+            "rank": 6,
             "name": "James",
             "handle": "@jamesthorneauthor",
             "platform": "Instagram",
@@ -990,20 +998,12 @@
             "points": 115
           },
           {
-            "rank": 6,
+            "rank": 7,
             "name": "Lottie",
             "handle": "@rocknrollspiderman",
             "platform": "Instagram",
             "country": "United Kingdom",
             "points": 100
-          },
-          {
-            "rank": 7,
-            "name": "jakub",
-            "handle": "@jacob112360",
-            "platform": "Instagram",
-            "country": "United Kingdom",
-            "points": 25
           }
         ]
       },

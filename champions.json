@@ -1,0 +1,41 @@
+{
+  "updated": "2026-10-17T07:58:32.656Z",
+  "games": {
+    "runner": {
+      "title": "Airship Runner",
+      "champion": {
+        "name": "jakub",
+        "handle": "@jacob112360",
+        "key": "@jacob112360",
+        "week": "2026-10-16"
+      },
+      "wins": {
+        "@jacob112360": 1
+      }
+    },
+    "needle": {
+      "title": "Thread the Needle",
+      "champion": {
+        "name": "Devin",
+        "handle": "@vintage_book_journal",
+        "key": "@vintage_book_journal",
+        "week": "2026-10-16-r"
+      },
+      "wins": {
+        "@vintage_book_journal": 2
+      }
+    },
+    "trench": {
+      "title": "Trench Run",
+      "champion": {
+        "name": "Kate",
+        "handle": "@redhead_reader",
+        "key": "@redhead_reader",
+        "week": "2026-10-16"
+      },
+      "wins": {
+        "@redhead_reader": 1
+      }
+    }
+  }
+}
