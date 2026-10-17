@@ -1,14 +1,14 @@
 {
-  "updated": "2026-10-17T03:40:02.580Z",
+  "updated": "2026-10-17T03:47:57.329Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 747970,
+  "crewTotal": 749165,
   "acts": {
     "two": 505425,
-    "three": 47970
+    "three": 49165
   },
-  "entries": 14657,
-  "participants": 759,
+  "entries": 14683,
+  "participants": 762,
   "reveals": [
     {
       "at": 125000,
@@ -32,7 +32,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 680,
+      "participants": 683,
       "top": [
         {
           "rank": 1,
@@ -80,7 +80,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 18229
+          "points": 18379
         },
         {
           "rank": 7,
@@ -848,17 +848,17 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 47970,
-    "entries": 909,
+    "crewPoints": 49165,
+    "entries": 935,
     "carried": 5425,
-    "participants": 83,
+    "participants": 88,
     "regions": [
       {
         "key": "us",
         "label": "United States",
         "title": "United States",
         "treasure": true,
-        "participants": 64,
+        "participants": 69,
         "top": [
           {
             "rank": 1,
@@ -898,7 +898,7 @@
             "handle": "@topherdauthor",
             "platform": "Instagram",
             "country": "United States",
-            "points": 1490
+            "points": 1540
           },
           {
             "rank": 6,
