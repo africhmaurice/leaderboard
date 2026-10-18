@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-18T19:58:26.896Z",
+  "updated": "2026-10-18T20:27:28.031Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 803088,
+  "crewTotal": 803338,
   "acts": {
     "two": 505425,
-    "three": 97238
+    "three": 97488
   },
-  "entries": 15832,
+  "entries": 15837,
   "participants": 795,
   "reveals": [
     {
@@ -52,19 +52,19 @@
         },
         {
           "rank": 3,
+          "name": "Clark",
+          "handle": "@grizspins",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 30287
+        },
+        {
+          "rank": 4,
           "name": "Theresa",
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
           "points": 30150
-        },
-        {
-          "rank": 4,
-          "name": "Clark",
-          "handle": "@grizspins",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 30037
         },
         {
           "rank": 5,
@@ -848,8 +848,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 97238,
-    "entries": 2084,
+    "crewPoints": 97488,
+    "entries": 2089,
     "carried": 5425,
     "participants": 131,
     "regions": [
@@ -902,6 +902,14 @@
           },
           {
             "rank": 6,
+            "name": "Clark",
+            "handle": "@grizspins",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 2442
+          },
+          {
+            "rank": 7,
             "name": "Tyler",
             "handle": "@tylers_bookshelf",
             "platform": "Instagram",
@@ -909,7 +917,7 @@
             "points": 2370
           },
           {
-            "rank": 7,
+            "rank": 8,
             "name": "Joshua",
             "handle": "@arkhamforest",
             "platform": "X",
@@ -917,20 +925,12 @@
             "points": 2325
           },
           {
-            "rank": 8,
+            "rank": 9,
             "name": "Topher",
             "handle": "@topherdauthor",
             "platform": "Instagram",
             "country": "United States",
             "points": 2220
-          },
-          {
-            "rank": 9,
-            "name": "Clark",
-            "handle": "@grizspins",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 2192
           },
           {
             "rank": 10,
