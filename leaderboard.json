@@ -1,14 +1,14 @@
 {
-  "updated": "2026-10-18T00:42:22.148Z",
+  "updated": "2026-10-18T19:58:26.896Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 780501,
+  "crewTotal": 803088,
   "acts": {
     "two": 505425,
-    "three": 74651
+    "three": 97238
   },
-  "entries": 15283,
-  "participants": 772,
+  "entries": 15832,
+  "participants": 795,
   "reveals": [
     {
       "at": 125000,
@@ -32,7 +32,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 692,
+      "participants": 714,
       "top": [
         {
           "rank": 1,
@@ -40,7 +40,7 @@
           "handle": "",
           "platform": "Instagram",
           "country": "United States",
-          "points": 42195
+          "points": 43185
         },
         {
           "rank": 2,
@@ -48,23 +48,23 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 33315
+          "points": 34380
         },
         {
           "rank": 3,
-          "name": "Clark",
-          "handle": "@grizspins",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 29610
-        },
-        {
-          "rank": 4,
           "name": "Theresa",
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 29085
+          "points": 30150
+        },
+        {
+          "rank": 4,
+          "name": "Clark",
+          "handle": "@grizspins",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 30037
         },
         {
           "rank": 5,
@@ -72,7 +72,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 28855
+          "points": 29120
         },
         {
           "rank": 6,
@@ -80,23 +80,23 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 19569
+          "points": 20209
         },
         {
           "rank": 7,
-          "name": "Kate",
-          "handle": "@redhead_reader",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 16245
-        },
-        {
-          "rank": 8,
           "name": "Brandi",
           "handle": "@brandibuystoomanybooks",
           "platform": "Instagram",
           "country": "United States",
-          "points": 15935
+          "points": 17390
+        },
+        {
+          "rank": 8,
+          "name": "Kate",
+          "handle": "@redhead_reader",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 16735
         },
         {
           "rank": 9,
@@ -104,7 +104,7 @@
           "handle": "@queen_0f_ink",
           "platform": "Instagram",
           "country": "United States",
-          "points": 14670
+          "points": 15035
         },
         {
           "rank": 10,
@@ -112,7 +112,7 @@
           "handle": "@heathers_endless_tbr",
           "platform": "Instagram",
           "country": "United States",
-          "points": 14430
+          "points": 14720
         }
       ]
     },
@@ -122,7 +122,7 @@
       "title": "United Kingdom",
       "note": "*The three U.K. Sky Pirates with the most points at the end of the hunt find the U.K. Treasure — revealed soon.",
       "treasure": true,
-      "participants": 32,
+      "participants": 33,
       "top": [
         {
           "rank": 1,
@@ -130,7 +130,7 @@
           "handle": "@spine.breakerbooks",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 22145
+          "points": 22510
         },
         {
           "rank": 2,
@@ -138,7 +138,7 @@
           "handle": "@dearthedays",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 15900
+          "points": 16125
         },
         {
           "rank": 3,
@@ -146,7 +146,7 @@
           "handle": "@jacob112360",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 15745
+          "points": 16010
         },
         {
           "rank": 4,
@@ -178,7 +178,7 @@
           "handle": "@rocknrollspiderman",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 4680
+          "points": 4730
         },
         {
           "rank": 8,
@@ -220,7 +220,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 17715
+          "points": 18105
         },
         {
           "rank": 2,
@@ -228,7 +228,7 @@
           "handle": "@ryan_reads_big_books",
           "platform": "Instagram",
           "country": "Canada",
-          "points": 14620
+          "points": 15250
         },
         {
           "rank": 3,
@@ -236,7 +236,7 @@
           "handle": "",
           "platform": "",
           "country": "Canada",
-          "points": 6865
+          "points": 6890
         },
         {
           "rank": 4,
@@ -848,17 +848,17 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 74651,
-    "entries": 1535,
+    "crewPoints": 97238,
+    "entries": 2084,
     "carried": 5425,
-    "participants": 108,
+    "participants": 131,
     "regions": [
       {
         "key": "us",
         "label": "United States",
         "title": "United States",
         "treasure": true,
-        "participants": 87,
+        "participants": 109,
         "top": [
           {
             "rank": 1,
@@ -866,7 +866,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 4146
+            "points": 5211
           },
           {
             "rank": 2,
@@ -874,7 +874,7 @@
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
-            "points": 3405
+            "points": 4470
           },
           {
             "rank": 3,
@@ -882,7 +882,7 @@
             "handle": "",
             "platform": "Instagram",
             "country": "United States",
-            "points": 3355
+            "points": 4345
           },
           {
             "rank": 4,
@@ -890,7 +890,7 @@
             "handle": "@poppa_squatch",
             "platform": "Instagram",
             "country": "United States",
-            "points": 2440
+            "points": 2705
           },
           {
             "rank": 5,
@@ -898,47 +898,47 @@
             "handle": "@redhead_reader",
             "platform": "Instagram",
             "country": "United States",
-            "points": 2030
+            "points": 2520
           },
           {
             "rank": 6,
-            "name": "Topher",
-            "handle": "@topherdauthor",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 1905
-          },
-          {
-            "rank": 7,
-            "name": "Bradley",
-            "handle": "@brad54kgusa",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 1780
-          },
-          {
-            "rank": 8,
-            "name": "Clark",
-            "handle": "@grizspins",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 1765
-          },
-          {
-            "rank": 9,
             "name": "Tyler",
             "handle": "@tylers_bookshelf",
             "platform": "Instagram",
             "country": "United States",
-            "points": 1730
+            "points": 2370
+          },
+          {
+            "rank": 7,
+            "name": "Joshua",
+            "handle": "@arkhamforest",
+            "platform": "X",
+            "country": "United States",
+            "points": 2325
+          },
+          {
+            "rank": 8,
+            "name": "Topher",
+            "handle": "@topherdauthor",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 2220
+          },
+          {
+            "rank": 9,
+            "name": "Clark",
+            "handle": "@grizspins",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 2192
           },
           {
             "rank": 10,
-            "name": "Andrea",
-            "handle": "@andrea_heinrichs85",
+            "name": "Brandi",
+            "handle": "@brandibuystoomanybooks",
             "platform": "Instagram",
             "country": "United States",
-            "points": 1630
+            "points": 1970
           }
         ]
       },
@@ -947,7 +947,7 @@
         "label": "United Kingdom",
         "title": "United Kingdom",
         "treasure": true,
-        "participants": 7,
+        "participants": 8,
         "top": [
           {
             "rank": 1,
@@ -955,7 +955,7 @@
             "handle": "@spine.breakerbooks",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 1355
+            "points": 1720
           },
           {
             "rank": 2,
@@ -963,7 +963,7 @@
             "handle": "@dearthedays",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 1190
+            "points": 1415
           },
           {
             "rank": 3,
@@ -971,7 +971,7 @@
             "handle": "@jacob112360",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 790
+            "points": 1055
           },
           {
             "rank": 4,
@@ -987,7 +987,7 @@
             "handle": "@rocknrollspiderman",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 250
+            "points": 300
           },
           {
             "rank": 6,
@@ -1004,6 +1004,14 @@
             "platform": "Instagram",
             "country": "United Kingdom",
             "points": 115
+          },
+          {
+            "rank": 8,
+            "name": "Liane",
+            "handle": "@beanie",
+            "platform": "",
+            "country": "United Kingdom",
+            "points": 50
           }
         ]
       },
@@ -1016,6 +1024,14 @@
         "top": [
           {
             "rank": 1,
+            "name": "Ryan",
+            "handle": "@ryan_reads_big_books",
+            "platform": "Instagram",
+            "country": "Canada",
+            "points": 1795
+          },
+          {
+            "rank": 2,
             "name": "Valerio",
             "handle": "@bugauanga",
             "platform": "YouTube",
@@ -1023,28 +1039,20 @@
             "points": 1625
           },
           {
-            "rank": 2,
-            "name": "Ritch",
-            "handle": "@ritswilin_",
-            "platform": "Instagram",
-            "country": "Philippines",
-            "points": 1340
-          },
-          {
             "rank": 3,
             "name": "Lilith",
             "handle": "@lovelisyda",
             "platform": "Instagram",
             "country": "Estonia",
-            "points": 1230
+            "points": 1620
           },
           {
             "rank": 4,
-            "name": "Ryan",
-            "handle": "@ryan_reads_big_books",
+            "name": "Ritch",
+            "handle": "@ritswilin_",
             "platform": "Instagram",
-            "country": "Canada",
-            "points": 1165
+            "country": "Philippines",
+            "points": 1340
           },
           {
             "rank": 5,
