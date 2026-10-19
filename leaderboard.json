@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-19T01:39:58.438Z",
+  "updated": "2026-10-19T02:17:17.136Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 811278,
+  "crewTotal": 811428,
   "acts": {
     "two": 505425,
-    "three": 105578
+    "three": 105728
   },
-  "entries": 16010,
+  "entries": 16013,
   "participants": 804,
   "reveals": [
     {
@@ -48,7 +48,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 34580
+          "points": 34630
         },
         {
           "rank": 3,
@@ -64,7 +64,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 30512
+          "points": 30612
         },
         {
           "rank": 5,
@@ -848,8 +848,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 105578,
-    "entries": 2265,
+    "crewPoints": 105728,
+    "entries": 2268,
     "carried": 5425,
     "participants": 142,
     "regions": [
@@ -866,7 +866,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 5411
+            "points": 5461
           },
           {
             "rank": 2,
@@ -886,19 +886,19 @@
           },
           {
             "rank": 4,
+            "name": "Clark",
+            "handle": "@grizspins",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 2767
+          },
+          {
+            "rank": 5,
             "name": "Joshua",
             "handle": "@poppa_squatch",
             "platform": "Instagram",
             "country": "United States",
             "points": 2755
-          },
-          {
-            "rank": 5,
-            "name": "Clark",
-            "handle": "@grizspins",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 2667
           },
           {
             "rank": 6,
