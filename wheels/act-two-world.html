@@ -78,7 +78,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
     <h2>Winners</h2>
     
     <ol class="slots" id="slots"></ol>
-    <p class="fine">Every Act Two entry is its own slice of the wheel, mixed so no name sits next to itself. Winners are chosen with the browser’s cryptographic random number generator. Limit one “prize” per person.</p>
+    
     <div class="tools"><button class="reset" id="reset" type="button">START OVER</button><button class="reset" id="save" type="button" hidden>SAVE RESULTS</button></div>
   </aside>
 </div>
@@ -88,9 +88,9 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
 (function () {
   // [first name, handle, entries] for every U.S. Act One entrant, from the hunt's ledger.
   var ENTRANTS = [["Lilith","@lovelisyda",225],["Ryan","@ryan_reads_big_books",220],["Chrystal","",84],["Brittany","",32],["Matthew","@mflynn101",29],["Becky","@becks.and.books",26],["Nayana","@books.with.nay",12],["Bridget","@bbeatson",10],["Petrik","@petrikleo",9],["Philip","@biggusdricus",6],["Mark","@duffmanis",5],["Sindre","@sindremt",4],["Thierry","",4],["Silvia","@mientrasleos",2],["Gordon","@ink.carnation",2],["Micaël","@theadhdreader",1],["João","@joaob099",1],["Tiina","@tiina.verse",1],["Kirsten","@bookshooksandhorses",1],["Chadi","@arabiskenatt",1],["Thomas","@thomas__langley",1],["Dave","@deric",1],["Jen","@simplewondersshop",1],["Nick","@nicksalcole",1]];
-  var WINNERS = 5, KEY = 'actTwoWheelWorld5:winners';   // each wheel saves under its own name
+  var WINNERS = 5, KEY = 'actTwoWheelWorldSite:winners';   // each wheel saves under its own name
   // On the website the wheel replays the recorded draw instead of drawing: REPLAY holds each spin's layout and landing.
-  var REPLAY = {"spins":[{"order":[11,5,3,9,7,9,7,3,6,3,9,5,3,5,6,18,7,3,5,3,5,17,5,3,16,10,7,5,8,7,9,11,20,3,11,3,9,5,12,22,5,3,10,8,3,10,12,5,14,3,6,3,10,3,8,3,7,5,6,13,5,6,5,3,8,5,3,10,8,6,3,5,19,3,11,14,13,7,12,23,3,7,5,6,8,3,6,5,3,12,5,8,5,6,21,3,15,6,5,8,5,3,5,3,6,3,5,3,7,3,9,7,6,5,3,8,3,5,3,5,3],"k":65,"off":0.3315092,"start":0,"end":-3434.3747381157027,"dur":11136}]};
+  var REPLAY = {"spins":[{"order":[1,20,0,1,0,3,2,1,0,1,8,4,19,0,1,3,6,1,2,0,5,0,5,1,0,1,0,1,0,3,0,1,2,0,3,0,1,2,0,1,0,1,4,1,0,1,0,12,0,8,1,5,1,0,1,0,1,2,0,1,8,4,0,1,14,0,1,2,1,2,6,1,15,2,3,1,2,4,1,2,1,0,3,1,0,1,10,0,1,0,1,0,2,3,0,1,0,5,1,2,9,4,2,4,0,1,0,1,2,1,0,1,0,10,0,23,1,0,5,0,1,0,7,0,1,0,1,0,1,0,2,0,5,0,4,0,1,2,0,1,4,0,1,0,1,4,2,0,1,5,3,1,2,0,4,1,0,1,0,1,2,1,0,1,0,1,0,2,5,1,0,5,0,1,9,0,22,0,10,12,0,6,8,3,2,21,1,0,1,0,12,1,2,16,5,0,1,2,1,0,1,2,0,1,10,1,3,1,0,3,8,0,1,4,1,2,0,1,0,1,0,1,0,2,1,2,0,1,0,4,9,0,1,0,4,3,4,0,1,0,7,1,0,4,0,11,1,0,1,2,0,2,3,1,0,2,1,2,0,1,0,1,0,1,0,1,0,5,1,0,14,3,1,0,1,0,1,0,4,1,6,1,0,1,2,0,3,0,4,5,0,1,0,1,5,1,0,2,7,1,5,1,0,1,0,1,2,0,1,0,1,3,0,5,0,1,0,1,0,2,1,0,1,0,1,2,0,4,0,1,0,1,2,1,0,2,0,2,0,1,4,1,0,2,0,1,0,6,1,0,2,1,0,6,0,2,11,1,0,1,2,8,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,4,1,3,0,1,0,1,0,1,0,1,0,1,0,1,0,3,2,11,0,1,0,1,0,1,0,2,1,0,1,0,1,0,1,2,1,0,8,0,1,0,10,1,0,2,0,1,3,0,1,0,1,3,2,12,0,1,0,1,0,1,0,1,5,0,1,0,1,0,1,0,2,0,5,0,1,0,1,3,2,0,2,0,1,0,2,1,0,1,0,1,0,4,0,2,1,0,3,0,11,5,4,1,7,0,1,0,1,0,1,0,1,6,0,3,1,2,3,1,0,1,2,0,5,1,0,5,0,1,17,1,2,1,2,1,5,0,1,5,1,0,7,1,2,1,6,0,4,0,1,0,8,2,1,3,1,9,7,0,1,3,18,1,13,1,2,1,0,1,0,4,0,1,4,0,1,0,2,0,1,0,2,4,0,2,9,3,0,3,2,6,1,0,2,1,0,4,0,1,2,0,3,1,0,1,5,2,5,1,0,2,1,2,0,3,1,7,0,2,8,1,0,1,0,2,0,1,2,0,1,9,0,6,3,5,2,1,2,3,1,0,1,4,0,2,1,0,1,0,2,13,7,0,1,0,2,1,7,1,0,2,1,2,4,1,2,1,0,1,0,1,7,0,1,0,1,0,1,2,6,1,6,1,0,2,5,0,2,0,2,1,0,1,0,1,0],"k":360,"off":0.5,"start":0,"end":-3431.134020618557,"dur":12000},{"order":[4,0,1,0,3,1,0,1,5,5,1,0,1,0,3,1,7,0,8,1,0,1,0,0,1,0,1,9,0,6,3,5,1,3,1,0,1,4,0,1,0,1,0,13,7,0,1,0,1,7,1,0,1,4,1,1,0,1,0,1,7,0,1,0,1,0,1,6,1,6,1,0,5,0,0,1,0,1,0,1,0,1,20,0,1,0,3,1,0,1,8,4,19,0,1,3,6,1,0,5,0,5,1,0,1,0,1,0,3,0,1,0,3,0,1,0,1,0,1,4,1,0,1,0,12,0,8,1,5,1,0,1,0,1,0,1,8,4,0,1,14,0,1,1,6,1,15,3,1,4,1,1,0,3,1,0,1,10,0,1,0,1,0,3,0,1,0,5,1,9,4,4,0,1,0,1,1,0,1,0,10,0,23,1,0,5,0,1,0,7,0,1,0,1,0,1,0,0,5,0,4,0,1,0,1,4,0,1,0,1,4,0,1,5,3,1,0,4,1,0,1,0,1,1,0,1,0,1,0,5,1,0,5,0,1,9,0,22,0,10,12,0,6,8,3,21,1,0,1,0,12,1,16,5,0,1,1,0,1,0,1,10,1,3,1,0,3,8,0,1,4,1,0,1,0,1,0,1,0,1,0,1,0,4,9,0,1,0,4,3,4,0,1,0,7,1,0,4,0,11,1,0,1,0,3,1,0,1,0,1,0,1,0,1,0,1,0,5,1,0,14,3,1,0,1,0,1,0,4,1,6,1,0,1,0,3,0,4,5,0,1,0,1,5,1,0,7,1,5,1,0,1,0,1,0,1,0,1,3,0,5,0,1,0,1,0,1,0,1,0,1,0,4,0,1,0,1,1,0,0,0,1,4,1,0,0,1,0,6,1,0,1,0,6,0,11,1,0,1,8,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,4,1,3,0,1,0,1,0,1,0,1,0,1,0,1,0,3,11,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,8,0,1,0,10,1,0,0,1,3,0,1,0,1,3,12,0,1,0,1,0,1,0,1,5,0,1,0,1,0,1,0,0,5,0,1,0,1,3,0,0,1,0,1,0,1,0,1,0,4,0,1,0,3,0,11,5,4,1,7,0,1,0,1,0,1,0,1,6,0,3,1,3,1,0,1,0,5,1,0,5,0,1,17,1,1,1,5,0,1,5,1,0,7,1,1,6,0,4,0,1,0,8,1,3,1,9,7,0,1,3,18,1,13,1,1,0,1,0,4,0,1,4,0,1,0,0,1,0,4,0,9,3,0,3,6,1,0,1,0],"k":312,"off":0.5,"start":-191.13402061855686,"end":-3069.075630252101,"dur":12000},{"order":[2,1,0,1,0,1,0,4,0,2,1,0,3,0,11,5,4,1,7,0,1,0,1,0,1,0,1,6,0,3,1,2,3,1,0,1,2,0,5,1,0,5,0,1,17,1,2,1,2,1,5,0,1,5,1,0,7,1,2,1,6,0,4,0,1,0,8,2,1,3,1,9,7,0,1,3,18,1,13,1,2,1,0,1,0,4,0,1,4,0,1,0,2,0,1,0,2,4,0,2,9,3,0,3,2,6,1,0,2,1,0,4,0,1,2,0,3,1,0,1,5,2,5,1,0,2,1,2,0,3,1,7,0,2,8,1,0,1,0,2,0,1,2,0,1,9,0,6,3,5,2,1,2,3,1,0,1,4,0,2,1,0,1,0,2,13,7,0,1,0,2,1,7,1,0,2,1,2,4,1,2,1,0,1,0,1,7,0,1,0,1,0,1,2,6,1,6,1,0,2,5,0,2,0,2,1,0,1,0,1,0,1,20,0,1,0,3,2,1,0,1,8,4,19,0,1,3,6,1,2,0,5,0,5,1,0,1,0,1,0,3,0,1,2,0,3,0,1,2,0,1,0,1,4,1,0,1,0,12,0,8,1,5,1,0,1,0,1,2,0,1,8,4,0,1,14,0,1,2,1,2,6,1,15,2,3,1,2,4,1,2,1,0,3,1,0,1,10,0,1,0,1,0,2,3,0,1,0,5,1,2,9,4,2,4,0,1,0,1,2,1,0,1,0,10,0,23,1,0,5,0,1,0,7,0,1,0,1,0,1,0,2,0,5,0,4,0,1,2,0,1,4,0,1,0,1,4,2,0,1,5,3,1,2,0,4,1,0,1,0,1,2,1,0,1,0,1,0,2,5,1,0,5,0,1,9,0,22,0,10,12,0,6,8,3,2,21,1,0,1,0,12,1,2,16,5,0,1,2,1,0,1,2,0,1,10,1,3,1,0,3,8,0,1,4,1,2,0,1,0,1,0,1,0,2,1,2,0,1,0,4,9,0,1,0,4,3,4,0,1,0,7,1,0,4,0,11,1,0,1,2,0,2,3,1,0,2,1,2,0,1,0,1,0,1,0,1,0,5,1,0,14,3,1,0,1,0,1,0,4,1,6,1,0,1,2,0,3,0,4,5,0,1,0,1,5,1,0,2,7,1,5,1,0,1,0,1,2,0,1,0,1,3,0,5,0,1,0,1,0,2,1,0,1,0,1,2,0,4,0,1,0,1,2,1,0,2,0,2,0,1,4,1,0,2,0,1,0,6,1,0,2,1,0,6,0,2,11,1,0,1,2,8,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,4,1,3,0,1,0,1,0,1,0,1,0,1,0,1,0,3,2,11,0,1,0,1,0,1,0,2,1,0,1,0,1,0,1,2,1,0,8,0,1,0,10,1,0,2,0,1,3,0,1,0,1,3,2,12,0,1,0,1,0,1,0,1,5,0,1,0,1,0,1,0,2,0,5,0,1,0,1,3,2,0,2,0,1,0],"k":190,"off":0.5199348,"start":0,"end":-2981.0120420147277,"dur":12493},{"order":[2,0,2,0,2,0,9,0,4,0,2,0,3,0,2,0,14,2,0,12,2,0,4,2,0,8,0,2,5,0,3,6,2,0,5,2,5,0,7,0,10,5,0,2,0,4,0,2,0,2,0,4,0,3,0,4,0,5,0,5,0,4,0,4,0,2,0,4,0,2,0,20,0,5,0,4,0,9,0,2,0,2,0,2,0,3,0,2,0,3,0,5,0,2,0,4,0,6,0,4,0,6,0,2,0,4,0,2,0,8,0,10,0,3,0,6,0,5,0,4,0,4,0,2,0,13,0,4,0,3,0,2,0,2,0,2,0,4,0,2,0,9,0,2,0,5,0,4,0,4,0,2,0,2,0,3,0,6,0,7,0,7,0,10,0,5,0,3,0,7,0,6,0,2,0,3,0,12,0,2,0,2,0,3,0,5,0,2,0,6,0,3,0,18,0,5,0,2,0,3,0,2,0,4,0,3,0,15,0,2,0,2,0,4,0,5,0,3,0,2,0,5,0,3,0,6,0,3,0,2,0,6,0,22,0,4,0,2,0,3,0,2,0,3,0,10,0,2,0,9,0,2,0,2,0,2,0,6,0,8,0,3,0,11,0,2,0,5,0,4,0,2,0,9,0,6,0,2,0,2,0,3,0,3,0,2,0,2,0,11,0,8,0,7,0,2,0,5,0,5,0,2,0,2,0,2,0,5,0,2,0,7,0,3,0,17,0,6,0,2,0,2,0,2,0,2,0,2,0,3,0,5,0,2,0,3,0,13,0,11,0,3,0,12,0,5,0,7,0,4,0,8,0,5,0,12,0,7,0,2,0,2,0,2,0,4,0,5,0,2,0,8,0,2,0,14,0,2,0,2,0,2,0,3,0,2,0,4,0,2,0,7,0,2,0,3,0,2,0,2,0,10,0,3,0,3,0,23,0,3,0,2,0,2,0,11,0,4,0,2,0,4,0,4,0,8,0,16,0,5,0,2,0,2,0,5,0,8,0,5,0,4,0,7,0,2,0,2,0,8,0,3,0,9,0,19,0,21,0],"k":421,"off":0.39804600000000007,"start":-2981.0120420147277,"end":-690.508271372549,"dur":11789},{"order":[11,5,3,9,7,9,7,3,6,3,9,5,3,5,6,18,7,3,5,3,5,17,5,3,16,10,7,5,8,7,9,11,20,3,11,3,9,5,12,22,5,3,10,8,3,10,12,5,14,3,6,3,10,3,8,3,7,5,6,13,5,6,5,3,8,5,3,10,8,6,3,5,19,3,11,14,13,7,12,23,3,7,5,6,8,3,6,5,3,12,5,8,5,6,21,3,15,6,5,8,5,3,5,3,6,3,5,3,7,3,9,7,6,5,3,8,3,5,3,5,3],"k":65,"off":0.3315092,"start":0,"end":-3434.3747381157027,"dur":11136}]};
   var PUBLIC = true;   // the website copy: it only ever replays, and waits quietly until the draw is saved
   var spins = [];   // the record of this draw, saved so the website can replay it exactly
   var COLORS = ['#c53200', '#268e62', '#1a5e41', '#2c6021', '#912501', '#1a5e41', '#268e62', '#57bb41'];
@@ -116,9 +116,6 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
     // a save from another wheel (the shared-name bug before 2026-10-02) is ignored
     if (!winners.every(function (w) { return ENTRANTS.some(function (e) { return e[0] === w[0] && e[1] === w[1]; }); })) { winners = []; spins = []; }
   }
-  var PRESET = [["Chrystal",""],["Lilith","@lovelisyda"],["Ryan","@ryan_reads_big_books"],["Matthew","@mflynn101"]];
-  if (winners.length < PRESET.length) { winners = PRESET.slice(); spins = []; }
-  if (!REPLAY) try { var sv = JSON.parse(localStorage.getItem(KEY + ':spins') || '[]') || []; if (sv.length === winners.length - PRESET.length) spins = sv; } catch (e) {}
   var INDEX = new Map(ENTRANTS.map(function (e, i) { return [e, i]; }));
 
   // Lays out one equal slice per entry, in random order, with no two neighbouring slices (the last and
@@ -161,7 +158,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
     return spread(people, top);
   }
   function build() {
-    if (REPLAY) { var r = REPLAY.spins[Math.min(winners.length - PRESET.length, REPLAY.spins.length - 1)]; slices = r.order.map(function (i) { return ENTRANTS[i]; }); paintFace(); dirty = false; return; }
+    if (REPLAY) { var r = REPLAY.spins[Math.min(winners.length, REPLAY.spins.length - 1)]; slices = r.order.map(function (i) { return ENTRANTS[i]; }); paintFace(); dirty = false; return; }
     var won = {}; winners.forEach(function (w) { won[w[0] + '|' + w[1]] = 1; });
     var people = ENTRANTS.filter(function (e) { return !won[e[0] + '|' + e[1]]; });
     slices = arrange(people);
@@ -269,12 +266,12 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
 
   function spin() {
     if (PUBLIC && !REPLAY) return;
-    if (REPLAY && !spinning && winners.length >= WINNERS) { winners = PRESET.slice(); dirty = true; btn.textContent = 'SPIN'; renderSlots(-1); }
+    if (REPLAY && !spinning && winners.length >= WINNERS) { winners = []; dirty = true; btn.textContent = 'SPIN'; renderSlots(-1); }
     if (spinning || winners.length >= WINNERS) return;
     if (dirty) build();                       // the last winner's slices leave the wheel here, as the next spin starts
     spinning = true; btn.disabled = true;
     var n = slices.length, w = 360 / n;
-    var rec = REPLAY && REPLAY.spins[winners.length - PRESET.length];
+    var rec = REPLAY && REPLAY.spins[winners.length];
     if (rec) angle = rec.start;
     var k = rec ? rec.k : randInt(n);         // the winning entry: every remaining entry has the same chance
     var offset = (rec ? rec.off : 0.3 + 0.4 * rand01()) * w;  // land well inside that slice, never on its edge
@@ -342,7 +339,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
   $('reset').addEventListener('click', function () {
     if (spinning) return;
     if (!armed) { armed = 1; this.textContent = 'CLICK AGAIN TO CLEAR WINNERS'; var b = this; setTimeout(function () { armed = 0; b.textContent = 'START OVER'; }, 3000); return; }
-    armed = 0; this.textContent = 'START OVER'; winners = PRESET.slice(); spins = []; btn.textContent = 'SPIN';
+    armed = 0; this.textContent = 'START OVER'; winners = []; spins = []; btn.textContent = 'SPIN';
     try { localStorage.removeItem(KEY); localStorage.removeItem(KEY + ':spins'); } catch (x) {}
     build(); angle = 0; zoom = 1; draw(); renderSlots(-1); now.textContent = 'Spin the wheel!'; nowh.textContent = '679 entries from 24 international sky pirates';
   });
