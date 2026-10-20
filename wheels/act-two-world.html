@@ -90,7 +90,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
   var ENTRANTS = [["Lilith","@lovelisyda",225],["Ryan","@ryan_reads_big_books",220],["Chrystal","",84],["Brittany","",32],["Matthew","@mflynn101",29],["Becky","@becks.and.books",26],["Nayana","@books.with.nay",12],["Bridget","@bbeatson",10],["Petrik","@petrikleo",9],["Philip","@biggusdricus",6],["Mark","@duffmanis",5],["Sindre","@sindremt",4],["Thierry","",4],["Silvia","@mientrasleos",2],["Gordon","@ink.carnation",2],["Micaël","@theadhdreader",1],["João","@joaob099",1],["Tiina","@tiina.verse",1],["Kirsten","@bookshooksandhorses",1],["Chadi","@arabiskenatt",1],["Thomas","@thomas__langley",1],["Dave","@deric",1],["Jen","@simplewondersshop",1],["Nick","@nicksalcole",1]];
   var WINNERS = 5, KEY = 'actTwoWheelWorld5:winners';   // each wheel saves under its own name
   // On the website the wheel replays the recorded draw instead of drawing: REPLAY holds each spin's layout and landing.
-  var REPLAY = null;
+  var REPLAY = {"spins":[{"order":[11,5,3,9,7,9,7,3,6,3,9,5,3,5,6,18,7,3,5,3,5,17,5,3,16,10,7,5,8,7,9,11,20,3,11,3,9,5,12,22,5,3,10,8,3,10,12,5,14,3,6,3,10,3,8,3,7,5,6,13,5,6,5,3,8,5,3,10,8,6,3,5,19,3,11,14,13,7,12,23,3,7,5,6,8,3,6,5,3,12,5,8,5,6,21,3,15,6,5,8,5,3,5,3,6,3,5,3,7,3,9,7,6,5,3,8,3,5,3,5,3],"k":65,"off":0.3315092,"start":0,"end":-3434.3747381157027,"dur":11136}]};
   var PUBLIC = true;   // the website copy: it only ever replays, and waits quietly until the draw is saved
   var spins = [];   // the record of this draw, saved so the website can replay it exactly
   var COLORS = ['#c53200', '#268e62', '#1a5e41', '#2c6021', '#912501', '#1a5e41', '#268e62', '#57bb41'];
@@ -118,6 +118,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
   }
   var PRESET = [["Chrystal",""],["Lilith","@lovelisyda"],["Ryan","@ryan_reads_big_books"],["Matthew","@mflynn101"]];
   if (winners.length < PRESET.length) { winners = PRESET.slice(); spins = []; }
+  if (!REPLAY) try { var sv = JSON.parse(localStorage.getItem(KEY + ':spins') || '[]') || []; if (sv.length === winners.length - PRESET.length) spins = sv; } catch (e) {}
   var INDEX = new Map(ENTRANTS.map(function (e, i) { return [e, i]; }));
 
   // Lays out one equal slice per entry, in random order, with no two neighbouring slices (the last and
