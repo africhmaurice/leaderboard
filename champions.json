@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T21:48:12.685Z",
+  "updated": "2026-10-21T22:01:05.659Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -39,8 +39,15 @@
     },
     "gauntlet": {
       "title": "Sky Gauntlet",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Dennis",
+        "handle": "@dennisreadslitrpg",
+        "key": "@dennisreadslitrpg",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "@dennisreadslitrpg": 1
+      }
     },
     "daily_word": {
       "title": "Skyword",
