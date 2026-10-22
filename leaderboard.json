@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-22T13:43:07.295Z",
+  "updated": "2026-10-22T13:46:18.578Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 925628,
+  "crewTotal": 926528,
   "acts": {
     "two": 505425,
-    "three": 219928
+    "three": 220828
   },
-  "entries": 18706,
+  "entries": 18728,
   "participants": 956,
   "reveals": [
     {
@@ -48,7 +48,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 40540
+          "points": 40590
         },
         {
           "rank": 3,
@@ -64,7 +64,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 36135
+          "points": 36660
         },
         {
           "rank": 5,
@@ -96,7 +96,7 @@
           "handle": "@redhead_reader",
           "platform": "Instagram",
           "country": "United States",
-          "points": 18895
+          "points": 18995
         },
         {
           "rank": 9,
@@ -848,17 +848,17 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 219928,
-    "entries": 4961,
+    "crewPoints": 220828,
+    "entries": 4983,
     "carried": 5425,
-    "participants": 303,
+    "participants": 304,
     "regions": [
       {
         "key": "us",
         "label": "United States",
         "title": "United States",
         "treasure": true,
-        "participants": 279,
+        "participants": 280,
         "top": [
           {
             "rank": 1,
@@ -866,23 +866,23 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 11371
+            "points": 11421
           },
           {
             "rank": 2,
+            "name": "Theresa",
+            "handle": "@earlybirdbooks",
+            "platform": "TikTok",
+            "country": "United States",
+            "points": 11080
+          },
+          {
+            "rank": 3,
             "name": "Christopher",
             "handle": "",
             "platform": "Instagram",
             "country": "United States",
             "points": 10655
-          },
-          {
-            "rank": 3,
-            "name": "Theresa",
-            "handle": "@earlybirdbooks",
-            "platform": "TikTok",
-            "country": "United States",
-            "points": 10555
           },
           {
             "rank": 4,
@@ -914,7 +914,7 @@
             "handle": "@redhead_reader",
             "platform": "Instagram",
             "country": "United States",
-            "points": 4680
+            "points": 4780
           },
           {
             "rank": 8,
