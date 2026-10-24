@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-24T19:41:54.707Z",
+  "updated": "2026-10-24T19:44:42.015Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 995215,
+  "crewTotal": 995615,
   "acts": {
     "two": 505425,
-    "three": 289515
+    "three": 289915
   },
   "entries": 20057,
   "participants": 1021,
@@ -76,19 +76,19 @@
         },
         {
           "rank": 6,
+          "name": "Tyler",
+          "handle": "@tylers_bookshelf",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 24519
+        },
+        {
+          "rank": 7,
           "name": "Brandi",
           "handle": "@brandibuystoomanybooks",
           "platform": "Instagram",
           "country": "United States",
           "points": 24390
-        },
-        {
-          "rank": 7,
-          "name": "Tyler",
-          "handle": "@tylers_bookshelf",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 24119
         },
         {
           "rank": 8,
@@ -848,7 +848,7 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 289515,
+    "crewPoints": 289915,
     "entries": 6312,
     "carried": 5425,
     "participants": 374,
@@ -902,19 +902,19 @@
           },
           {
             "rank": 6,
+            "name": "Tyler",
+            "handle": "@tylers_bookshelf",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 6680
+          },
+          {
+            "rank": 7,
             "name": "Topher",
             "handle": "@topherdauthor",
             "platform": "Instagram",
             "country": "United States",
             "points": 6645
-          },
-          {
-            "rank": 7,
-            "name": "Tyler",
-            "handle": "@tylers_bookshelf",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 6280
           },
           {
             "rank": 8,
