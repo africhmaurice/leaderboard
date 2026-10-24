@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T19:15:42.026Z",
+  "updated": "2026-10-24T19:27:03.818Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -52,43 +52,99 @@
     },
     "gauntlet_easy": {
       "title": "Sky Gauntlet Easy Mode",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Clark",
+        "handle": "@grizspins",
+        "key": "@grizspins",
+        "week": "2026-10-23-r2"
+      },
+      "wins": {
+        "@grizspins": 1
+      }
     },
     "daily_word": {
       "title": "Skyword",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Sophie",
+        "handle": "",
+        "key": "sophie",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "sophie": 1
+      }
     },
     "shelf_sort": {
       "title": "Sort the Shelf",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Joshua",
+        "handle": "@poppa_squatch",
+        "key": "@poppa_squatch",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "@poppa_squatch": 1
+      }
     },
     "emoji_reads": {
       "title": "Book Icons",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Christopher",
+        "handle": "",
+        "key": "christopher",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "christopher": 1
+      }
     },
     "crossword": {
       "title": "The Bookish Crossword",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Christopher",
+        "handle": "",
+        "key": "christopher",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "christopher": 1
+      }
     },
     "blades_brass": {
       "title": "Blades & Brass",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Christopher",
+        "handle": "",
+        "key": "christopher",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "christopher": 1
+      }
     },
     "crest_quest": {
       "title": "Crest Quest",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Christopher",
+        "handle": "",
+        "key": "christopher",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "christopher": 1
+      }
     },
     "matching_auras": {
       "title": "Matching Auras",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Christopher",
+        "handle": "",
+        "key": "christopher",
+        "week": "2026-10-23"
+      },
+      "wins": {
+        "christopher": 1
+      }
     }
   }
 }
