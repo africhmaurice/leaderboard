@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-23T22:38:29.981Z",
+  "updated": "2026-10-24T19:15:38.382Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 989165,
+  "crewTotal": 990665,
   "acts": {
     "two": 505425,
-    "three": 283465
+    "three": 284965
   },
-  "entries": 20045,
+  "entries": 20048,
   "participants": 1021,
   "reveals": [
     {
@@ -88,7 +88,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 23519
+          "points": 24019
         },
         {
           "rank": 8,
@@ -96,7 +96,7 @@
           "handle": "@redhead_reader",
           "platform": "Instagram",
           "country": "United States",
-          "points": 19485
+          "points": 19985
         },
         {
           "rank": 9,
@@ -848,8 +848,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 283465,
-    "entries": 6300,
+    "crewPoints": 284965,
+    "entries": 6303,
     "carried": 5425,
     "participants": 374,
     "regions": [
@@ -902,6 +902,14 @@
           },
           {
             "rank": 6,
+            "name": "Tyler",
+            "handle": "@tylers_bookshelf",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 6180
+          },
+          {
+            "rank": 7,
             "name": "Topher",
             "handle": "@topherdauthor",
             "platform": "Instagram",
@@ -909,28 +917,20 @@
             "points": 6145
           },
           {
-            "rank": 7,
+            "rank": 8,
+            "name": "Kate",
+            "handle": "@redhead_reader",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 5770
+          },
+          {
+            "rank": 9,
             "name": "Heather",
             "handle": "@heathers_endless_tbr",
             "platform": "Instagram",
             "country": "United States",
             "points": 5685
-          },
-          {
-            "rank": 8,
-            "name": "Tyler",
-            "handle": "@tylers_bookshelf",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 5680
-          },
-          {
-            "rank": 9,
-            "name": "Kate",
-            "handle": "@redhead_reader",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 5270
           },
           {
             "rank": 10,

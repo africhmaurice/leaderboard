@@ -1,16 +1,17 @@
 {
-  "updated": "2026-10-23T22:38:32.954Z",
+  "updated": "2026-10-24T19:15:42.026Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
       "champion": {
-        "name": "jakub",
-        "handle": "@jacob112360",
-        "key": "@jacob112360",
-        "week": "2026-10-16"
+        "name": "Tyler",
+        "handle": "@tylers_bookshelf",
+        "key": "@tylers_bookshelf",
+        "week": "2026-10-23"
       },
       "wins": {
-        "@jacob112360": 1
+        "@jacob112360": 1,
+        "@tylers_bookshelf": 1
       }
     },
     "needle": {
@@ -19,10 +20,10 @@
         "name": "Devin",
         "handle": "@vintage_book_journal",
         "key": "@vintage_book_journal",
-        "week": "2026-10-16-r"
+        "week": "2026-10-23"
       },
       "wins": {
-        "@vintage_book_journal": 2
+        "@vintage_book_journal": 3
       }
     },
     "trench": {
@@ -31,10 +32,10 @@
         "name": "Kate",
         "handle": "@redhead_reader",
         "key": "@redhead_reader",
-        "week": "2026-10-16"
+        "week": "2026-10-23"
       },
       "wins": {
-        "@redhead_reader": 1
+        "@redhead_reader": 2
       }
     },
     "gauntlet": {
@@ -48,6 +49,11 @@
       "wins": {
         "@dennisreadslitrpg": 1
       }
+    },
+    "gauntlet_easy": {
+      "title": "Sky Gauntlet Easy Mode",
+      "champion": null,
+      "wins": {}
     },
     "daily_word": {
       "title": "Skyword",
