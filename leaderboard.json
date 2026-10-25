@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-25T01:59:55.754Z",
+  "updated": "2026-10-25T02:00:41.845Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1023825,
+  "crewTotal": 1026125,
   "acts": {
     "two": 505425,
-    "three": 318125
+    "three": 320425
   },
-  "entries": 20708,
+  "entries": 20719,
   "participants": 1028,
   "reveals": [
     {
@@ -40,7 +40,7 @@
           "handle": "",
           "platform": "Instagram",
           "country": "United States",
-          "points": 54625
+          "points": 56125
         },
         {
           "rank": 2,
@@ -48,7 +48,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 48645
+          "points": 48895
         },
         {
           "rank": 3,
@@ -56,7 +56,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 46615
+          "points": 46815
         },
         {
           "rank": 4,
@@ -130,7 +130,7 @@
           "handle": "@spine.breakerbooks",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 27200
+          "points": 27550
         },
         {
           "rank": 2,
@@ -848,8 +848,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 318125,
-    "entries": 6963,
+    "crewPoints": 320425,
+    "entries": 6974,
     "carried": 5425,
     "participants": 382,
     "regions": [
@@ -866,7 +866,7 @@
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
-            "points": 21035
+            "points": 21235
           },
           {
             "rank": 2,
@@ -874,7 +874,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 19476
+            "points": 19726
           },
           {
             "rank": 3,
@@ -890,7 +890,7 @@
             "handle": "",
             "platform": "Instagram",
             "country": "United States",
-            "points": 15785
+            "points": 17285
           },
           {
             "rank": 5,
@@ -955,7 +955,7 @@
             "handle": "@spine.breakerbooks",
             "platform": "Instagram",
             "country": "United Kingdom",
-            "points": 6410
+            "points": 6760
           },
           {
             "rank": 2,
