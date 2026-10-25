@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T20:06:33.561Z",
+  "updated": "2026-10-25T01:23:43.031Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -90,61 +90,61 @@
     "emoji_reads": {
       "title": "Book Icons",
       "champion": {
-        "name": "Christopher",
+        "name": "Riff",
         "handle": "",
-        "key": "christopher",
+        "key": "riff",
         "week": "2026-10-23"
       },
       "wins": {
-        "christopher": 1
+        "riff": 1
       }
     },
     "crossword": {
       "title": "The Bookish Crossword",
       "champion": {
-        "name": "Christopher",
+        "name": "Riff",
         "handle": "",
-        "key": "christopher",
+        "key": "riff",
         "week": "2026-10-23"
       },
       "wins": {
-        "christopher": 1
+        "riff": 1
       }
     },
     "blades_brass": {
       "title": "Blades & Brass",
       "champion": {
-        "name": "Christopher",
+        "name": "Riff",
         "handle": "",
-        "key": "christopher",
+        "key": "riff",
         "week": "2026-10-23"
       },
       "wins": {
-        "christopher": 1
+        "riff": 1
       }
     },
     "crest_quest": {
       "title": "Crest Quest",
       "champion": {
-        "name": "Christopher",
+        "name": "Riff",
         "handle": "",
-        "key": "christopher",
+        "key": "riff",
         "week": "2026-10-23"
       },
       "wins": {
-        "christopher": 1
+        "riff": 1
       }
     },
     "matching_auras": {
       "title": "Matching Auras",
       "champion": {
-        "name": "Christopher",
+        "name": "Riff",
         "handle": "",
-        "key": "christopher",
+        "key": "riff",
         "week": "2026-10-23"
       },
       "wins": {
-        "christopher": 1
+        "riff": 1
       }
     }
   }
