@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T01:29:22.953Z",
+  "updated": "2026-10-25T01:59:58.605Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -66,13 +66,13 @@
     "daily_word": {
       "title": "Skyword",
       "champion": {
-        "name": "Monk",
-        "handle": "",
-        "key": "monk",
+        "name": "Sophie",
+        "handle": "@ierie",
+        "key": "@ierie",
         "week": "2026-10-23"
       },
       "wins": {
-        "monk": 1
+        "@ierie": 1
       }
     },
     "shelf_sort": {
