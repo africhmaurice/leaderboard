@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-25T17:18:48.015Z",
+  "updated": "2026-10-25T21:19:02.757Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1039720,
+  "crewTotal": 1040220,
   "acts": {
     "two": 505425,
-    "three": 334020
+    "three": 334520
   },
-  "entries": 21082,
+  "entries": 21088,
   "participants": 1030,
   "reveals": [
     {
@@ -186,7 +186,7 @@
           "handle": "@hellojolley",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 2245
+          "points": 2745
         },
         {
           "rank": 9,
@@ -848,10 +848,10 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 334020,
-    "entries": 7337,
+    "crewPoints": 334520,
+    "entries": 7343,
     "carried": 5425,
-    "participants": 386,
+    "participants": 387,
     "regions": [
       {
         "key": "us",
@@ -947,7 +947,7 @@
         "label": "United Kingdom",
         "title": "United Kingdom",
         "treasure": true,
-        "participants": 9,
+        "participants": 10,
         "top": [
           {
             "rank": 1,
@@ -999,6 +999,14 @@
           },
           {
             "rank": 7,
+            "name": "David",
+            "handle": "@hellojolley",
+            "platform": "Instagram",
+            "country": "United Kingdom",
+            "points": 500
+          },
+          {
+            "rank": 8,
             "name": "Katherine",
             "handle": "@wheelygoodfantasy",
             "platform": "Instagram",
@@ -1006,7 +1014,7 @@
             "points": 275
           },
           {
-            "rank": 8,
+            "rank": 9,
             "name": "James",
             "handle": "@jamesthorneauthor",
             "platform": "Instagram",
@@ -1014,7 +1022,7 @@
             "points": 165
           },
           {
-            "rank": 9,
+            "rank": 10,
             "name": "Liane",
             "handle": "@beanie",
             "platform": "",
