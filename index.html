@@ -202,5 +202,35 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 </script>
 <!-- Headings: Cracked Imperia Bold with its 3D, same as the main site (2026-10-09). -->
 <script src="https://africhmaurice.github.io/site/heads.js"></script>
+
+<!-- Loot box 110 (The Other Country Loot Box): a tiny red speck in the bottom-left corner of the Other Country board.
+     Tapping it tells the site page, which shows the chest. -->
+<style>#lb-speck{position:absolute;left:7px;bottom:7px;width:2px;height:2px;background:#e3241b;z-index:3}
+#lb-speck::before{content:"";position:absolute;left:-9px;bottom:-9px;width:22px;height:22px}
+#lb-speck[hidden]{display:none}</style>
+<script>(function(){
+  var reg=document.getElementById('region'),panel=document.querySelector('.panel');if(!reg||!panel)return;
+  if(getComputedStyle(panel).position==='static')panel.style.position='relative';
+  var s=document.createElement('span');s.id='lb-speck';s.setAttribute('aria-hidden','true');s.hidden=true;panel.appendChild(s);
+  s.addEventListener('click',function(){if(window.parent!==window)window.parent.postMessage({thLoot:110},'*');});
+  function check(){s.hidden=!/other countr/i.test(reg.textContent||'');}
+  new MutationObserver(check).observe(reg,{childList:true,characterData:true,subtree:true});check();
+})();</script>
+
+<!-- Loot box 130 (5 Taps in the Cranium): tap your own name on the board five times. -->
+<script>(function(){
+  var me=null,n=0,last=0,list=document.getElementById('board')||document.querySelector('ol,ul');
+  var clean=function(t){return String(t||'').toLowerCase().replace(/^@+/,'').replace(/[^a-z0-9_.]/g,'');};
+  window.addEventListener('message',function(e){if(e.source===window.parent&&e.data&&e.data.thMe)me=e.data.thMe;});
+  document.addEventListener('click',function(e){
+    if(!me||window.parent===window)return;var row=e.target.closest&&e.target.closest('.row');if(!row)return;
+    if(!e.target.closest('.name,.handle'))return;
+    var h=row.querySelector('.handle'),nm=row.querySelector('.name'),hv=clean(h&&h.firstChild&&h.firstChild.nodeValue),nv=clean(nm&&nm.textContent);
+    var mine=(me.handle&&clean(me.handle)&&(clean(me.handle)===hv||clean(me.handle)===nv))||(!me.handle&&me.first&&nv.indexOf(clean(me.first))===0);
+    if(!mine){n=0;return;}
+    var t=Date.now();n=(t-last<2000)?n+1:1;last=t;
+    if(n>=5){n=0;window.parent.postMessage({thLoot:130},'*');}
+  });
+})();</script>
 </body>
 </html>
