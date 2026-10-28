@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T01:16:58.872Z",
+  "updated": "2026-10-28T19:01:21.703Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -156,6 +156,11 @@
       "wins": {
         "riff": 1
       }
+    },
+    "sky_mines": {
+      "title": "Sky Mines",
+      "champion": null,
+      "wins": {}
     }
   }
 }
