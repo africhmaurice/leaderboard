@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-28T00:42:48.018Z",
+  "updated": "2026-10-28T01:16:54.327Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1186405,
+  "crewTotal": 1186605,
   "acts": {
     "two": 505425,
-    "three": 464455
+    "three": 464655
   },
-  "entries": 24170,
+  "entries": 24174,
   "participants": 1039,
   "reveals": [
     {
@@ -48,7 +48,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 61515
+          "points": 61565
         },
         {
           "rank": 3,
@@ -56,7 +56,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 53810
+          "points": 53860
         },
         {
           "rank": 4,
@@ -228,7 +228,7 @@
           "handle": "@ryan_reads_big_books",
           "platform": "Instagram",
           "country": "Canada",
-          "points": 26110
+          "points": 26160
         },
         {
           "rank": 3,
@@ -848,8 +848,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 464455,
-    "entries": 10102,
+    "crewPoints": 464655,
+    "entries": 10106,
     "carried": 5425,
     "participants": 399,
     "regions": [
@@ -866,7 +866,7 @@
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 31946
+            "points": 31996
           },
           {
             "rank": 2,
@@ -874,7 +874,7 @@
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
-            "points": 27830
+            "points": 27880
           },
           {
             "rank": 3,
@@ -922,7 +922,7 @@
             "handle": "@topherdauthor",
             "platform": "Instagram",
             "country": "United States",
-            "points": 10780
+            "points": 10830
           },
           {
             "rank": 9,
@@ -1044,7 +1044,7 @@
             "handle": "@ryan_reads_big_books",
             "platform": "Instagram",
             "country": "Canada",
-            "points": 12255
+            "points": 12305
           },
           {
             "rank": 2,
