@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T17:24:20.896Z",
+  "updated": "2026-10-28T00:11:33.413Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -25,6 +25,16 @@
       "wins": {
         "@vintage_book_journal": 3
       }
+    },
+    "levian": {
+      "title": "The Levian",
+      "champion": null,
+      "wins": {}
+    },
+    "stacker": {
+      "title": "Master Stacker",
+      "champion": null,
+      "wins": {}
     },
     "trench": {
       "title": "Trench Run",
