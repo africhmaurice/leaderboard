@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T17:27:13.236Z",
+  "updated": "2026-10-31T21:06:20.348Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -7,11 +7,11 @@
         "name": "Tyler",
         "handle": "@tylers_bookshelf",
         "key": "@tylers_bookshelf",
-        "week": "2026-10-23"
+        "week": "2026-10-30"
       },
       "wins": {
         "@jacob112360": 1,
-        "@tylers_bookshelf": 1
+        "@tylers_bookshelf": 2
       }
     },
     "needle": {
@@ -20,32 +20,47 @@
         "name": "Devin",
         "handle": "@vintage_book_journal",
         "key": "@vintage_book_journal",
-        "week": "2026-10-23"
+        "week": "2026-10-30"
       },
       "wins": {
-        "@vintage_book_journal": 3
+        "@vintage_book_journal": 4
       }
     },
     "levian": {
       "title": "The Levian",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Topher",
+        "handle": "@topherdauthor",
+        "key": "@topherdauthor",
+        "week": "2026-10-30"
+      },
+      "wins": {
+        "@topherdauthor": 1
+      }
     },
     "stacker": {
       "title": "Master Stacker",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Topher",
+        "handle": "@topherdauthor",
+        "key": "@topherdauthor",
+        "week": "2026-10-30"
+      },
+      "wins": {
+        "@topherdauthor": 1
+      }
     },
     "trench": {
       "title": "Trench Run",
       "champion": {
-        "name": "Kate",
-        "handle": "@redhead_reader",
-        "key": "@redhead_reader",
-        "week": "2026-10-23"
+        "name": "Tyler",
+        "handle": "@tylers_bookshelf",
+        "key": "@tylers_bookshelf",
+        "week": "2026-10-30"
       },
       "wins": {
-        "@redhead_reader": 2
+        "@redhead_reader": 2,
+        "@tylers_bookshelf": 1
       }
     },
     "gauntlet": {
@@ -54,59 +69,63 @@
         "name": "Topher",
         "handle": "@topherdauthor",
         "key": "@topherdauthor",
-        "week": "2026-10-23-r2"
+        "week": "2026-10-30"
       },
       "wins": {
         "@dennisreadslitrpg": 1,
-        "@topherdauthor": 1
+        "@topherdauthor": 2
       }
     },
     "gauntlet_easy": {
       "title": "Sky Gauntlet Easy Mode",
       "champion": {
-        "name": "Clark",
-        "handle": "@grizspins",
-        "key": "@grizspins",
-        "week": "2026-10-23-r2"
+        "name": "Brandi",
+        "handle": "@brandibuystoomanybooks",
+        "key": "@brandibuystoomanybooks",
+        "week": "2026-10-30"
       },
       "wins": {
-        "@grizspins": 1
+        "@grizspins": 1,
+        "@brandibuystoomanybooks": 1
       }
     },
     "daily_word": {
       "title": "Skyword",
       "champion": {
-        "name": "Sophie",
-        "handle": "@ierie",
-        "key": "@ierie",
-        "week": "2026-10-23"
+        "name": "Lilith",
+        "handle": "@lovelisyda",
+        "key": "@lovelisyda",
+        "week": "2026-10-30"
       },
       "wins": {
-        "@ierie": 1
+        "@ierie": 1,
+        "@lovelisyda": 1
       }
     },
     "shelf_sort": {
       "title": "Sort the Shelf",
       "champion": {
-        "name": "Joshua",
-        "handle": "@poppa_squatch",
-        "key": "@poppa_squatch",
-        "week": "2026-10-23"
+        "name": "Jillian",
+        "handle": "@littleboopboops",
+        "key": "@littleboopboops",
+        "week": "2026-10-30"
       },
       "wins": {
-        "@poppa_squatch": 1
+        "@poppa_squatch": 1,
+        "@littleboopboops": 1
       }
     },
     "emoji_reads": {
       "title": "Book Icons",
       "champion": {
-        "name": "Riff",
-        "handle": "",
-        "key": "riff",
-        "week": "2026-10-23"
+        "name": "Lilith",
+        "handle": "@lovelisyda",
+        "key": "@lovelisyda",
+        "week": "2026-10-30"
       },
       "wins": {
-        "riff": 1
+        "riff": 1,
+        "@lovelisyda": 1
       }
     },
     "crossword": {
@@ -115,10 +134,10 @@
         "name": "Riff",
         "handle": "",
         "key": "riff",
-        "week": "2026-10-23"
+        "week": "2026-10-30"
       },
       "wins": {
-        "riff": 1
+        "riff": 2
       }
     },
     "blades_brass": {
@@ -127,10 +146,10 @@
         "name": "Riff",
         "handle": "",
         "key": "riff",
-        "week": "2026-10-23"
+        "week": "2026-10-30"
       },
       "wins": {
-        "riff": 1
+        "riff": 2
       }
     },
     "crest_quest": {
@@ -139,28 +158,36 @@
         "name": "Riff",
         "handle": "",
         "key": "riff",
-        "week": "2026-10-23"
+        "week": "2026-10-30"
       },
       "wins": {
-        "riff": 1
+        "riff": 2
       }
     },
     "matching_auras": {
       "title": "Matching Auras",
       "champion": {
-        "name": "Riff",
-        "handle": "",
-        "key": "riff",
-        "week": "2026-10-23"
+        "name": "Andrea",
+        "handle": "@andrea_heinrichs85",
+        "key": "@andrea_heinrichs85",
+        "week": "2026-10-30"
       },
       "wins": {
-        "riff": 1
+        "riff": 1,
+        "@andrea_heinrichs85": 1
       }
     },
     "sky_mines": {
       "title": "Sky Mines",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Alaura",
+        "handle": "@alauraslibrary_",
+        "key": "@alauraslibrary_",
+        "week": "2026-10-30"
+      },
+      "wins": {
+        "@alauraslibrary_": 1
+      }
     }
   }
 }
