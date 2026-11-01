@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-01T00:03:33.105Z",
+  "updated": "2026-11-01T01:49:07.826Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1579615,
+  "crewTotal": 1580115,
   "acts": {
     "two": 505425,
-    "three": 879615
+    "three": 880115
   },
-  "entries": 27853,
+  "entries": 27855,
   "participants": 1051,
   "reveals": [
     {
@@ -72,7 +72,7 @@
           "handle": "@grizspins",
           "platform": "Instagram",
           "country": "United States",
-          "points": 69892
+          "points": 70142
         },
         {
           "rank": 6,
@@ -220,7 +220,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 36242
+          "points": 36492
         },
         {
           "rank": 2,
@@ -848,8 +848,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 879615,
-    "entries": 13785,
+    "crewPoints": 880115,
+    "entries": 13787,
     "carried": 183375,
     "participants": 413,
     "regions": [
@@ -886,19 +886,19 @@
           },
           {
             "rank": 4,
+            "name": "Clark",
+            "handle": "@grizspins",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 40447
+          },
+          {
+            "rank": 5,
             "name": "Theresa",
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
             "points": 40240
-          },
-          {
-            "rank": 5,
-            "name": "Clark",
-            "handle": "@grizspins",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 40197
           },
           {
             "rank": 6,
@@ -1044,7 +1044,7 @@
             "handle": "@lovelisyda",
             "platform": "Instagram",
             "country": "Estonia",
-            "points": 19357
+            "points": 19607
           },
           {
             "rank": 2,
