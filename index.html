@@ -70,6 +70,12 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 .empty{text-align:center;padding:clamp(30px,5vw,54px) 16px;color:var(--moss)}
 .empty strong{display:block;font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp(24px,3.4vw,38px);letter-spacing:.03em;color:var(--ink);margin:14px 0 8px}
 .empty p{margin:0 auto;max-width:640px;font-weight:700;font-size:clamp(14px,1.5vw,17px);letter-spacing:.05em;line-height:1.6;color:var(--forest)}
+/* Act Four leads the page as one worldwide board; the final Acts One to Three country boards follow (Maurice, 2026-11-02). */
+.sect{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,56px);line-height:1.2;letter-spacing:.03em;color:#fff;text-align:center;margin:clamp(48px,7vw,80px) auto 0;max-width:1000px}
+.sect-sub{font-weight:700;font-size:clamp(13px,1.4vw,15px);letter-spacing:.1em;text-transform:uppercase;color:var(--peach);text-align:center;margin:14px auto 0}
+.a4{margin-top:clamp(28px,4vw,40px)}
+.a4 .row.top3 .rank{color:#2c6021}
+.a4 .pts{color:#2c6021}
 .note{font-weight:700;font-size:clamp(13px,1.4vw,15px);letter-spacing:.05em;line-height:1.6;color:var(--peach);text-shadow:0 1px 6px rgba(0,0,0,.35);text-align:center;margin:clamp(22px,3vw,32px) auto 0;max-width:780px}
 
 @media (max-width:620px){
@@ -90,8 +96,16 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
   <h1>Top 10 Sky Pirates</h1>
   <div class="whole" id="whole" hidden><div><b id="w-crew"></b><span>Sky Pirates in the Hunt</span></div><div><b id="w-pts"></b><span>Points Earned by Everyone</span></div></div>
 </header>
+<main class="panel a4" id="a4">
+  <h2 class="region">Act Four · Worldwide</h2>
+  <p class="meta" id="a4-meta" aria-live="polite"></p>
+  <div class="hrow" aria-hidden="true"><span>Rank</span><span>Name</span><span class="h-handle">Handle</span><span class="h-country">Country</span><span style="text-align:right">Points</span></div>
+  <ol class="board" id="a4-board"></ol>
+</main>
+<h2 class="sect" id="sect" hidden>Acts One to Three</h2>
+<p class="sect-sub" id="sect-sub" hidden>Final standings · September 21 to November 1</p>
 <div class="tabs" id="tabs" role="tablist" aria-label="Leaderboard region"></div>
-<main class="panel">
+<main class="panel" id="acts13">
   <h2 class="region" id="region"></h2>
   <p class="meta" id="meta" aria-live="polite"></p>
   <div class="hrow" aria-hidden="true"><span>Rank</span><span>Name</span><span class="h-handle">Handle</span><span class="h-country">Country</span><span style="text-align:right">Points</span></div>
@@ -134,6 +148,26 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
     });
   }
 
+  function rows(top, mark) {
+    return top.map(function (p) {
+      return '<li class="row' + (mark && p.rank <= 3 ? ' top3' : '') + '">' +
+        '<span class="rank">' + p.rank + '</span>' +
+        '<span class="name">' + esc(p.name || p.handle) + '</span>' +
+        '<span class="handle">' + esc(p.handle || '—') + (p.platform ? ' <em>(' + esc(p.platform) + ')</em>' : '') + '</span>' +
+        '<span class="country">' + esc(p.country || '—') + '</span>' +
+        '<span class="pts">' + Number(p.points).toLocaleString() + '<small>PTS</small></span></li>';
+    }).join('');
+  }
+
+  // Act Four: one worldwide list, everyone starting at zero on November 2.
+  function renderActFour() {
+    var a4 = (data && data.actFour) || { top: [] }, el = document.getElementById('a4-board');
+    el.innerHTML = a4.top && a4.top.length ? rows(a4.top, true)
+      : '<li class="empty"><strong>Act Four starts now</strong><p>Every sky pirate starts Act Four at zero. The first points take the top spot!</p></li>';
+    document.getElementById('a4-meta').textContent = 'November 2 to November 10' + (a4.participants ? ' · ' + a4.participants.toLocaleString('en-US') + ' sky pirates' : '') +
+      (data.updated ? ' · Updated ' + new Date(data.updated).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
+  }
+
   function renderBoard() {
     var regions = (data && data.regions) || [];
     var reg = regions.filter(function (r) { return r.key === current; })[0] || regions[0] || {};
@@ -159,14 +193,11 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
       }).join('');
     }
 
-    if (data && data.updated) {
-      var t = new Date(data.updated);
-      metaEl.textContent = 'Updated ' + t.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
-    }
-    // the share card shows whichever region is open
-    if (!share && window.LBShare) share = LBShare.mount(document.querySelector('.panel'), function () {
-      var r = (data.regions || []).filter(function (x) { return x.key === current; })[0] || {};
-      return { title: 'Leaderboard', region: r.label || '', when: data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : '', stat: (data.participants || 0).toLocaleString('en-US') + ' sky pirates in the hunt  ·  ' + (data.crewTotal || 0).toLocaleString('en-US') + ' points earned', rows: r.top || [], theme: 'scarlet' };
+    metaEl.textContent = (reg.participants ? reg.participants.toLocaleString('en-US') + ' sky pirates on this board · ' : '') + 'Final';
+    // the share card shows the Act Four board
+    if (!share && window.LBShare) share = LBShare.mount(document.getElementById('a4'), function () {
+      var a4 = data.actFour || {};
+      return { title: 'Act Four Standings', region: 'Worldwide', when: data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : '', stat: (a4.participants ? a4.participants.toLocaleString('en-US') + ' sky pirates  ·  ' : '') + (a4.crewPoints || 0).toLocaleString('en-US') + ' Act Four crew points', rows: a4.top || [], theme: 'green' };
     });
     else if (share) share.refresh();
     reportHeight();
@@ -182,7 +213,10 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
           document.getElementById('w-pts').textContent = d.crewTotal.toLocaleString('en-US');
           document.getElementById('whole').hidden = false;
         }
-        var regions = d.regions || [];
+        // The country boards are the final Acts One to Three standings, stored when Act Three closed.
+        var regions = (d.actsOneToThree && d.actsOneToThree.regions) || d.regions || [];
+        document.getElementById('sect').hidden = document.getElementById('sect-sub').hidden = !d.actsOneToThree;
+        renderActFour();
         if (only) regions = regions.filter(function (r) { return r.key === only; });
         data.regions = regions;
         if (!current || !regions.some(function (r) { return r.key === current; })) current = (regions[0] || {}).key;
@@ -209,7 +243,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 #lb-speck::before{content:"";position:absolute;left:-9px;bottom:-9px;width:22px;height:22px}
 #lb-speck[hidden]{display:none}</style>
 <script>(function(){
-  var reg=document.getElementById('region'),panel=document.querySelector('.panel');if(!reg||!panel)return;
+  var reg=document.getElementById('region'),panel=document.getElementById('acts13');if(!reg||!panel)return;
   if(getComputedStyle(panel).position==='static')panel.style.position='relative';
   var s=document.createElement('span');s.id='lb-speck';s.setAttribute('aria-hidden','true');s.hidden=true;panel.appendChild(s);
   s.addEventListener('click',function(){if(window.parent!==window)window.parent.postMessage({thLoot:110},'*');});
