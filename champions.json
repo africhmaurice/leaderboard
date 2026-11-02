@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T07:19:04.469Z",
+  "updated": "2026-11-02T07:55:43.073Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -88,6 +88,21 @@
         "@grizspins": 1,
         "@brandibuystoomanybooks": 1
       }
+    },
+    "holdwall": {
+      "title": "Hold the Wall!",
+      "champion": null,
+      "wins": {}
+    },
+    "goonscamp": {
+      "title": "Goma Goons Campaign",
+      "champion": null,
+      "wins": {}
+    },
+    "goonsffa": {
+      "title": "Goma Goons Free-for-All",
+      "champion": null,
+      "wins": {}
     },
     "daily_word": {
       "title": "Skyword",
