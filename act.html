@@ -9,13 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 /* Act standings (Maurice, 2026-10-01): the leaderboard's layout with everything on the daily standings card.
-   ?act=one|two|three picks the act and its color: Act One violet, Act Two green, Act Three red.
+   ?act=one|two|three|four picks the act and its color: Act One violet, Act Two emerald, Act Three red, Act Four forest green.
+   Act Four is one worldwide board (Maurice, 2026-11-02); the earlier acts keep their country tabs.
    Each act starts every player at zero; the main leaderboard keeps the overall totals. */
 @font-face{font-family:'Atomic Marker';src:url('https://static1.squarespace.com/static/68f0178dd88a7e52ec46ae7e/t/6aa9db35bc4f704c9378c402/1789516598919/Set+Sail+Studios+-+Atomic+Marker+Regular.otf') format('opentype');font-display:block}
 :root{--ink:#111;--forest:#1b3b15;--moss:#607667;--rule:rgba(27,59,21,.2);
   --base:#482d85;--wash:rgba(72,45,133,.9);--hi:#7b4ee1;--soft:#c3a6ff;--deep:#2d1c53}
 html[data-act="two"]{--base:#1a5e41;--wash:rgba(26,94,65,.9);--hi:#268e62;--soft:#89fbcb;--deep:#0f3a27}
 html[data-act="three"]{--base:#c1330a;--wash:rgba(193,51,10,.9);--hi:#d13d0e;--soft:#ffd9c4;--deep:#912501}
+html[data-act="four"]{--base:#2c6021;--wash:rgba(44,96,33,.9);--hi:#57bb41;--soft:#a2f590;--deep:#1b3b15}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{font-family:'Almarai',sans-serif;color:#fff;-webkit-font-smoothing:antialiased;background-color:var(--base);position:relative;isolation:isolate;
@@ -89,7 +91,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 <body>
 <script>
 (function () {
-  var act = (location.search.match(/[?&]act=(one|two|three)/i) || [])[1] || 'three';
+  var act = (location.search.match(/[?&]act=(one|two|three|four)/i) || [])[1] || 'three';
   document.documentElement.setAttribute('data-act', act.toLowerCase());
   if (window.parent !== window && /[?&]embed=1/.test(location.search)) document.documentElement.classList.add('embedded');
 })();
@@ -128,8 +130,13 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
   var ACTS = {
     one: { key: 'actOne', name: 'Act One', dates: 'September 21 to September 30', goal: 40000, marks: [8000, 16000, 24000, 30000, 32000] },
     two: { key: 'actTwo', name: 'Act Two', dates: 'October 1 to October 15', goal: 200000, marks: [50000, 80000, 100000, 120000, 150000], bonus: [300000, 400000, 500000] },
-    three: { key: 'actThree', name: 'Act Three', dates: 'October 16 to November 1', goal: 600000, marks: [150000, 300000, 450000], bonus: [800000, 1000000] }
+    three: { key: 'actThree', name: 'Act Three', dates: 'October 16 to November 1', goal: 600000, marks: [150000, 300000, 450000], bonus: [800000, 1000000] },
+    four: { key: 'actFour', name: 'Act Four', dates: 'November 2 to November 10', goal: 500000, marks: [125000, 250000, 375000] }
   };
+  var ENDS = { two: '2026-10-16T00:00:00-04:00', three: '2026-11-02T00:00:00-05:00', four: '2026-11-11T00:00:00-05:00' };
+  var done = function () { return ACT === 'one' || Date.now() >= Date.parse(ENDS[ACT]); };
+  // A worldwide act has one list (d.top) instead of country boards.
+  var boards = function (d) { return d.regions || (d.top ? [{ key: 'world', label: 'Worldwide', title: 'Worldwide', treasure: true, participants: d.participants, top: d.top }] : []); };
   var A = ACTS[ACT];
   var $ = function (id) { return document.getElementById(id); };
   var fmt = function (n) { return Number(n || 0).toLocaleString('en-US'); };
@@ -153,7 +160,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
 
   function render() {
     var d = data[A.key];
-    var over = ACT === 'one' || Date.now() >= Date.parse(ACT === 'two' ? '2026-10-16T00:00:00-04:00' : '2026-11-02T00:00:00-05:00');
+    var over = done();
     if (!d) {
       $('when').textContent = A.dates;
       $('board').innerHTML = '<li class="empty">' + A.name + ' hasn’t started yet. Every sky pirate starts it at zero.</li>';
@@ -161,7 +168,7 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
     }
     $('when').textContent = A.dates + (over ? ' · Final' : '');
     $('s-pts').textContent = fmt(d.crewPoints);
-    var prev = { two: 'Act One', three: 'Act Two' }[ACT];
+    var prev = { two: 'Act One', three: 'Act Two', four: 'Act Three' }[ACT];
     if (d.carried && prev) { $('s-carry').textContent = 'Includes ' + fmt(d.carried) + ' carried over from ' + prev; $('s-carry').hidden = false; } else $('s-carry').hidden = true;
     $('s-ent').textContent = fmt(d.entries);
     $('s-crew').textContent = fmt(d.participants);
@@ -172,9 +179,9 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
     $('foot').innerHTML = ACT === 'one'
       ? 'Every Act One reward and bonus unlocked: <em>' + fmt(d.crewPoints) + '</em> points'
       : next ? 'Next reward: <em>' + fmt(d.crewPoints) + '</em> / ' + fmt(next) : '';   // no 'every reward unlocked' line past the last tier (Maurice, 2026-10-13)
-    var regions = d.regions || [];
+    var regions = boards(d);
     if (!current || !regions.some(function (r) { return r.key === current; })) current = (regions[0] || {}).key;
-    var tabs = $('tabs'); tabs.innerHTML = '';
+    var tabs = $('tabs'); tabs.innerHTML = ''; tabs.style.display = regions.length < 2 ? 'none' : '';
     regions.forEach(function (reg) {
       var b = document.createElement('button'); b.type = 'button'; b.setAttribute('role', 'tab');
       b.textContent = (reg.label || '').toUpperCase(); b.setAttribute('aria-selected', reg.key === current ? 'true' : 'false');
@@ -193,10 +200,9 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
         '<span class="pts">' + fmt(p.points) + '<small>PTS</small></span></li>';
     }).join('') : '<li class="empty">Nobody on this board yet. The first points take the top spot!</li>';
     if (!share && window.LBShare) share = LBShare.mount(document.querySelector('.panel'), function () {
-      var dd = data[A.key] || {}, r = (dd.regions || []).filter(function (x) { return x.key === current; })[0] || {};
-      var done = ACT === 'one' || Date.now() >= Date.parse(ACT === 'two' ? '2026-10-16T00:00:00-04:00' : '2026-11-02T00:00:00-05:00');
-      return { title: A.name + ' Standings', region: r.label || '', when: done ? 'Final' : (data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : ''),
-        stat: (dd.participants ? fmt(dd.participants) + ' sky pirates  ·  ' : '') + fmt(dd.crewPoints) + ' ' + A.name + ' crew points', rows: r.top || [], theme: { one: 'violet', two: 'teal', three: 'scarlet' }[ACT] };
+      var dd = data[A.key] || {}, r = boards(dd).filter(function (x) { return x.key === current; })[0] || {};
+      return { title: A.name + ' Standings', region: r.label || '', when: done() ? 'Final' : (data.updated ? 'Updated ' + new Date(data.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : ''),
+        stat: (dd.participants ? fmt(dd.participants) + ' sky pirates  ·  ' : '') + fmt(dd.crewPoints) + ' ' + A.name + ' crew points', rows: r.top || [], theme: { one: 'violet', two: 'teal', three: 'scarlet', four: 'green' }[ACT] };
     });
     else if (share) share.refresh();
     $('note').innerHTML = 'Every sky pirate starts each act at zero. Overall totals are on <a href="https://www.mauriceafrich.com/leaderboard" target="_top">the leaderboard</a>.';
