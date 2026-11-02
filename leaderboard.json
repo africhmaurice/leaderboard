@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T05:40:55.928Z",
+  "updated": "2026-11-02T06:21:43.175Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
   "crewTotal": 1636965,
@@ -1126,7 +1126,6 @@
   },
   "actFour": {
     "crewPoints": 0,
-    "entries": 0,
     "carried": 0,
     "participants": 0,
     "top": []

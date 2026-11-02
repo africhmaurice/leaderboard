@@ -170,7 +170,8 @@ h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp
     $('s-pts').textContent = fmt(d.crewPoints);
     var prev = { two: 'Act One', three: 'Act Two', four: 'Act Three' }[ACT];
     if (d.carried && prev) { $('s-carry').textContent = 'Includes ' + fmt(d.carried) + ' carried over from ' + prev; $('s-carry').hidden = false; } else $('s-carry').hidden = true;
-    $('s-ent').textContent = fmt(d.entries);
+    // Act Four has no sweepstakes, so its card shows the goal instead of entries (Maurice, 2026-11-02).
+    if (ACT === 'four') { $('s-ent-l').textContent = 'Act Four Goal'; $('s-ent').textContent = fmt(A.goal); } else $('s-ent').textContent = fmt(d.entries);
     $('s-crew').textContent = fmt(d.participants);
     var pct = Math.min(100, d.crewPoints / A.goal * 100);
     $('pct').textContent = pct.toFixed(1) + '%';
