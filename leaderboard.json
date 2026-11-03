@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-03T17:41:37.213Z",
+  "updated": "2026-11-03T19:58:18.322Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1810330,
+  "crewTotal": 1811830,
   "acts": {
     "two": 505425,
     "three": 1021965,
-    "four": 88365
+    "four": 89865
   },
   "entries": 29853,
   "participants": 1061,
@@ -229,7 +229,7 @@
           "handle": "@ryan_reads_big_books",
           "platform": "Instagram",
           "country": "Canada",
-          "points": 37555
+          "points": 38055
         },
         {
           "rank": 3,
@@ -1125,7 +1125,7 @@
     ]
   },
   "actFour": {
-    "crewPoints": 88365,
+    "crewPoints": 89865,
     "carried": 0,
     "participants": 49,
     "top": [
@@ -1147,6 +1147,14 @@
       },
       {
         "rank": 3,
+        "name": "Ryan",
+        "handle": "@ryan_reads_big_books",
+        "platform": "Instagram",
+        "country": "Canada",
+        "points": 4150
+      },
+      {
+        "rank": 4,
         "name": "Tyler",
         "handle": "@tylers_bookshelf",
         "platform": "Instagram",
@@ -1154,20 +1162,12 @@
         "points": 4100
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Kate",
         "handle": "@redhead_reader",
         "platform": "Instagram",
         "country": "United States",
         "points": 3750
-      },
-      {
-        "rank": 5,
-        "name": "Ryan",
-        "handle": "@ryan_reads_big_books",
-        "platform": "Instagram",
-        "country": "Canada",
-        "points": 3650
       },
       {
         "rank": 6,
@@ -1187,6 +1187,14 @@
       },
       {
         "rank": 8,
+        "name": "Jillian",
+        "handle": "@littleboopboops",
+        "platform": "Instagram",
+        "country": "United States",
+        "points": 3000
+      },
+      {
+        "rank": 9,
         "name": "Theresa",
         "handle": "@earlybirdbooks",
         "platform": "TikTok",
@@ -1194,20 +1202,12 @@
         "points": 2975
       },
       {
-        "rank": 9,
+        "rank": 10,
         "name": "Topher",
         "handle": "@topherdauthor",
         "platform": "Instagram",
         "country": "United States",
         "points": 2875
-      },
-      {
-        "rank": 10,
-        "name": "Mina",
-        "handle": "@dearthedays",
-        "platform": "Instagram",
-        "country": "United Kingdom",
-        "points": 2800
       }
     ]
   },

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T17:41:41.974Z",
+  "updated": "2026-11-03T19:58:21.432Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -91,18 +91,39 @@
     },
     "holdwall": {
       "title": "Hold the Wall!",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Ryan",
+        "handle": "@ryan_reads_big_books",
+        "key": "@ryan_reads_big_books",
+        "week": "2026-11-06"
+      },
+      "wins": {
+        "@ryan_reads_big_books": 1
+      }
     },
     "goonscamp": {
       "title": "Goma Goons Campaign",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Brian",
+        "handle": "@featherandinkbooks",
+        "key": "@featherandinkbooks",
+        "week": "2026-11-06"
+      },
+      "wins": {
+        "@featherandinkbooks": 1
+      }
     },
     "goonsffa": {
       "title": "Goma Goons Free-for-All",
-      "champion": null,
-      "wins": {}
+      "champion": {
+        "name": "Jillian",
+        "handle": "@littleboopboops",
+        "key": "@littleboopboops",
+        "week": "2026-11-06"
+      },
+      "wins": {
+        "@littleboopboops": 1
+      }
     },
     "daily_word": {
       "title": "Skyword",
