@@ -1,14 +1,14 @@
 {
-  "updated": "2026-11-03T16:56:38.806Z",
+  "updated": "2026-11-03T17:40:21.489Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1725330,
+  "crewTotal": 1810330,
   "acts": {
     "two": 505425,
-    "three": 936965,
-    "four": 88365
+    "three": 1021965,
+    "four": 110330
   },
-  "entries": 28833,
+  "entries": 29853,
   "participants": 1061,
   "reveals": [
     {
@@ -37,19 +37,19 @@
       "top": [
         {
           "rank": 1,
-          "name": "Riff",
-          "handle": "",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 97495
-        },
-        {
-          "rank": 2,
           "name": "Puck",
           "handle": "@4eyedgoonie",
           "platform": "Instagram",
           "country": "United States",
-          "points": 88415
+          "points": 128915
+        },
+        {
+          "rank": 2,
+          "name": "Riff",
+          "handle": "",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 109995
         },
         {
           "rank": 3,
@@ -57,7 +57,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 84640
+          "points": 101640
         },
         {
           "rank": 4,
@@ -65,7 +65,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 75635
+          "points": 85135
         },
         {
           "rank": 5,
@@ -77,6 +77,14 @@
         },
         {
           "rank": 6,
+          "name": "Brandi",
+          "handle": "@brandibuystoomanybooks",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 53800
+        },
+        {
+          "rank": 7,
           "name": "Joshua",
           "handle": "@poppa_squatch",
           "platform": "Instagram",
@@ -84,20 +92,12 @@
           "points": 51380
         },
         {
-          "rank": 7,
+          "rank": 8,
           "name": "Tyler",
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
           "points": 50254
-        },
-        {
-          "rank": 8,
-          "name": "Brandi",
-          "handle": "@brandibuystoomanybooks",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 48300
         },
         {
           "rank": 9,
@@ -849,8 +849,8 @@
     "locked": true
   },
   "actThree": {
-    "crewPoints": 936965,
-    "entries": 14765,
+    "crewPoints": 1021965,
+    "entries": 15785,
     "carried": 183375,
     "locked": true,
     "participants": 420,
@@ -868,26 +868,34 @@
             "handle": "@4eyedgoonie",
             "platform": "Instagram",
             "country": "United States",
-            "points": 67315
+            "points": 107815
           },
           {
             "rank": 2,
-            "name": "Riff",
-            "handle": "",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 48780
-          },
-          {
-            "rank": 3,
             "name": "Katie",
             "handle": "@spacefoxy9",
             "platform": "Instagram",
             "country": "United States",
-            "points": 48671
+            "points": 65671
+          },
+          {
+            "rank": 3,
+            "name": "Riff",
+            "handle": "",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 61280
           },
           {
             "rank": 4,
+            "name": "Theresa",
+            "handle": "@earlybirdbooks",
+            "platform": "TikTok",
+            "country": "United States",
+            "points": 51680
+          },
+          {
+            "rank": 5,
             "name": "Clark",
             "handle": "@grizspins",
             "platform": "Instagram",
@@ -895,20 +903,12 @@
             "points": 42937
           },
           {
-            "rank": 5,
-            "name": "Theresa",
-            "handle": "@earlybirdbooks",
-            "platform": "TikTok",
-            "country": "United States",
-            "points": 42180
-          },
-          {
             "rank": 6,
             "name": "Brandi",
             "handle": "@brandibuystoomanybooks",
             "platform": "Instagram",
             "country": "United States",
-            "points": 29130
+            "points": 34630
           },
           {
             "rank": 7,
@@ -1125,8 +1125,8 @@
     ]
   },
   "actFour": {
-    "crewPoints": 88365,
-    "carried": 0,
+    "crewPoints": 110330,
+    "carried": 21965,
     "participants": 49,
     "top": [
       {
@@ -1214,7 +1214,7 @@
   "actsOneToThree": {
     "locked": true,
     "through": "2026-11-01",
-    "crewTotal": 1636965,
+    "crewTotal": 1721965,
     "participants": 1057,
     "regions": [
       {
@@ -1227,27 +1227,27 @@
         "top": [
           {
             "rank": 1,
-            "name": "Riff",
-            "handle": "",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 95470
-          },
-          {
-            "rank": 2,
-            "name": "Katie",
-            "handle": "@spacefoxy9",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 81240
-          },
-          {
-            "rank": 3,
             "name": "Puck",
             "handle": "@4eyedgoonie",
             "platform": "Instagram",
             "country": "United States",
-            "points": 78740
+            "points": 119240
+          },
+          {
+            "rank": 2,
+            "name": "Riff",
+            "handle": "",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 107970
+          },
+          {
+            "rank": 3,
+            "name": "Katie",
+            "handle": "@spacefoxy9",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 98240
           },
           {
             "rank": 4,
@@ -1255,7 +1255,7 @@
             "handle": "@earlybirdbooks",
             "platform": "TikTok",
             "country": "United States",
-            "points": 72660
+            "points": 82160
           },
           {
             "rank": 5,
@@ -1267,19 +1267,19 @@
           },
           {
             "rank": 6,
+            "name": "Brandi",
+            "handle": "@brandibuystoomanybooks",
+            "platform": "Instagram",
+            "country": "United States",
+            "points": 53150
+          },
+          {
+            "rank": 7,
             "name": "Joshua",
             "handle": "@poppa_squatch",
             "platform": "Instagram",
             "country": "United States",
             "points": 48055
-          },
-          {
-            "rank": 7,
-            "name": "Brandi",
-            "handle": "@brandibuystoomanybooks",
-            "platform": "Instagram",
-            "country": "United States",
-            "points": 47650
           },
           {
             "rank": 8,
