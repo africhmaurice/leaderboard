@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T19:58:21.432Z",
+  "updated": "2026-11-03T21:05:15.261Z",
   "games": {
     "runner": {
       "title": "Airship Runner",
@@ -92,13 +92,14 @@
     "holdwall": {
       "title": "Hold the Wall!",
       "champion": {
-        "name": "Ryan",
-        "handle": "@ryan_reads_big_books",
-        "key": "@ryan_reads_big_books",
+        "name": "Lilith",
+        "handle": "@lovelisyda",
+        "key": "@lovelisyda",
         "week": "2026-11-06"
       },
       "wins": {
-        "@ryan_reads_big_books": 1
+        "@ryan_reads_big_books": 1,
+        "@lovelisyda": 1
       }
     },
     "goonscamp": {
