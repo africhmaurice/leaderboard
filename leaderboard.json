@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-03T03:43:45.705Z",
+  "updated": "2026-11-03T05:02:01.126Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1690430,
+  "crewTotal": 1694430,
   "acts": {
     "two": 505425,
     "three": 936965,
-    "four": 53465
+    "four": 57465
   },
   "entries": 28833,
   "participants": 1059,
@@ -45,19 +45,19 @@
         },
         {
           "rank": 2,
+          "name": "Puck",
+          "handle": "@4eyedgoonie",
+          "platform": "Instagram",
+          "country": "United States",
+          "points": 85365
+        },
+        {
+          "rank": 3,
           "name": "Katie",
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
           "points": 83440
-        },
-        {
-          "rank": 3,
-          "name": "Puck",
-          "handle": "@4eyedgoonie",
-          "platform": "Instagram",
-          "country": "United States",
-          "points": 81365
         },
         {
           "rank": 4,
@@ -1125,12 +1125,20 @@
     ]
   },
   "actFour": {
-    "crewPoints": 53465,
+    "crewPoints": 57465,
     "carried": 0,
     "participants": 43,
     "top": [
       {
         "rank": 1,
+        "name": "Puck",
+        "handle": "@4eyedgoonie",
+        "platform": "Instagram",
+        "country": "United States",
+        "points": 6625
+      },
+      {
+        "rank": 2,
         "name": "Lilith",
         "handle": "@lovelisyda",
         "platform": "Instagram",
@@ -1138,20 +1146,12 @@
         "points": 3175
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Theresa",
         "handle": "@earlybirdbooks",
         "platform": "TikTok",
         "country": "United States",
         "points": 2975
-      },
-      {
-        "rank": 3,
-        "name": "Puck",
-        "handle": "@4eyedgoonie",
-        "platform": "Instagram",
-        "country": "United States",
-        "points": 2625
       },
       {
         "rank": 4,
