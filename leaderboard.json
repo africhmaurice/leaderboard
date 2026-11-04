@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-04T03:25:33.306Z",
+  "updated": "2026-11-04T04:25:58.721Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 1842980,
+  "crewTotal": 1853355,
   "acts": {
     "two": 505425,
     "three": 1021965,
-    "four": 121015
+    "four": 131390
   },
   "entries": 29853,
   "participants": 1062,
@@ -57,7 +57,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 103215
+          "points": 103465
         },
         {
           "rank": 4,
@@ -261,7 +261,7 @@
           "handle": "@scotchmist13",
           "platform": "",
           "country": "Other Country",
-          "points": 2625
+          "points": 2650
         },
         {
           "rank": 7,
@@ -1125,9 +1125,9 @@
     ]
   },
   "actFour": {
-    "crewPoints": 121015,
+    "crewPoints": 131390,
     "carried": 0,
-    "participants": 54,
+    "participants": 55,
     "top": [
       {
         "rank": 1,
@@ -1139,6 +1139,14 @@
       },
       {
         "rank": 2,
+        "name": "Ryan",
+        "handle": "@boundbymisery",
+        "platform": "Instagram",
+        "country": "United States",
+        "points": 6000
+      },
+      {
+        "rank": 3,
         "name": "Lilith",
         "handle": "@lovelisyda",
         "platform": "Instagram",
@@ -1146,7 +1154,7 @@
         "points": 5525
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Ryan",
         "handle": "@ryan_reads_big_books",
         "platform": "Instagram",
@@ -1154,7 +1162,15 @@
         "points": 5350
       },
       {
-        "rank": 4,
+        "rank": 5,
+        "name": "Katie",
+        "handle": "@spacefoxy9",
+        "platform": "Instagram",
+        "country": "United States",
+        "points": 5225
+      },
+      {
+        "rank": 6,
         "name": "Tyler",
         "handle": "@tylers_bookshelf",
         "platform": "Instagram",
@@ -1162,15 +1178,7 @@
         "points": 5225
       },
       {
-        "rank": 5,
-        "name": "Katie",
-        "handle": "@spacefoxy9",
-        "platform": "Instagram",
-        "country": "United States",
-        "points": 4975
-      },
-      {
-        "rank": 6,
+        "rank": 7,
         "name": "Nova",
         "handle": "@nova_for_words",
         "platform": "Instagram",
@@ -1178,7 +1186,7 @@
         "points": 4750
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Kate",
         "handle": "@redhead_reader",
         "platform": "Instagram",
@@ -1186,7 +1194,7 @@
         "points": 4750
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Theresa",
         "handle": "@earlybirdbooks",
         "platform": "TikTok",
@@ -1194,20 +1202,12 @@
         "points": 4225
       },
       {
-        "rank": 9,
+        "rank": 10,
         "name": "Joshua",
         "handle": "@poppa_squatch",
         "platform": "Instagram",
         "country": "United States",
         "points": 4025
-      },
-      {
-        "rank": 10,
-        "name": "Chrystal",
-        "handle": "",
-        "platform": "",
-        "country": "Canada",
-        "points": 3750
       }
     ]
   },
