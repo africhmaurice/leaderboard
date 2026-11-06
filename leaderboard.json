@@ -1,15 +1,15 @@
 {
-  "updated": "2026-11-06T03:10:30.058Z",
+  "updated": "2026-11-06T16:03:07.788Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 2043530,
+  "crewTotal": 2069030,
   "acts": {
     "two": 505425,
     "three": 1022965,
-    "four": 320565
+    "four": 346065
   },
   "entries": 29865,
-  "participants": 1071,
+  "participants": 1077,
   "reveals": [
     {
       "at": 125000,
@@ -33,7 +33,7 @@
       "title": "United States",
       "note": "*The three Sky Pirates with the most points at the end of the hunt find The Treasure.",
       "treasure": true,
-      "participants": 978,
+      "participants": 984,
       "top": [
         {
           "rank": 1,
@@ -49,7 +49,7 @@
           "handle": "",
           "platform": "Instagram",
           "country": "United States",
-          "points": 121770
+          "points": 123670
         },
         {
           "rank": 3,
@@ -57,7 +57,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 114165
+          "points": 115015
         },
         {
           "rank": 4,
@@ -81,7 +81,7 @@
           "handle": "@poppa_squatch",
           "platform": "Instagram",
           "country": "United States",
-          "points": 64905
+          "points": 65305
         },
         {
           "rank": 7,
@@ -97,7 +97,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 61654
+          "points": 63054
         },
         {
           "rank": 9,
@@ -139,7 +139,7 @@
           "handle": "@dearthedays",
           "platform": "Instagram",
           "country": "United Kingdom",
-          "points": 30230
+          "points": 30930
         },
         {
           "rank": 3,
@@ -221,7 +221,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 56407
+          "points": 58382
         },
         {
           "rank": 2,
@@ -229,7 +229,7 @@
           "handle": "@ryan_reads_big_books",
           "platform": "Instagram",
           "country": "Canada",
-          "points": 41930
+          "points": 42530
         },
         {
           "rank": 3,
@@ -1125,9 +1125,9 @@
     ]
   },
   "actFour": {
-    "crewPoints": 320565,
+    "crewPoints": 346065,
     "carried": 0,
-    "participants": 70,
+    "participants": 77,
     "top": [
       {
         "rank": 1,
@@ -1143,7 +1143,7 @@
         "handle": "@lovelisyda",
         "platform": "Instagram",
         "country": "Estonia",
-        "points": 19100
+        "points": 21075
       },
       {
         "rank": 3,
@@ -1151,15 +1151,15 @@
         "handle": "@poppa_squatch",
         "platform": "Instagram",
         "country": "United States",
-        "points": 16850
+        "points": 17250
       },
       {
         "rank": 4,
-        "name": "Theresa",
-        "handle": "@earlybirdbooks",
-        "platform": "TikTok",
+        "name": "Tyler",
+        "handle": "@tylers_bookshelf",
+        "platform": "Instagram",
         "country": "United States",
-        "points": 16000
+        "points": 16900
       },
       {
         "rank": 5,
@@ -1167,15 +1167,15 @@
         "handle": "@spacefoxy9",
         "platform": "Instagram",
         "country": "United States",
-        "points": 15925
+        "points": 16775
       },
       {
         "rank": 6,
-        "name": "Tyler",
-        "handle": "@tylers_bookshelf",
-        "platform": "Instagram",
+        "name": "Theresa",
+        "handle": "@earlybirdbooks",
+        "platform": "TikTok",
         "country": "United States",
-        "points": 15500
+        "points": 16000
       },
       {
         "rank": 7,
@@ -1183,7 +1183,7 @@
         "handle": "",
         "platform": "Instagram",
         "country": "United States",
-        "points": 13300
+        "points": 15200
       },
       {
         "rank": 8,
