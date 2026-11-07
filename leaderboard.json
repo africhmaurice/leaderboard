@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-07T02:09:43.447Z",
+  "updated": "2026-11-07T03:34:18.628Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 2089755,
+  "crewTotal": 2089655,
   "acts": {
     "two": 505425,
     "three": 1022965,
-    "four": 366790
+    "four": 366690
   },
   "entries": 29865,
   "participants": 1078,
@@ -1125,7 +1125,7 @@
     ]
   },
   "actFour": {
-    "crewPoints": 366790,
+    "crewPoints": 366690,
     "carried": 0,
     "participants": 78,
     "top": [
@@ -1199,7 +1199,7 @@
         "handle": "@dennisreadslitrpg",
         "platform": "TikTok",
         "country": "United States",
-        "points": 12050
+        "points": 11950
       },
       {
         "rank": 10,
