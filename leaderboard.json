@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-09T18:16:44.758Z",
+  "updated": "2026-11-09T23:55:31.040Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 2219480,
+  "crewTotal": 2233780,
   "acts": {
     "two": 505425,
     "three": 1023965,
-    "four": 495515
+    "four": 509815
   },
   "entries": 29877,
   "participants": 1079,
@@ -41,7 +41,7 @@
           "handle": "@4eyedgoonie",
           "platform": "Instagram",
           "country": "United States",
-          "points": 152790
+          "points": 155290
         },
         {
           "rank": 2,
@@ -57,7 +57,7 @@
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
-          "points": 119265
+          "points": 120465
         },
         {
           "rank": 4,
@@ -65,7 +65,7 @@
           "handle": "@earlybirdbooks",
           "platform": "TikTok",
           "country": "United States",
-          "points": 110935
+          "points": 112610
         },
         {
           "rank": 5,
@@ -81,7 +81,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 72204
+          "points": 72429
         },
         {
           "rank": 7,
@@ -155,7 +155,7 @@
           "handle": "",
           "platform": "",
           "country": "United Kingdom",
-          "points": 19602
+          "points": 20302
         },
         {
           "rank": 5,
@@ -221,7 +221,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 65207
+          "points": 65332
         },
         {
           "rank": 2,
@@ -229,7 +229,7 @@
           "handle": "@ryan_reads_big_books",
           "platform": "Instagram",
           "country": "Canada",
-          "points": 55605
+          "points": 55905
         },
         {
           "rank": 3,
@@ -237,7 +237,7 @@
           "handle": "",
           "platform": "",
           "country": "Canada",
-          "points": 24030
+          "points": 24730
         },
         {
           "rank": 4,
@@ -1125,7 +1125,7 @@
     ]
   },
   "actFour": {
-    "crewPoints": 495515,
+    "crewPoints": 509815,
     "carried": 0,
     "participants": 86,
     "top": [
@@ -1135,7 +1135,7 @@
         "handle": "@4eyedgoonie",
         "platform": "Instagram",
         "country": "United States",
-        "points": 33050
+        "points": 35550
       },
       {
         "rank": 2,
@@ -1143,7 +1143,7 @@
         "handle": "@earlybirdbooks",
         "platform": "TikTok",
         "country": "United States",
-        "points": 28775
+        "points": 30450
       },
       {
         "rank": 3,
@@ -1151,7 +1151,7 @@
         "handle": "@lovelisyda",
         "platform": "Instagram",
         "country": "Estonia",
-        "points": 27900
+        "points": 28025
       },
       {
         "rank": 4,
@@ -1159,23 +1159,23 @@
         "handle": "@tylers_bookshelf",
         "platform": "Instagram",
         "country": "United States",
-        "points": 26050
+        "points": 26275
       },
       {
         "rank": 5,
-        "name": "Ryan",
-        "handle": "@ryan_reads_big_books",
-        "platform": "Instagram",
-        "country": "Canada",
-        "points": 21700
-      },
-      {
-        "rank": 6,
         "name": "Katie",
         "handle": "@spacefoxy9",
         "platform": "Instagram",
         "country": "United States",
-        "points": 21025
+        "points": 22225
+      },
+      {
+        "rank": 6,
+        "name": "Ryan",
+        "handle": "@ryan_reads_big_books",
+        "platform": "Instagram",
+        "country": "Canada",
+        "points": 22000
       },
       {
         "rank": 7,
@@ -1203,11 +1203,11 @@
       },
       {
         "rank": 10,
-        "name": "Topher",
-        "handle": "@topherdauthor",
+        "name": "Whitney",
+        "handle": "@queen_0f_ink",
         "platform": "Instagram",
         "country": "United States",
-        "points": 14475
+        "points": 15500
       }
     ]
   },
