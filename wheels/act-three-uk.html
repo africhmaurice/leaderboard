@@ -332,7 +332,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
   });
   if ((REPLAY || PUBLIC) && $('reset')) $('reset').hidden = true;
   // Inside the website's frame on a phone, tell the page how tall the wheel is.
-  if (PUBLIC && parent !== window) { var tell = function () { var de = document.documentElement, st = document.querySelector('.stage'), els = [de, document.body, st]; els.forEach(function (e) { e.style.height = 'auto'; }); var h = de.scrollHeight; els.forEach(function (e) { e.style.height = ''; }); parent.postMessage({ wheelHeight: h }, '*'); }; addEventListener('load', tell); addEventListener('resize', tell); setTimeout(tell, 600); }
+  if (PUBLIC && parent !== window) { var tell = function () { var de = document.documentElement, st = document.querySelector('.stage'), els = [de, document.body, st]; els.forEach(function (e) { e.style.height = 'auto'; }); var h = Math.ceil(st.getBoundingClientRect().height); els.forEach(function (e) { e.style.height = ''; }); parent.postMessage({ wheelHeight: h }, '*'); }; addEventListener('load', tell); addEventListener('resize', tell); setTimeout(tell, 600); }
   document.addEventListener('keydown', function (e) { if (e.code === 'Space' && e.target === document.body) { e.preventDefault(); spin(); } });
   // Starting over needs two clicks, so a stray click mid-recording can't wipe the winners.
   var armed = 0;
