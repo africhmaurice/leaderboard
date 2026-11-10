@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-10T23:20:52.916Z",
+  "updated": "2026-11-10T23:42:54.595Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 2285380,
+  "crewTotal": 2288880,
   "acts": {
     "two": 505425,
     "three": 1023965,
-    "four": 561415
+    "four": 564915
   },
   "entries": 29877,
   "participants": 1083,
@@ -53,19 +53,19 @@
         },
         {
           "rank": 3,
+          "name": "Theresa",
+          "handle": "@earlybirdbooks",
+          "platform": "TikTok",
+          "country": "United States",
+          "points": 122710
+        },
+        {
+          "rank": 4,
           "name": "Katie",
           "handle": "@spacefoxy9",
           "platform": "Instagram",
           "country": "United States",
           "points": 121890
-        },
-        {
-          "rank": 4,
-          "name": "Theresa",
-          "handle": "@earlybirdbooks",
-          "platform": "TikTok",
-          "country": "United States",
-          "points": 121210
         },
         {
           "rank": 5,
@@ -81,7 +81,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 76829
+          "points": 78829
         },
         {
           "rank": 7,
@@ -1125,7 +1125,7 @@
     ]
   },
   "actFour": {
-    "crewPoints": 561415,
+    "crewPoints": 564915,
     "carried": 0,
     "participants": 91,
     "top": [
@@ -1143,7 +1143,7 @@
         "handle": "@earlybirdbooks",
         "platform": "TikTok",
         "country": "United States",
-        "points": 39050
+        "points": 40550
       },
       {
         "rank": 3,
@@ -1151,7 +1151,7 @@
         "handle": "@tylers_bookshelf",
         "platform": "Instagram",
         "country": "United States",
-        "points": 30675
+        "points": 32675
       },
       {
         "rank": 4,
