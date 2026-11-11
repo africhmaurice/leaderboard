@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-11T17:22:30.978Z",
+  "updated": "2026-11-11T17:28:54.758Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 2312405,
+  "crewTotal": 2312455,
   "acts": {
     "two": 505425,
     "three": 1023965,
-    "four": 577140
+    "four": 585990
   },
   "entries": 29877,
   "participants": 1085,
@@ -81,7 +81,7 @@
           "handle": "@tylers_bookshelf",
           "platform": "Instagram",
           "country": "United States",
-          "points": 82829
+          "points": 82879
         },
         {
           "rank": 7,
@@ -1125,7 +1125,7 @@
     ]
   },
   "actFour": {
-    "crewPoints": 577140,
+    "crewPoints": 585990,
     "carried": 0,
     "participants": 91,
     "top": [
@@ -1143,7 +1143,7 @@
         "handle": "@4eyedgoonie",
         "platform": "Instagram",
         "country": "United States",
-        "points": 41175
+        "points": 41675
       },
       {
         "rank": 3,
@@ -1151,7 +1151,7 @@
         "handle": "@tylers_bookshelf",
         "platform": "Instagram",
         "country": "United States",
-        "points": 34925
+        "points": 36725
       },
       {
         "rank": 4,
@@ -1159,7 +1159,7 @@
         "handle": "@lovelisyda",
         "platform": "Instagram",
         "country": "Estonia",
-        "points": 30200
+        "points": 32250
       },
       {
         "rank": 5,
@@ -1175,7 +1175,7 @@
         "handle": "@ryan_reads_big_books",
         "platform": "Instagram",
         "country": "Canada",
-        "points": 23750
+        "points": 24750
       },
       {
         "rank": 7,
@@ -1183,7 +1183,7 @@
         "handle": "@topherdauthor",
         "platform": "Instagram",
         "country": "United States",
-        "points": 19475
+        "points": 19975
       },
       {
         "rank": 8,
@@ -1199,7 +1199,7 @@
         "handle": "@redhead_reader",
         "platform": "Instagram",
         "country": "United States",
-        "points": 17325
+        "points": 17825
       },
       {
         "rank": 10,
