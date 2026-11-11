@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-11T16:54:01.811Z",
+  "updated": "2026-11-11T17:22:30.978Z",
   "emptyHeading": "No pirates on this board yet",
   "emptyMessage": "THE HUNT OFFICIALLY BEGINS SEPTEMBER 20TH. ONCE THE CREW SETS SAIL AND THAT PESKY SKY PIRATE CAPTAIN BEGINS TOTALLING POINTS, THE TOP 10 CURRENT RUNNING LEADERS WILL BE RANKED RIGHT HERE!",
-  "crewTotal": 2312355,
+  "crewTotal": 2312405,
   "acts": {
     "two": 505425,
     "three": 1023965,
@@ -221,7 +221,7 @@
           "handle": "@lovelisyda",
           "platform": "Instagram",
           "country": "Estonia",
-          "points": 69507
+          "points": 69557
         },
         {
           "rank": 2,
