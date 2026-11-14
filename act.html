@@ -31,6 +31,9 @@ html.embedded body{min-height:0!important}
 /* The frame never scrolls by itself (iPhones hand a swipe to a frame that is even 1px taller than its box), so every swipe moves the host page. */
 html.embedded,html.embedded body{overflow:hidden!important;overscroll-behavior:auto}
 html.embedded .bgbox,html.embedded .bgwash{display:none}
+/* Embedded, the frame sits right under the host page's menu, and the first words start the same distance under it
+   as on every other page (Maurice, 2026-11-11); the host's loader.js uses the same clamp. */
+html.embedded body{padding-top:clamp(40px,6vw,88px)!important}
 .head{text-align:center;margin:0 auto clamp(26px,3.5vw,40px);max-width:1000px}
 .eyebrow{font-family:'Atomic Marker',Impact,sans-serif;font-size:clamp(24px,3.5vw,44px);line-height:1.2;letter-spacing:.03em;color:var(--soft);margin:0 0 14px}
 h1{font-family:'Atomic Marker',Impact,sans-serif;font-weight:400;font-size:clamp(46px,8vw,120px);line-height:1.2;letter-spacing:.03em;color:#fff;margin:0}
